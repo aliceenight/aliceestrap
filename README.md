@@ -60,8 +60,8 @@ machine's name is never compiled into the binary.
 
 ## Building
 
-See [BUILDING.md](BUILDING.md). Short version: install the .NET 10 SDK, then
-run `build.cmd`.
+See [BUILDING.md](BUILDING.md). Short version: clone with `--recursive`, install
+the .NET 10 SDK, then run `build.cmd`.
 
 ## Licence
 

@@ -5,8 +5,8 @@ cd /d "%~dp0"
 
 if not exist "wpfui\src\Wpf.Ui\Wpf.Ui.csproj" (
     echo.
-    echo   The wpfui folder is missing, nothing can build without it.
-    echo   It is part of this repository, so re-download or re-clone the repo.
+    echo   The wpfui submodule is missing, nothing can build without it.
+    echo   Run:  git submodule update --init
     echo.
     exit /b 1
 )

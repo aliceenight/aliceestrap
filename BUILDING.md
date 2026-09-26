@@ -9,7 +9,7 @@ aliceestrap is a WPF app targeting `net10.0-windows`. It only builds on Windows.
 | Windows | 10 or newer |
 | .NET SDK | 10.0.100 or newer 10.x |
 | .NET Desktop Runtime | 10.0.x, needed to *run* the result |
-| git | optional, to clone the repository |
+| git | to clone the repository and the wpfui submodule |
 
 Visual Studio is optional. If you use it, install the **.NET desktop development** workload and open `Aliceestrap.sln`.
 
@@ -25,11 +25,25 @@ The runtime is a separate matter. The publish below is framework-dependent, so w
 
 ## First-time setup
 
-The WPF UI library the app uses is included in the repository under `wpfui\`, so a plain clone or zip download has everything needed:
+The WPF UI library the app uses lives in its own repository, [aliceenight/wpfui](https://github.com/aliceenight/wpfui), and is pulled in as a git submodule under `wpfui\`:
 
 ```
 Aliceestrap.csproj  ->  ..\wpfui\src\Wpf.Ui\Wpf.Ui.csproj
 ```
+
+Clone with submodules:
+
+```
+git clone --recursive https://github.com/aliceenight/aliceestrap
+```
+
+If you already cloned without `--recursive`, fetch it with:
+
+```
+git submodule update --init
+```
+
+GitHub's "Download ZIP" does not include submodules, so a zip download will not build.
 
 ## Build
 
@@ -112,7 +126,7 @@ Aliceestrap\            the application
   Resources\Strings.resx source strings, one .resx per language
   UI\Elements\           windows and pages
   UI\ViewModels\         their view models
-wpfui\                   the UI library
+wpfui\                   the UI library (submodule)
 Images\                  banners for this readme
 ```
 
@@ -120,7 +134,7 @@ Adding a string means editing both `Resources\Strings.resx` and `Resources\Strin
 
 ## Things worth knowing
 
-- **No updater.** There is no release feed, so there is nothing to check. Install a newer build by running the new exe; it offers to upgrade the installed copy.
+- **Updater.** Before launching Roblox, the app checks the latest release of `aliceenight/aliceestrap` on GitHub and installs a newer `aliceestrap.exe` if there is one. The download is checked against the release's size and SHA-256 digest, and an exe that isn't newer is never installed. "Check for updates" in the Bootstrapper tab turns it off. Release tags must be `v` plus the `<Version>` in `Aliceestrap.csproj`; the release workflow refuses anything else.
 - **No machine name in the binary.** The csproj used to bake `$(COMPUTERNAME)\$(USERNAME)` into an assembly attribute, which would otherwise go out in the `User-Agent` header. It bakes the literal `local` instead.
 - **No remote config.** `RemoteDataManager` always reads the bundled `Data.json`. The package maps in `Models\APIs\Config\PackageMaps.cs` are therefore only as current as the source. If Roblox renames or adds a package and downloads start failing, that file is where to fix it.
 
@@ -133,7 +147,7 @@ More than one `.sln` in the root. Delete the stale one, or name the solution exp
 This is the SDK resolution error wearing a disguise. Read the lines below it; it means `global.json` asked for an SDK you do not have.
 
 **`Wpf.Ui.csproj not found`**
-The `wpfui` folder is missing. Re-download or re-clone the repository.
+The `wpfui` submodule is missing. Run `git submodule update --init`.
 
 **CsWin32 complains about Windows SDK metadata**
 `Aliceestrap.csproj` has a `FixMds` target that hardcodes `microsoft.windows.sdk.win32metadata` version `55.0.45-preview` under `%UserProfile%\.nuget\packages`. It only fires when the normal resolution finds nothing. If the version there has moved on, update the path in the csproj.
