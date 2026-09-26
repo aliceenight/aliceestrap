@@ -1,0 +1,143 @@
+<base:WpfUiWindow x:Class="Aliceestrap.UI.Elements.Settings.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Aliceestrap.UI.Elements.Settings.Pages"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:base="clr-namespace:Aliceestrap.UI.Elements.Base"
+             xmlns:resources="clr-namespace:Aliceestrap.Resources"
+             xmlns:dmodels="clr-namespace:Aliceestrap.UI.ViewModels.Settings"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance dmodels:MainWindowViewModel, IsDesignTimeCreatable=True}"
+             Title="{x:Static resources:Strings.Menu_Title}"
+             MinWidth="1000"
+             MinHeight="520"
+             Width="1100"
+             Height="660"
+             Background="{DynamicResource ApplicationBackgroundBrush}"
+             ExtendsContentIntoTitleBar="True"
+             WindowBackdropType="None"
+             WindowStartupLocation="CenterScreen"
+             Closing="WpfUiWindow_Closing"
+             Closed="WpfUiWindow_Closed">
+    <Grid Background="{DynamicResource ApplicationBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ui:Snackbar
+            x:Name="AlreadyRunningSnackbar"
+            Title="{x:Static resources:Strings.Menu_AlreadyRunning_Title}"
+            Message="{x:Static resources:Strings.Menu_AlreadyRunning_Caption}"
+            Icon="Info20" Timeout="10000" Margin="200,0,200,20" Grid.RowSpan="10" Panel.ZIndex="10" />
+
+        <ui:Snackbar
+            x:Name="SettingsSavedSnackbar"
+            Title="{x:Static resources:Strings.Menu_SettingsSaved_Title}"
+            Message="{x:Static resources:Strings.Menu_SettingsSaved_Message}"
+            Appearance="Success" Icon="CheckmarkCircle32" Timeout="3000" Margin="200,0,200,20" Grid.RowSpan="10" Panel.ZIndex="9" />
+
+        <Border Grid.Row="0" Background="{DynamicResource ShellHeaderBrush}">
+            <Grid>
+                <ui:TitleBar x:Name="RootTitleBar" Padding="0" Height="52" ForceShutdown="False" MinimizeToTray="False" UseSnapLayout="True" Title="" />
+
+                <StackPanel Orientation="Horizontal" Margin="20,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" IsHitTestVisible="False">
+                    <Border Width="28" Height="28" CornerRadius="8" ClipToBounds="True">
+                        <Image Source="pack://application:,,,/Aliceestrap.png" RenderOptions.BitmapScalingMode="HighQuality" />
+                    </Border>
+                    <TextBlock Margin="10,0,0,1" VerticalAlignment="Center" FontSize="16" FontWeight="SemiBold" Text="aliceestrap" Foreground="{DynamicResource ShellGlowBrush}" />
+                    <Border Margin="10,1,0,0" Padding="7,2" VerticalAlignment="Center" CornerRadius="6" Background="{DynamicResource ShellNavHoverBrush}">
+                        <TextBlock x:Name="VersionBadge" FontSize="11" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,150,0">
+                    <ui:AutoSuggestBox x:Name="SearchBox" Width="240" PlaceholderText="{x:Static resources:Strings.Menu_SearchSettings}" TextChanged="AutoSuggestBoxTextChanged" />
+                    <ui:Button Margin="8,0,0,0" Padding="9" Icon="Info24" Appearance="Transparent" ToolTip="{x:Static resources:Strings.Menu_About_Title}" Command="{Binding OpenAboutCommand, Mode=OneTime}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Background="{DynamicResource ShellHeaderBrush}" BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}" BorderThickness="0,0,0,1">
+            <StackPanel x:Name="TabStrip" Orientation="Horizontal" Margin="16,2,16,12" HorizontalAlignment="Center" />
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Border x:Name="EditBanner" Grid.Row="0" MaxWidth="920" Margin="24,16,10,0" Padding="14,10" CornerRadius="10" Visibility="Collapsed"
+                    Background="{DynamicResource ShellNavSelectedBrush}" BorderBrush="{DynamicResource ShellGlowStartBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ui:SymbolIcon Grid.Column="0" Symbol="Edit20" FontSize="18" Margin="0,0,10,0" VerticalAlignment="Center" Foreground="{DynamicResource ShellNavSelectedTextBrush}" />
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock x:Name="EditBannerTitle" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                        <TextBlock x:Name="EditBannerKind" FontSize="12" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <ui:Button MinWidth="80" Margin="0,0,8,0" Appearance="Transparent" Content="{x:Static resources:Strings.Common_Cancel}" Click="EditCancel_Click" />
+                        <ui:Button MinWidth="120" Icon="Save20" Appearance="Primary" Content="{x:Static resources:Strings.Menu_Presets_SaveToPreset}" Click="EditSave_Click" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <ui:NavigationFluent x:Name="RootNavigation" Visibility="Collapsed" Frame="{Binding ElementName=RootFrame}" SelectedPageIndex="0">
+                <ui:NavigationFluent.Items>
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Integrations_Title}" PageType="{x:Type pages:IntegrationsPage}" Icon="PlugConnected20" Tag="integrations" />
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Behaviour_Title}" PageType="{x:Type pages:BehaviourPage}" Icon="Rocket20" Tag="bootstrapper" />
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Common_Deployment}" PageType="{x:Type pages:ChannelPage}" Icon="BranchFork20" Tag="channel" Cache="False" />
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Mods_Title}" PageType="{x:Type pages:ModsPage}" Icon="PuzzlePiece20" Tag="mods" />
+                    <ui:NavigationItem x:Name="fastflags" Content="{x:Static resources:Strings.Menu_FastFlags_Title}" PageType="{x:Type pages:FastFlagsPage}" Icon="Beaker20" Tag="fastflags" />
+                    <ui:NavigationItem x:Name="gbs" Content="{x:Static resources:Strings.Common_GlobalSettings}" PageType="{x:Type pages:GlobalSettingsPage}" Icon="Options20" Tag="gbseditor"/>
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Presets_Title}" PageType="{x:Type pages:PresetsPage}" Icon="BookmarkMultiple20" Tag="presets" Cache="False" />
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_Appearance_Title}" PageType="{x:Type pages:AppearancePage}" Icon="Color20" Tag="appearance" />
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Common_Shortcuts}" PageType="{x:Type pages:ShortcutsPage}" Icon="Link20" Tag="shortcuts" />
+
+                    <ui:NavigationItem Content="{x:Static resources:Strings.Menu_FastFlagEditor_Title}" PageType="{x:Type pages:FastFlagEditorPage}" Tag="fastflageditor" Visibility="Collapsed" />
+                </ui:NavigationFluent.Items>
+            </ui:NavigationFluent>
+
+            <Grid Grid.Row="1" MaxWidth="920" Margin="24,22,10,6" HorizontalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock x:Name="PageTitle" FontSize="26" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                    <Rectangle Width="36" Height="3" Margin="1,8,0,0" HorizontalAlignment="Left" RadiusX="1.5" RadiusY="1.5" Fill="{DynamicResource ShellGlowBrush}" />
+                </StackPanel>
+            </Grid>
+
+            <Frame x:Name="RootFrame" Grid.Row="2" MaxWidth="920" Margin="24,6,10,0" />
+        </Grid>
+
+        <Border Grid.Row="3" Padding="20,12" Background="{DynamicResource ShellFooterBrush}" BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <ui:ToggleSwitch IsChecked="{Binding TestModeEnabled, Mode=TwoWay}" />
+                    <TextBlock Padding="10,0,0,0" Text="{x:Static resources:Strings.Menu_TestMode}" VerticalAlignment="Center" FontSize="13" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <ui:Button MinWidth="90" Margin="0,0,8,0" Appearance="Transparent" Content="{x:Static resources:Strings.Common_Close}" Command="{Binding CloseWindowCommand, Mode=OneWay}" />
+                    <ui:Button x:Name="SaveButton" MinWidth="90" Margin="0,0,8,0" Content="{x:Static resources:Strings.Menu_Save}" Command="{Binding SaveSettingsCommand, Mode=OneWay}" />
+                    <ui:Button x:Name="SaveAndLaunchButton" MinWidth="140" Icon="Play20" Appearance="Primary" Content="{x:Static resources:Strings.Menu_SaveAndLaunch}" Command="{Binding SaveAndLaunchSettingsCommand, Mode=OneWay}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</base:WpfUiWindow>

@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
+    <value>Roblox è già in esecuzione e l'avvio di un'altra istanza lo chiuderà. Sei sicuro di voler continuare ad avviarlo?</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxDown" xml:space="preserve">
+    <value>Roblox potrebbe non essere raggiungibile in questo momento. Vai su {0} per più informazioni.</value>
+  </data>
+  <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
+    <value>Non è stato possibile effettuare una connessione, il che probabilmente indica una scarsa connessione a internet o un blocco firewall. Se la tua connessione va bene, assicurati che il tuo antivirus non stia bloccando aliceestrap.</value>
+  </data>
+  <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
+    <value>Devi prima installare aliceestrap per disinstallarlo.</value>
+  </data>
+  <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
+    <value>aliceestrap non ha abbastanza spazio per scaricare e installare Roblox. Per favore libera dello spazio e riprova.</value>
+  </data>
+  <data name="Bootstrapper.Status.ApplyingModifications" xml:space="preserve">
+    <value>Applicando le modifiche di Roblox...</value>
+  </data>
+  <data name="Bootstrapper.Status.Configuring" xml:space="preserve">
+    <value>Configurando {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.Connecting" xml:space="preserve">
+    <value>Connessione a Roblox...</value>
+  </data>
+  <data name="Bootstrapper.Status.Installing" xml:space="preserve">
+    <value>Installando {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.InstallingWebView2" xml:space="preserve">
+    <value>Installazione WebView2, per favore attendere...</value>
+  </data>
+  <data name="Bootstrapper.Status.Starting" xml:space="preserve">
+    <value>Inizializzazione di {product}...</value>
+    <comment>"Starting Roblox" or "Starting Roblox Studio"</comment>
+  </data>
+  <data name="Bootstrapper.Status.Upgrading" xml:space="preserve">
+    <value>Aggiornando {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
+    <value>In attesa di altre istanze...</value>
+  </data>
+  <data name="Bootstrapper.StylePreview.ImageCancel" xml:space="preserve">
+    <value>Anteprima stile - Clicca sul pulsante X in alto a destra per chiudere</value>
+    <comment>Text for style previews that use an X button. Currently only applies to Byfron</comment>
+  </data>
+  <data name="Bootstrapper.StylePreview.TextCancel" xml:space="preserve">
+    <value>Anteprima stile - Clicca su Annulla per chiudere</value>
+    <comment>Text for style previews that use text button that says "Cancel"</comment>
+  </data>
+  <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
+    <value>aliceestrap è stato disinstallato con successo</value>
+  </data>
+  <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
+    <value>Roblox è attualmente in esecuzione, deve essere chiuso prima di poter disinstallare aliceestrap. Desideri chiudere Roblox ora?</value>
+  </data>
+  <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
+    <value>Roblox richiede l'uso dei componenti Windows Media Foundation, che sembrano mancare. Probabilmente perché stai utilizzando un'edizione di Windows N. Per favore, installali prima di avviare Roblox.</value>
+  </data>
+  <data name="Common.AddSingle" xml:space="preserve">
+    <value>Aggiungi singolo</value>
+  </data>
+  <data name="Common.Browse" xml:space="preserve">
+    <value>Sfoglia</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="Common.Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Common.DiscordRichPresence" xml:space="preserve">
+    <value>Attività di Discord</value>
+  </data>
+  <data name="Common.ImportJson" xml:space="preserve">
+    <value>Importa JSON</value>
+  </data>
+  <data name="Common.OpenLogFile" xml:space="preserve">
+    <value>Apri file di registro</value>
+  </data>
+  <data name="Common.Miscellaneous" xml:space="preserve">
+    <value>Varie</value>
+  </data>
+  <data name="Common.Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Common.New" xml:space="preserve">
+    <value>Nuovo</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Common.OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common.Presets" xml:space="preserve">
+    <value>Impostazioni predefinite</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>Resetta</value>
+    <comment>In the context of resetting something to a default value</comment>
+  </data>
+  <data name="Common.Value" xml:space="preserve">
+    <value>Valore</value>
+  </data>
+  <data name="Common.Warning" xml:space="preserve">
+    <value>Avvertimento</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>Sì</value>
+  </data>
+  <data name="ContextMenu.CloseRoblox" xml:space="preserve">
+    <value>Chiudi Roblox</value>
+  </data>
+  <data name="ContextMenu.CloseRobloxMessage" xml:space="preserve">
+    <value>Sei sicuro di voler chiudere Roblox? Questo chiuderà forzatamente il processo.</value>
+  </data>
+  <data name="ContextMenu.CopyDeeplinkInvite" xml:space="preserve">
+    <value>Copia l'invito</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.CopyInstanceId" xml:space="preserve">
+    <value>Copia ID dell'istanza</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.InstanceId" xml:space="preserve">
+    <value>ID dell'istanza</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Location" xml:space="preserve">
+    <value>Posizione</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Public" xml:space="preserve">
+    <value>Connesso a un server pubblico</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Title" xml:space="preserve">
+    <value>Informazioni sul server</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Type" xml:space="preserve">
+    <value>Scrivi</value>
+  </data>
+  <data name="Dialog.AddFastFlag.Title" xml:space="preserve">
+    <value>Aggiungi Fast Flag</value>
+  </data>
+  <data name="Dialog.Connectivity.MoreInfo" xml:space="preserve">
+    <value>Più informazioni:</value>
+  </data>
+  <data name="Dialog.Connectivity.Title" xml:space="preserve">
+    <value>Errore di connessione</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
+    <value>aliceestrap non è in grado di connettersi a {0}</value>
+    <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
+  </data>
+  <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
+    <value>Copia il contenuto del registro</value>
+  </data>
+  <data name="Dialog.Exception.Title" xml:space="preserve">
+    <value>Errore di aliceestrap</value>
+  </data>
+  <data name="Common.Custom" xml:space="preserve">
+    <value>Personalizzato</value>
+  </data>
+  <data name="Enums.BootstrapperIcon.IconEarly2015" xml:space="preserve">
+    <value>Inizio 2015</value>
+  </data>
+  <data name="Enums.BootstrapperIcon.IconLate2015" xml:space="preserve">
+    <value>Fine 2015</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ByfronDialog" xml:space="preserve">
+    <value>Finto Byfron (2023)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
+    <value>Fluent (Classico)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
+    <value>Fluent (Vetro)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
+    <value>Legacy (2008 - 2011)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.LegacyDialog2011" xml:space="preserve">
+    <value>Legacy (2011 - 2014)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ProgressDialog" xml:space="preserve">
+    <value>Roblox (~2014)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.VistaDialog" xml:space="preserve">
+    <value>Vista (2008 - 2011)</value>
+  </data>
+  <data name="Enums.CursorType.From2006" xml:space="preserve">
+    <value>2006 (Cartonizzato)</value>
+  </data>
+  <data name="Enums.CursorType.From2013" xml:space="preserve">
+    <value>2013 (Angolare)</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.D3D11" xml:space="preserve">
+    <value>Direct3D 11</value>
+  </data>
+  <data name="Enums.ServerType.Private" xml:space="preserve">
+    <value>Server privato</value>
+  </data>
+  <data name="Enums.ServerType.Public" xml:space="preserve">
+    <value>Server pubblico</value>
+  </data>
+  <data name="Enums.ServerType.Reserved" xml:space="preserve">
+    <value>Server riservato</value>
+  </data>
+  <data name="Enums.Theme.Dark" xml:space="preserve">
+    <value>Scuro</value>
+  </data>
+  <data name="Enums.Theme.Light" xml:space="preserve">
+    <value>Chiaro</value>
+  </data>
+  <data name="InstallChecker.Updated" xml:space="preserve">
+    <value>aliceestrap è stato aggiornato alla versione {0}</value>
+  </data>
+  <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
+    <value>La versione di aliceestrap che hai avviato è diversa da quella attualmente installata.
+Vorresti aggiornare la versione attualmente installata?</value>
+  </data>
+  <data name="Menu.About.Title" xml:space="preserve">
+    <value>Riguardo a</value>
+  </data>
+  <data name="Menu.About.Version" xml:space="preserve">
+    <value>Versione {0}</value>
+    <comment>{0} is replaced with the version, i.e. "Version 2.8.0"</comment>
+  </data>
+  <data name="Menu.AllFiles" xml:space="preserve">
+    <value>Tutti i file</value>
+  </data>
+  <data name="Menu.AlreadyRunning.Caption" xml:space="preserve">
+    <value>Nota che non tutti i tuoi cambiamenti verranno immediatamente applicati finché non verranno chiuse tutte le istanze di Roblox aperte.</value>
+  </data>
+  <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
+    <value>aliceestrap è già in esecuzione</value>
+  </data>
+  <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
+    <value>Si può dare un aspetto diverso, retro o simile a quello di Roblox.</value>
+  </data>
+  <data name="Menu.Appearance.Bootstrapper.Title" xml:space="preserve">
+    <value>Bootstrapper</value>
+  </data>
+  <data name="Menu.Appearance.CustomisationTitle.Description" xml:space="preserve">
+    <value>Il testo che appare come titolo del bootstrapper.</value>
+  </data>
+  <data name="Menu.Appearance.CustomisationTitle.Title" xml:space="preserve">
+    <value>Titolo</value>
+  </data>
+  <data name="Menu.Appearance.Description" xml:space="preserve">
+    <value>Configura come aliceestrap dovrebbe apparire.</value>
+  </data>
+  <data name="Menu.Appearance.Global.Theme.Title" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Menu.Appearance.Icon.Description" xml:space="preserve">
+    <value>Scegli quale icona dovrebbe usare.</value>
+  </data>
+  <data name="Menu.Appearance.Icon.Title" xml:space="preserve">
+    <value>Icona</value>
+  </data>
+  <data name="Menu.Appearance.Preview" xml:space="preserve">
+    <value>Anteprima</value>
+  </data>
+  <data name="Menu.Appearance.Style.Description" xml:space="preserve">
+    <value>Scegli come dovrebbe apparire. Il tema scuro non si applica a Legacy/Vista.</value>
+  </data>
+  <data name="Menu.Appearance.Style.Title" xml:space="preserve">
+    <value>Stile</value>
+  </data>
+  <data name="Menu.Appearance.Title" xml:space="preserve">
+    <value>Aspetto</value>
+  </data>
+  <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
+    <value>Evita la chiusura di un gioco aperto aprendone uno accidentalmente.</value>
+  </data>
+  <data name="Menu.Behaviour.ConfirmLaunches.Title" xml:space="preserve">
+    <value>Richiedi conferma prima di avviare un'altra istanza di Roblox</value>
+  </data>
+  <data name="Menu.Behaviour.Description" xml:space="preserve">
+    <value>Configura cosa dovrebbe fare aliceestrap quando avvia Roblox.</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
+    <value>Roblox verrà installato da capo al prossimo avvio.</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxReinstall.Title" xml:space="preserve">
+    <value>Forza la reinstallazione di Roblox</value>
+  </data>
+  <data name="Menu.Behaviour.Title" xml:space="preserve">
+    <value>Bootstrapper</value>
+  </data>
+  <data name="Menu.FastFlagEditor.AddNew" xml:space="preserve">
+    <value>Aggiungi nuovo</value>
+  </data>
+  <data name="Menu.FastFlagEditor.AlreadyExists" xml:space="preserve">
+    <value>Esiste già un flag con questo nome.</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Back" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ConflictingImport" xml:space="preserve">
+    <value>Alcuni dei flag che stai cercando di importare hanno già valori impostati. Vorresti sovrascrivere i valori attuali con quelli definiti nell'importazione?
+
+Ci sono {0} definizioni di flag in conflitto:
+{1}</value>
+    <comment>{0} is a number, {1} is a comma-separated list</comment>
+  </data>
+  <data name="Menu.FastFlagEditor.DeleteSelected" xml:space="preserve">
+    <value>Cancella i selezionati</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Description" xml:space="preserve">
+    <value>Gestisci i tuoi Fast Flag. Fai doppio click su una colonna per modificarla.</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ExportJson" xml:space="preserve">
+    <value>Esporta in JSON</value>
+  </data>
+  <data name="Menu.FastFlagEditor.InvalidJSON" xml:space="preserve">
+    <value>Il JSON inserito non sembra essere valido. Si prega di ricontrollare e riprovare.
+
+Più informazioni:
+{0}</value>
+    <comment>{0} is an exception message</comment>
+  </data>
+  <data name="Menu.FastFlagEditor.JsonCopiedToClipboard" xml:space="preserve">
+    <value>Copiato negli appunti.</value>
+  </data>
+  <data name="Menu.FastFlagEditor.LargeConfig" xml:space="preserve">
+    <value>Sembra che stiate importando una configurazione molto grande. Dovresti importare solo le configurazioni che comprendi. NON incollare ciecamente configurazioni create da altre persone. Se si continua, è molto probabile che si verificano problemi di stabilità e cambiamenti imprevisti.
+
+Siete sicuri di volere continuare?</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Search" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ShowPresetFlags" xml:space="preserve">
+    <value>Mostra i flag predefiniti</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Title" xml:space="preserve">
+    <value>Editor di Fast Flag</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Back" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Continue" xml:space="preserve">
+    <value>So quello che sto facendo</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Header" xml:space="preserve">
+    <value>Sai quello che stai facendo?</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Text" xml:space="preserve">
+    <value>I Fast Flag sono estremamente potenti, dato che sono pensati per essere utilizzati esclusivamente dagli ingegneri di Roblox. Anche se possono risultare molto utili, la loro configurazione manuale può provocare gravi problemi di stabilità e funzionalità. NON usare l’editor se non sei sicuro di quello che stai facendo.
+
+NON usare questo editor per importare lunghi ‘elenchi di flag’ creati da altre persone che promettono di migliorare le prestazioni o simili. Questi sono soggetti ai problemi menzionati sopra e causeranno difficoltà poiché non sarai completamente a conoscenza di ciò che stanno modificando. Se stavi per farlo, TORNA INDIETRO.</value>
+  </data>
+  <data name="Menu.FastFlags.Description" xml:space="preserve">
+    <value>Controlla come specifiche caratteristiche e parametri del sistema di Roblox sono configurati.</value>
+  </data>
+  <data name="Menu.FastFlags.Editor.Description" xml:space="preserve">
+    <value>Gestisci i tuoi Fast Flag. Da usare con cautela.</value>
+    <comment>Title is Menu.FastFlagEditor.Title</comment>
+  </data>
+  <data name="Menu.FastFlags.Presets.FixDisplayScaling.Description" xml:space="preserve">
+    <value>Roblox riduce la qualità del rendering in base al ridimensionamento di Windows del tuo display.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.FixDisplayScaling.Title" xml:space="preserve">
+    <value>Mantiene la qualità del rendering con il ridimensionamento del display</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Title" xml:space="preserve">
+    <value>Modalità di renderizzazione</value>
+  </data>
+  <data name="Menu.FastFlags.Title" xml:space="preserve">
+    <value>Impostazioni dell'engine</value>
+  </data>
+  <data name="Menu.FontFiles" xml:space="preserve">
+    <value>File di font</value>
+  </data>
+  <data name="Menu.IconFiles" xml:space="preserve">
+    <value>File delle icone</value>
+  </data>
+  <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
+    <value>aliceestrap non può essere installato qui. Seleziona una cartella diversa, oppure utilizza la posizione predefinita cliccando il tasto reset.</value>
+  </data>
+  <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
+    <value>La cartella che hai scelto per l'installazione di aliceestrap esiste già e NON è vuota. È consigliato installare aliceestrap in una nuova cartella indipendente.
+
+È consigiabile proseguire l'installazione nella posizione suggerita:
+{0}
+
+Vuoi utilizzare questa posizione per procedere con l'installazione?
+Selezionando 'No' si ignorerà questo avvertimento procedendo con l'installazione.</value>
+    <comment>{0} is a file path</comment>
+  </data>
+  <data name="Menu.InstallLocation.NotSet" xml:space="preserve">
+    <value>Devi impostare una posizione d'installazione</value>
+  </data>
+  <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
+    <value>aliceestrap non ha il permesso di scrittura alla posizione selezionata per l'installazione. Per favore, scegli un'altra posizione.</value>
+  </data>
+  <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
+    <value>Tracciamento delle attività</value>
+  </data>
+  <data name="Menu.Integrations.AllowActivityJoining.Description" xml:space="preserve">
+    <value>Permette a tutti di entrare nel gioco a cui stai giocando attraverso il tuo profilo di Discord.</value>
+  </data>
+  <data name="Menu.Integrations.AllowActivityJoining.Title" xml:space="preserve">
+    <value>Permetti di unirsi all'attività</value>
+  </data>
+  <data name="Menu.Integrations.ShowAccountOnProfile.Description" xml:space="preserve">
+    <value>Mostra l’account Roblox con cui stai giocando sul tuo profilo Discord.</value>
+  </data>
+  <data name="Menu.Integrations.ShowAccountOnProfile.Title" xml:space="preserve">
+    <value>Mostra account di Roblox</value>
+  </data>
+  <data name="Menu.Integrations.Custom.AppLocation" xml:space="preserve">
+    <value>Posizione dell'applicazione</value>
+  </data>
+  <data name="Menu.Integrations.Custom.AutoClose" xml:space="preserve">
+    <value>Chiudi automaticamente quando Roblox si chiude</value>
+  </data>
+  <data name="Menu.Integrations.Custom.Description" xml:space="preserve">
+    <value>Qui puoi scegliere se avere altri programmi che si avvieranno automaticamente con Roblox.</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchArgs" xml:space="preserve">
+    <value>Argomenti di avvio</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchArgs.Placeholder" xml:space="preserve">
+    <value>Roblox è in esecuzione!</value>
+  </data>
+  <data name="Menu.Integrations.Custom.NewIntegration" xml:space="preserve">
+    <value>Nuova integrazione</value>
+  </data>
+  <data name="Menu.Integrations.Custom.NoneSelected" xml:space="preserve">
+    <value>Nessuna integrazione scelta, per favore scegli o aggiungine una nuova</value>
+  </data>
+  <data name="Menu.Integrations.Custom.Title" xml:space="preserve">
+    <value>Integrazioni personalizzate</value>
+  </data>
+  <data name="Menu.Integrations.Description" xml:space="preserve">
+    <value>Configura funzionalità aggiuntive da fare andare con Roblox.</value>
+  </data>
+  <data name="Menu.Integrations.DesktopApp.Title" xml:space="preserve">
+    <value>Non avviare l'applicazione del desktop alla chiusura</value>
+  </data>
+  <data name="Menu.Integrations.EnableActivityTracking.Description" xml:space="preserve">
+    <value>Permetti a aliceestrap di rilevare il gioco di Roblox che stai giocando. Alcune funzionalità potrebbero richiederlo.</value>
+  </data>
+  <data name="Menu.Integrations.EnableActivityTracking.Title" xml:space="preserve">
+    <value>Abilita il tracciamento delle attività</value>
+  </data>
+  <data name="Menu.Integrations.ShowGameActivity.Title" xml:space="preserve">
+    <value>Mostra attività di gioco</value>
+  </data>
+  <data name="Menu.Integrations.QueryServerLocation.Description" xml:space="preserve">
+    <value>Quando in gioco, sarai in grado di vedere dove si trova il tuo server tramite [ipinfo.io]({0}).</value>
+  </data>
+  <data name="Menu.Integrations.QueryServerLocation.Title" xml:space="preserve">
+    <value>Posizione del server Query</value>
+  </data>
+  <data name="Menu.Integrations.Title" xml:space="preserve">
+    <value>Integrazioni</value>
+  </data>
+  <data name="Menu.Mods.Description" xml:space="preserve">
+    <value>Cambia e applica i file di mod al client di Roblox.</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Choose" xml:space="preserve">
+    <value>Scegli Font...</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Description" xml:space="preserve">
+    <value>Le dimensioni del font possono essere cambiate nella scheda delle impostazioni.</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Invalid" xml:space="preserve">
+    <value>Il file che hai scelto non sembra essere un file di font valido.</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Remove" xml:space="preserve">
+    <value>Rimuovi font applicato</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Title" xml:space="preserve">
+    <value>Usa font personalizzato</value>
+  </data>
+  <data name="Menu.Mods.OpenModsFolder.Description" xml:space="preserve">
+    <value>Gestisci le mod di Roblox personalizzate qui.</value>
+  </data>
+  <data name="Menu.Mods.OpenModsFolder.Title" xml:space="preserve">
+    <value>Apri la cartella delle Modifiche</value>
+  </data>
+  <data name="Menu.Mods.Presets.MouseCursor.Description" xml:space="preserve">
+    <value>Scegli quale usare tra due stili di cursore classici di Roblox.</value>
+  </data>
+  <data name="Menu.Mods.Presets.MouseCursor.Title" xml:space="preserve">
+    <value>Cursore del mouse</value>
+  </data>
+  <data name="Menu.Mods.Presets.OldAvatarEditor.Description" xml:space="preserve">
+    <value>Riporta indietro il vecchio sfondo dell'editor di avatar usato su Roblox prima del 2020.</value>
+  </data>
+  <data name="Menu.Mods.Presets.OldAvatarEditor.Title" xml:space="preserve">
+    <value>Usa il vecchio sfondo dell'editore di avatar</value>
+  </data>
+  <data name="Menu.Mods.Title" xml:space="preserve">
+    <value>Modifiche</value>
+  </data>
+  <data name="Menu.MoreInfo" xml:space="preserve">
+    <value>Clicca per maggiori informazioni su questa opzione.</value>
+  </data>
+  <data name="Menu.Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="Menu.SettingsSaved.Message" xml:space="preserve">
+    <value>Questi cambiamenti prenderanno effetto la prossima volta che avvierai Roblox.</value>
+  </data>
+  <data name="Menu.SettingsSaved.Title" xml:space="preserve">
+    <value>Impostazioni salvate!</value>
+  </data>
+  <data name="Menu.Title" xml:space="preserve">
+    <value>Impostazioni di aliceestrap</value>
+  </data>
+  <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
+    <value>Scegli la lingua preferita</value>
+  </data>
+  <data name="Dialog.LanguageSelector.Subtext" xml:space="preserve">
+    <value>Scegli una lingua prima di continuare con l'installazione.</value>
+  </data>
+  <data name="Menu.Appearance.Language.Title" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="Menu.Appearance.Language.Description" xml:space="preserve">
+    <value>È necessario un riavvio per rendere effettive le modifiche.</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxLanguage.Title" xml:space="preserve">
+    <value>Permetti l'uso di lingue non supportate da Roblox</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxLanguage.Description" xml:space="preserve">
+    <value>Si applica solo a giochi avviati dal sito di Roblox.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.Categories.Rendering" xml:space="preserve">
+    <value>Rendering e Grafica</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.Categories.UserInterface" xml:space="preserve">
+    <value>Interfaccia Utente e Layout</value>
+  </data>
+  <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
+    <value>Permetti a aliceestrap di configurare Fast Flags</value>
+  </data>
+  <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
+    <value>Disabilitando questo non permetterà qualsiasi cosa configurata qui a essere applicata a Roblox.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.MSAA.Title" xml:space="preserve">
+    <value>Qualità Anti-aliasing (MSAA)</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
+    <value>aliceestrap non può scaricare Roblox</value>
+  </data>
+  <data name="Common.ImportFromFile" xml:space="preserve">
+    <value>Importa da file</value>
+  </data>
+  <data name="FileTypes.JSONFiles" xml:space="preserve">
+    <value>File JSON</value>
+    <comment>Shown in the open file dialog, where the file type selection dropdown is, e.g. "JSON files (*.json)"</comment>
+  </data>
+  <data name="Logger.NoWriteMode" xml:space="preserve">
+    <value>Nessun file di registro sarà scritto perché aliceestrap non ha accesso alla cartella a '{0}'</value>
+  </data>
+  <data name="Common.Default" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="Common.Automatic" xml:space="preserve">
+    <value>Automatico</value>
+  </data>
+  <data name="Common.SystemDefault" xml:space="preserve">
+    <value>Predefinito di sistema</value>
+  </data>
+  <data name="Installer.Title" xml:space="preserve">
+    <value>aliceestrap Installer</value>
+  </data>
+  <data name="Installer.Welcome.Title" xml:space="preserve">
+    <value>Benvenuto/a</value>
+  </data>
+  <data name="Installer.Install.Title" xml:space="preserve">
+    <value>Installa</value>
+    <comment>Refers to "Install" as a verb</comment>
+  </data>
+  <data name="Installer.Completion.Title" xml:space="preserve">
+    <value>Compimento</value>
+  </data>
+  <data name="Common.Navigation.Back" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="Common.Navigation.Next" xml:space="preserve">
+    <value>Avanti</value>
+  </data>
+  <data name="Installer.Welcome.MainText" xml:space="preserve">
+    <value>Grazie per aver scaricato aliceestrap.
+
+Gli unici siti ufficiali per scaricare aliceestrap sono {0} e {1}, quindi per favore verifica che l'hai ottenuto da una fonte ufficiale.
+
+Questo processo di installazione sarà veloce e semplice, e sarai in grado di configurare qualsiasi impostazione di aliceestrap dopo l'installazione.</value>
+    <comment>{0} and {1} are URLs</comment>
+  </data>
+  <data name="Installer.Welcome.NextToContinue" xml:space="preserve">
+    <value>Per favore clicca 'Avanti' per continuare.</value>
+  </data>
+  <data name="Installer.Install.Location.Title" xml:space="preserve">
+    <value>Scegli dove installare</value>
+  </data>
+  <data name="Installer.Install.Location.Text" xml:space="preserve">
+    <value>Roblox sarà anche installato in questo percorso. Cambialo se preferisci installare tutti i tuoi giochi in un'unità separata. Altrimenti, è consigliato mantenerlo così com'è.</value>
+  </data>
+  <data name="Installer.Install.Location.DataFound" xml:space="preserve">
+    <value>Dati esistenti trovati. Le tue mod e impostazioni saranno ripristinate.</value>
+  </data>
+  <data name="Common.Shortcuts" xml:space="preserve">
+    <value>Scorciatoie</value>
+  </data>
+  <data name="Common.Shortcuts.Desktop" xml:space="preserve">
+    <value>Icona sul desktop</value>
+  </data>
+  <data name="Common.Shortcuts.StartMenu" xml:space="preserve">
+    <value>Icona menu iniziale</value>
+  </data>
+  <data name="Installer.Completion.Text" xml:space="preserve">
+    <value>aliceestrap è stato installato con successo.
+
+Roblox non è stato ancora installato, questo accadrà quando lo avvierai insieme a aliceestrap per la prima volta. Tuttavia, prima che tu lo faccia, potresti voler configurare prima le impostazioni di aliceestrap.
+
+Inoltre, evita di utilizzare la scorciatoia "Roblox Player" per avviare Roblox, poiché aliceestrap non si avvierà con Roblox. Se non vedi aliceestrap apparire quando stai avviando attraverso il sito web, semplicemente avvia Roblox insieme a aliceestrap da desktop una volta per risolvere il problema.
+
+Cosa preferiresti fare?</value>
+  </data>
+  <data name="Installer.Completion.Settings.Title" xml:space="preserve">
+    <value>Configura le impostazioni di aliceestrap</value>
+  </data>
+  <data name="Installer.Completion.Settings.Description" xml:space="preserve">
+    <value>Modifica con tutte le funzionalità che offre</value>
+  </data>
+  <data name="Installer.Completion.Launch.Title" xml:space="preserve">
+    <value>Installa e avvia Roblox</value>
+  </data>
+  <data name="Installer.Completion.Launch.Description" xml:space="preserve">
+    <value>Ti porterà all'interno dell'app desktop una volta che tutto sarà finito</value>
+  </data>
+  <data name="Uninstaller.Title" xml:space="preserve">
+    <value>Disinstalla aliceestrap</value>
+  </data>
+  <data name="Uninstaller.KeepData.Label" xml:space="preserve">
+    <value>Mantieni le mie impostazioni e mod</value>
+  </data>
+  <data name="Uninstaller.KeepData.Description" xml:space="preserve">
+    <value>Verranno mantenuti dove aliceestrap è stato installato, e verranno ripristinati automaticamente su una reinstallazione.</value>
+  </data>
+  <data name="Uninstaller.Uninstall" xml:space="preserve">
+    <value>Disinstalla</value>
+  </data>
+  <data name="LaunchMenu.LaunchRoblox" xml:space="preserve">
+    <value>Avvia Roblox</value>
+  </data>
+  <data name="LaunchMenu.ConfigureSettings" xml:space="preserve">
+    <value>Configurazione delle impostazioni</value>
+  </data>
+  <data name="Bootstrapper.WebView2NotFound" xml:space="preserve">
+    <value>Al momento non hai il runtime WebView2 installato. Alcune funzionalità di Roblox potrebbero non funzionare correttamente senza di esso, come l’applicazione desktop. Vorresti scaricarlo ora?</value>
+  </data>
+  <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
+    <value>aliceestrap non è stato in grado di creare scorciatoie per il Desktop e il menu Start. Prova a crearle più tardi tramite le impostazioni.</value>
+  </data>
+  <data name="Installer.Install.Shortcuts.Description" xml:space="preserve">
+    <value>Si trattano di scorciatoie generiche che consentono di visualizzare un menu di avvio a scelta multipla. I collegamenti per funzioni specifiche possono essere creati successivamente nelle impostazioni.</value>
+  </data>
+  <data name="Menu.Shortcuts.Description" xml:space="preserve">
+    <value>Configura il modo in cui aliceestrap può essere avviato.</value>
+  </data>
+  <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
+    <value>Generale</value>
+  </data>
+  <data name="Menu.Shortcuts.General.Description" xml:space="preserve">
+    <value>Queste sono le scorciatoie che aprono il menu di avvio multi-scelta.</value>
+  </data>
+  <data name="Menu.Shortcuts.Function.Title" xml:space="preserve">
+    <value>Funzione</value>
+  </data>
+  <data name="Menu.Shortcuts.Function.Description" xml:space="preserve">
+    <value>Servono per la creazione di scorciatoie per accedere rapidamente a funzioni specifiche. Questi saranno tutti posizionati sul Desktop.</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Private" xml:space="preserve">
+    <value>Connesso al server privato</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Reserved" xml:space="preserve">
+    <value>Connesso a un server riservato</value>
+  </data>
+  <data name="Dialog.AlreadyRunning.Installer" xml:space="preserve">
+    <value>Per favore aspetta che l'installazione finisca.</value>
+  </data>
+  <data name="Dialog.AlreadyRunning.Uninstaller" xml:space="preserve">
+    <value>Per favore attendi che la disinstallazione finisca.</value>
+  </data>
+  <data name="About.Licenses.Title" xml:space="preserve">
+    <value>Licenze</value>
+    <comment>Referring to code licenses; see https://opensource.org/licenses for example</comment>
+  </data>
+  <data name="Menu.UnsavedChanges" xml:space="preserve">
+    <value>Hai delle modifiche non salvate. Sei sicuro che vuoi chiudere senza salvare?</value>
+  </data>
+  <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
+    <value>La versione di aliceestrap che hai avviato è più vecchia di quella installata attualmente.
+Potresti riscontrare dei problemi e alcune impostazioni potrebbero cambiare. Una reinstallazione è consigliata.
+Sei sicuro di voler continuare?</value>
+  </data>
+  <data name="Dialog.PlayerError.FailedLaunch" xml:space="preserve">
+    <value>Roblox non è riuscito ad avviarsi.</value>
+  </data>
+  <data name="Dialog.PlayerError.Crash" xml:space="preserve">
+    <value>Roblox è crashato.</value>
+  </data>
+  <data name="Common.Loading" xml:space="preserve">
+    <value>Caricamento, aspetta per favore...</value>
+  </data>
+  <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
+    <value>Le tue impostazioni non posso essere caricate. Verranno ripristinate alle configurazioni predefinite.</value>
+  </data>
+  <data name="JsonManager.FastFlagsLoadFailed" xml:space="preserve">
+    <value>Le tue Fast Flags non possono essere caricate. Verranno ripristinate alle configurazioni predefinite.</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Title" xml:space="preserve">
+    <value>Cronologia giochi</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Rejoin" xml:space="preserve">
+    <value>Rientra</value>
+  </data>
+  <data name="ActivityWatcher.RichPresenceLoadFailed" xml:space="preserve">
+    <value>Il tuo gioco non verrà mostrato sulla tua attività di Discord, perché si è verificato un errore durante il caricamento delle informazioni di gioco.</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Description" xml:space="preserve">
+    <value>La cronologia dei giochi sarà registrata solo per questa sessione. I giochi appariranno qui quando esci o entri all'interno di essi. Non potrai rientrare dentro tutti i server.</value>
+  </data>
+  <data name="ActivityWatcher.LocationQueryFailed" xml:space="preserve">
+    <value>La posizione del server non può essere ottenuta. Potrebbe essere dovuto al fatto che entri nei giochi troppo velocemente.</value>
+  </data>
+  <data name="Dialog.Connectivity.TryAgainLater" xml:space="preserve">
+    <value>Per favore riprova più tardi.</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxUpgradeSkip" xml:space="preserve">
+    <value>Per questo avvio, Roblox non sarà controllato per gli aggiornamenti, e le modifiche alle mod non saranno applicate.</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
+    <value>Dato che Roblox deve essere installato o aggiornato, aliceestrap non può continuare.</value>
+  </data>
+  <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
+    <value>aliceestrap è stato installato in questa posizione prima che ed è ancora presente, tuttavia l'installer non può sovrascrivere il vecchio eseguibile.
+
+Per favore elimina manualmente aliceestrap.exe dalla posizione d'installazione o prova a riavviare il sistema, e poi riprovare l'installazione.</value>
+  </data>
+  <data name="Common.NotAvailable" xml:space="preserve">
+    <value>Non disponibile</value>
+  </data>
+  <data name="Menu.Mods.Misc.CompatibilitySettings.Title" xml:space="preserve">
+    <value>Gestisci le impostazioni di compatibilità</value>
+  </data>
+  <data name="Menu.Mods.Misc.CompatibilitySettings.Description" xml:space="preserve">
+    <value>Configura i parametri della applicazione come lo scaling dei DPI e le [ottimizzazioni a schermo intero]({0}).</value>
+  </data>
+  <data name="Common.RobloxNotInstalled" xml:space="preserve">
+    <value>Roblox non è ancora stato installato. Si prega di avviare Roblox utilizzando aliceestrap almeno una volta prima di provare a utilizzare questa opzione.</value>
+  </data>
+  <data name="Installer.ShouldCancel" xml:space="preserve">
+    <value>Sei sicuro di volere annullare l'installazione?</value>
+  </data>
+  <data name="Bootstrapper.JsonManagerSaveFailed" xml:space="preserve">
+    <value>Salvataggio non riuscito di {0}: {1}</value>
+  </data>
+  <data name="Dialog.IconLoadFailed" xml:space="preserve">
+    <value>Impossibile caricare l'icona di bootstrapper scelta.
+
+{0}</value>
+    <comment>{0} is an exception message</comment>
+  </data>
+  <data name="Menu.Shortcuts.ExtractIcons.Title" xml:space="preserve">
+    <value>Estrai le icone di Roblox nella cartella</value>
+  </data>
+  <data name="Dialog.RegistryWriteError" xml:space="preserve">
+    <value>aliceestrap non è in grado di scrivere nel Registro di Windows. Probabilmente un antivirus sta interferendo e causando problemi.
+Assicurati che non ci sia nulla che possa limitare le operazioni di aliceestrap.</value>
+  </data>
+  <data name="Menu.FastFlags.Reset.Title" xml:space="preserve">
+    <value>Ripristina tutto ai valori predefiniti</value>
+  </data>
+  <data name="Dialog.Exception.Report" xml:space="preserve">
+    <value>Segnala eccezione</value>
+  </data>
+  <data name="Menu.TestMode" xml:space="preserve">
+    <value>Modalità di prova</value>
+    <comment>See the prompt for more context</comment>
+  </data>
+  <data name="Menu.TestMode.Prompt" xml:space="preserve">
+    <value>La modalità di prova facilita la verifica iterativa dell'effetto delle impostazioni su Roblox.
+
+Quando è attiva, avvierà automaticamente Roblox dopo aver chiuso le Impostazioni e riaprirà le Impostazioni dopo aver chiuso Roblox, in un ciclo che dura fino a quando non la si disattiva.
+
+Vuoi abilitare la modalità di prova?</value>
+  </data>
+  <data name="Common.Navigation.Install" xml:space="preserve">
+    <value>Installa</value>
+    <comment>The word "Install" is being used as a verb in this instance, like the other navigation button texts of "Next" and "Back"</comment>
+  </data>
+  <data name="Paths.Icons" xml:space="preserve">
+    <value>Icone</value>
+    <comment>Name of the folder that gets created according to the "create shortcut icons" option. Ensure that it is a valid folder name.</comment>
+  </data>
+  <data name="LaunchMenu.LaunchRobloxStudio" xml:space="preserve">
+    <value>Avvia Roblox Studio</value>
+  </data>
+  <data name="Dialog.Exception.Version" xml:space="preserve">
+    <value>Versione {0}</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.CustomDialog" xml:space="preserve">
+    <value>Personalizzato</value>
+  </data>
+  <data name="FileTypes.ZipArchive" xml:space="preserve">
+    <value>Archivio zip</value>
+    <comment>Shown in the save file dialog, where the file type selection dropdown is, e.g. "Zip archive (*.zip)"</comment>
+  </data>
+  <data name="Common.Export" xml:space="preserve">
+    <value>Esportazione</value>
+    <comment>Currently used under the "aliceestrap" settings tab for the button to export diagnostic data</comment>
+  </data>
+  <data name="Dialog.Connectivity.Preventing" xml:space="preserve">
+    <value>È probabile che qualcosa stia impedendo a aliceestrap di connettersi a Internet.</value>
+  </data>
+  <data name="Dialog.Connectivity.TimedOut" xml:space="preserve">
+    <value>La connessione è scaduta, il che potrebbe indicare una connessione scarsa o un blocco dal firewall.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="App.OSDeprecation.Win7_81" xml:space="preserve">
+    <value>Roblox non supporta più Windows 7 o 8.1. Per continuare a giocare Roblox, si prega di aggiornare a Windows 10 o più recente.</value>
+  </data>
+  <data name="Enums.CustomThemeTemplate.Blank" xml:space="preserve">
+    <value>Vuoto</value>
+  </data>
+  <data name="Enums.CustomThemeTemplate.Simple" xml:space="preserve">
+    <value>Semplice</value>
+  </data>
+  <data name="CustomTheme.Errors.ElementTypeCreationFailed" xml:space="preserve">
+    <value>{0} ha fallito a creare {1}: {2}</value>
+    <comment>{0} is the element name (e.g. Button), {1} is the attribute name (e.g. Text), {2} is the error reason</comment>
+  </data>
+  <data name="CustomTheme.Editor.Title" xml:space="preserve">
+    <value>Modificando "{0}"</value>
+  </data>
+  <data name="CustomTheme.Editor.Save.Success" xml:space="preserve">
+    <value>Il tema è stato salvato correttamente!</value>
+  </data>
+  <data name="CustomTheme.Editor.Save.Error" xml:space="preserve">
+    <value>Si è verificato un errore durante il salvataggio del tuo tema.</value>
+  </data>
+  <data name="CustomTheme.Editor.ConfirmSave" xml:space="preserve">
+    <value>Salvare le modifiche a {0}?</value>
+  </data>
+  <data name="CustomTheme.Editor.Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="CustomTheme.Editor.Preview" xml:space="preserve">
+    <value>Anteprima</value>
+  </data>
+  <data name="CustomTheme.Editor.OpenThemeDirectory" xml:space="preserve">
+    <value>Apri cartella dei temi</value>
+  </data>
+  <data name="CustomTheme.Add.Title" xml:space="preserve">
+    <value>Aggiungi un tema personalizzato</value>
+  </data>
+  <data name="Common.Template" xml:space="preserve">
+    <value>Modello</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameEmpty" xml:space="preserve">
+    <value>Il nome non può essere vuoto</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameIllegalCharacters" xml:space="preserve">
+    <value>Il nome contiene caratteri non validi</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameReserved" xml:space="preserve">
+    <value>Il nome non può essere utilizzato</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.Unknown" xml:space="preserve">
+    <value>Errore sconosciuto</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameTaken" xml:space="preserve">
+    <value>Il nome è già in uso</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.FileNotZip" xml:space="preserve">
+    <value>Il file dev'essere un ZIP</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.ZipMissingThemeFile" xml:space="preserve">
+    <value>Il tema del file non è stato trovato nel file ZIP</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.ZipInvalidData" xml:space="preserve">
+    <value>File ZIP non valido o corrotto</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.NoneSelected" xml:space="preserve">
+    <value>Nessun tema personalizzato scelto.</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.DeleteFailed" xml:space="preserve">
+    <value>L'eliminazione del tema personalizzato {0} non riuscita: {1}</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.RenameFailed" xml:space="preserve">
+    <value>L'eliminazione del tema personalizzato {0} fallita: {1}</value>
+  </data>
+  <data name="CustomTheme.Templates.Blank.UIElements" xml:space="preserve">
+    <value>Inserisci qui gli elementi dell'interfaccia utente</value>
+  </data>
+  <data name="CustomTheme.DefaultName" xml:space="preserve">
+    <value>Tema Personalizzato {0}</value>
+    <comment>{0} is a string (e.g. '1', '1-1234')</comment>
+  </data>
+  <data name="CustomTheme.Editor.Save.Success.Description" xml:space="preserve">
+    <value>Il tuo tema è stato salvato!</value>
+  </data>
+  <data name="Bootstrapper.ModificationsFailed.Title" xml:space="preserve">
+    <value>Applicazione delle modifiche non riuscita</value>
+  </data>
+  <data name="Bootstrapper.ModificationsFailed.Message" xml:space="preserve">
+    <value>Non tutte le modifiche saranno presenti nell'avvio corrente.</value>
+  </data>
+  <data name="Bootstrapper.ExtractionFailed.Title" xml:space="preserve">
+    <value>Estrazione dei file non riuscita</value>
+  </data>
+  <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
+    <value>Alcuni contenuti potrebbero mancare. Forza la reinstallazione di Roblox nelle impostazioni per risolverlo.</value>
+  </data>
+  <data name="Common.Rename" xml:space="preserve">
+    <value>Rinomina</value>
+  </data>
+  <data name="Common.CreateNew" xml:space="preserve">
+    <value>Crea Nuovo</value>
+  </data>
+  <data name="Menu.Behaviour.BackgroundUpdates.Title" xml:space="preserve">
+    <value>Aggiornamenti in background</value>
+  </data>
+  <data name="Menu.Behaviour.BackgroundUpdates.Description" xml:space="preserve">
+    <value>Aggiorna Roblox in background invece di attendere. Non consigliato per reti lente. Per far funzionare questa funzione è necessario almeno 3GB di spazio di archiviazione libero.</value>
+  </data>
+  <data name="Common.Import" xml:space="preserve">
+    <value>Importa</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="About.Title" xml:space="preserve">
+    <value>Riguardante aliceestrap</value>
+  </data>
+  <data name="Boostrapper.Dialog.UnauthorizedChannel" xml:space="preserve">
+    <value>Il canale che stai usando ({0}) non è più accessibile al pubblico. D'ora in poi userai il canale predefinito ({1}).</value>
+  </data>
+  <data name="Bootstrapper.Bootstrapper.Dialog.PromptChannelChange" xml:space="preserve">
+    <value>Roblox sta cercando di impostare il tuo canale su {0}, ma il tuo canale preferito attuale è {1}.
+
+
+Vuoi cambiare il tuo canale preferito in {0}?</value>
+  </data>
+  <data name="Bootstrapper.Dialog.ChannelOutOfDate" xml:space="preserve">
+    <value>Il canale che stai usando ({0}) è obsoleto e sembra non ricevere più aggiornamenti.
+Vuoi passare al canale predefinito ({1})?</value>
+  </data>
+  <data name="Bootstrapper.Status.Downloading" xml:space="preserve">
+    <value>Download in corso</value>
+  </data>
+  <data name="Bootstrapper.Status.DownloadingPackages" xml:space="preserve">
+    <value>Download in corso - {0} di {1}</value>
+  </data>
+  <data name="Bootstrapper.Status.WaitingForData" xml:space="preserve">
+    <value>In attesa dei dati</value>
+  </data>
+  <data name="Common.Channel" xml:space="preserve">
+    <value>Canale</value>
+  </data>
+  <data name="Common.Deployment" xml:space="preserve">
+    <value>Distribuzione</value>
+  </data>
+  <data name="Common.Geometry" xml:space="preserve">
+    <value>Geometria</value>
+  </data>
+  <data name="Common.GlobalSettings" xml:space="preserve">
+    <value>Impostazioni globali</value>
+  </data>
+  <data name="Common.HighestQuality" xml:space="preserve">
+    <value>Qualità massima</value>
+  </data>
+  <data name="Common.LowestQuality" xml:space="preserve">
+    <value>Qualità minima</value>
+  </data>
+  <data name="Common.Other" xml:space="preserve">
+    <value>Altro</value>
+  </data>
+  <data name="Common.Timestamp" xml:space="preserve">
+    <value>Data e ora</value>
+  </data>
+  <data name="Common.Unknown" xml:space="preserve">
+    <value>Sconosciuto</value>
+  </data>
+  <data name="Common.Version" xml:space="preserve">
+    <value>Versione</value>
+  </data>
+  <data name="Common.VersionGuid" xml:space="preserve">
+    <value>VersionGuid</value>
+  </data>
+  <data name="Common.WindowManipulation" xml:space="preserve">
+    <value>Manipolazione della finestra</value>
+  </data>
+  <data name="ContextMenu.ServerDetails.Notification.Text" xml:space="preserve">
+    <value>Posizione: {0}
+Tempo di attività: {1}</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Uptime" xml:space="preserve">
+    <value>Tempo di attività</value>
+  </data>
+  <data name="Dialog.Bloxshade.Setting" xml:space="preserve">
+    <value>aliceestrap non supporta più Bloxshade.
+Per maggiori informazioni, entra nel server Discord di Bloxshade.</value>
+  </data>
+  <data name="Dialog.Bloxshade.ThankYou" xml:space="preserve">
+    <value>Ci dispiace</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
+    <value>Al momento non è possibile scaricare Roblox. Controlla la connessione o prova a riportare il canale di distribuzione su production.</value>
+  </data>
+  <data name="Dialog.Exception.Info.1" xml:space="preserve">
+    <value>Si è verificata un'eccezione durante l'esecuzione di aliceestrap</value>
+  </data>
+  <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
+    <value>Il file di log contiene tutti i dettagli. Aprilo con il pulsante qui sotto, oppure copiane il contenuto se non è stato possibile salvarlo su disco.</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Channel" xml:space="preserve">
+    <value>Canale</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Config" xml:space="preserve">
+    <value>Configurazione</value>
+  </data>
+  <data name="Dialog.LaunchOptions.DontChange" xml:space="preserve">
+    <value>Non cambiare</value>
+  </data>
+  <data name="Dialog.LaunchOptions.FlagPreset" xml:space="preserve">
+    <value>Fast flag</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Launch" xml:space="preserve">
+    <value>Avvia</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Title" xml:space="preserve">
+    <value>Opzioni di avvio</value>
+  </data>
+  <data name="Dialog.LaunchOptions.VR" xml:space="preserve">
+    <value>Avvia in VR</value>
+  </data>
+  <data name="Dialog.PlayerError.HelpInformation" xml:space="preserve">
+    <value>Prova ad avviare di nuovo. Se continua a succedere, controlla se Roblox si avvia con il suo launcher. Se non si avvia, il problema è di Roblox e non di aliceestrap.</value>
+  </data>
+  <data name="Dialog.VRLaunch.Description" xml:space="preserve">
+    <value>Imposta l'opzione VR globale di Roblox prima dell'avvio del gioco.</value>
+  </data>
+  <data name="Dialog.VRLaunch.Desktop" xml:space="preserve">
+    <value>Senza VR</value>
+  </data>
+  <data name="Dialog.VRLaunch.Question" xml:space="preserve">
+    <value>Vuoi avviare il gioco in VR o senza VR?</value>
+  </data>
+  <data name="Dialog.VRLaunch.VR" xml:space="preserve">
+    <value>VR</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.TerminalDialog" xml:space="preserve">
+    <value>Windows Terminal</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.TwentyFiveDialog" xml:space="preserve">
+    <value>Roblox (~2025)</value>
+  </data>
+  <data name="Enums.CleanerOptions.Never" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneDay" xml:space="preserve">
+    <value>Dopo 1 giorno</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneMonth" xml:space="preserve">
+    <value>Dopo 1 mese</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneWeek" xml:space="preserve">
+    <value>Dopo 1 settimana</value>
+  </data>
+  <data name="Enums.CleanerOptions.TwoMonths" xml:space="preserve">
+    <value>Dopo 2 mesi</value>
+  </data>
+  <data name="Enums.CleanerOptions.TwoWeeks" xml:space="preserve">
+    <value>Dopo 2 settimane</value>
+  </data>
+  <data name="Enums.DiscordRPCStatusDisplay.Details" xml:space="preserve">
+    <value>Dettagli (gioca al gioco)</value>
+  </data>
+  <data name="Enums.DiscordRPCStatusDisplay.Name" xml:space="preserve">
+    <value>Nome (gioca a Roblox)</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.Vulkan" xml:space="preserve">
+    <value>Vulkan</value>
+  </data>
+  <data name="Menu.About.Description" xml:space="preserve">
+    <value>Un launcher personalizzato per Roblox.</value>
+  </data>
+  <data name="Menu.Appearance.RobloxIcon.Description" xml:space="preserve">
+    <value>Scegli quale icona Roblox deve mostrare nella barra delle applicazioni.</value>
+  </data>
+  <data name="Menu.Appearance.RobloxIcon.Title" xml:space="preserve">
+    <value>Icona di Roblox</value>
+  </data>
+  <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
+    <value>Scegli quale titolo deve avere la finestra di Roblox.</value>
+  </data>
+  <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
+    <value>Titolo di Roblox</value>
+  </data>
+  <data name="Menu.Appearance.WindowManipulationAlert" xml:space="preserve">
+    <value>Questa funzione richiede la manipolazione della finestra</value>
+  </data>
+  <data name="Menu.Behaviour.LaunchOptions.Description" xml:space="preserve">
+    <value>Tutto ciò che attivi qui ti verrà chiesto in un popup prima dell'avvio del gioco, così puoi sceglierlo per quell'avvio.</value>
+  </data>
+  <data name="Menu.Behaviour.LaunchOptions.VR" xml:space="preserve">
+    <value>VR</value>
+  </data>
+  <data name="Menu.Bootstrapper.AllowCookieAccess.Description" xml:space="preserve">
+    <value>Consente l'accesso alle API di Roblox tramite il tuo cookie di autenticazione. Viene usato solo per ottenere dettagli sui server in cui entri e non viene mai inviato altrove se non a Roblox.</value>
+  </data>
+  <data name="Menu.Bootstrapper.AllowCookieAccess.Title" xml:space="preserve">
+    <value>Consenti ad aliceestrap di accedere al tuo account Roblox</value>
+  </data>
+  <data name="Menu.Bootstrapper.CleanUp.Description" xml:space="preserve">
+    <value>aliceestrap rimuoverà i dati vecchi per risparmiare spazio</value>
+  </data>
+  <data name="Menu.Bootstrapper.CleanUp.Title" xml:space="preserve">
+    <value>Pulizia</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Age.Description" xml:space="preserve">
+    <value>I file più vecchi del periodo impostato verranno eliminati.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Age.Title" xml:space="preserve">
+    <value>Quando eliminare i file</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Cache.Description" xml:space="preserve">
+    <value>I download vecchi verranno eliminati.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Cache.Title" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.IncludeAliceestrap.Description" xml:space="preserve">
+    <value>I log di aliceestrap verranno eliminati.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.IncludeAliceestrap.Title" xml:space="preserve">
+    <value>Log di aliceestrap</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Logs.Description" xml:space="preserve">
+    <value>I file di log vecchi verranno eliminati.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Logs.Title" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.StudioCache.Description" xml:space="preserve">
+    <value>I download vecchi di Studio verranno eliminati.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.StudioCache.Title" xml:space="preserve">
+    <value>Cache di Studio</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Automatic" xml:space="preserve">
+    <value>Cambia automaticamente</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Description" xml:space="preserve">
+    <value>Roblox o aliceestrap potrebbero provare a cambiare il tuo canale preferito.</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Ignore" xml:space="preserve">
+    <value>Non cambiare mai</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Prompt" xml:space="preserve">
+    <value>Chiedi sempre</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Title" xml:space="preserve">
+    <value>Azione al cambio automatico del canale</value>
+  </data>
+  <data name="Menu.Channel.Description" xml:space="preserve">
+    <value>Modifica le impostazioni di distribuzione e installazione di Roblox e aliceestrap.</value>
+  </data>
+  <data name="Menu.Channel.Presets.Add" xml:space="preserve">
+    <value>Aggiungi</value>
+  </data>
+  <data name="Menu.Channel.Presets.ConfirmDelete" xml:space="preserve">
+    <value>Rimuovere {0} dai canali salvati?</value>
+  </data>
+  <data name="Menu.Channel.Presets.Duplicate" xml:space="preserve">
+    <value>{0} è già salvato.</value>
+  </data>
+  <data name="Menu.Channel.Presets.InvalidName" xml:space="preserve">
+    <value>Il nome di un canale può contenere solo lettere, numeri, punti, trattini e trattini bassi.</value>
+  </data>
+  <data name="Menu.Channel.Presets.NamePlaceholder" xml:space="preserve">
+    <value>Nome del canale</value>
+  </data>
+  <data name="Menu.Channel.Presets.Use" xml:space="preserve">
+    <value>Usa</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.Description" xml:space="preserve">
+    <value>Imposta quale dominio useranno Roblox e aliceestrap. Inserisci solo domini affidabili.</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.InvalidDomain" xml:space="preserve">
+    <value>Il dominio inserito sembra non valido.
+Non modificare questa impostazione se non sai cosa stai facendo.</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.Title" xml:space="preserve">
+    <value>Dominio di Roblox</value>
+  </data>
+  <data name="Menu.Channel.StaticDirectory.Description" xml:space="preserve">
+    <value>Passa da cartelle di installazione version-xxx a cartelle basate su BinaryType.</value>
+  </data>
+  <data name="Menu.Channel.StaticDirectory.Title" xml:space="preserve">
+    <value>Cartella fissa</value>
+  </data>
+  <data name="Menu.Channel.Switcher.Fetching" xml:space="preserve">
+    <value>Recupero delle ultime informazioni di distribuzione, attendi...</value>
+  </data>
+  <data name="Menu.Channel.Switcher.Unauthorized" xml:space="preserve">
+    <value>Il canale indicato non esiste o è privato</value>
+  </data>
+  <data name="Menu.ChannelChanger.Description" xml:space="preserve">
+    <value>Scegli il canale di distribuzione. Non cambiarlo se non sai cosa stai facendo.</value>
+  </data>
+  <data name="Menu.Deployment.Channel.OutOfDate" xml:space="preserve">
+    <value>Questo canale è obsoleto e probabilmente non viene più aggiornato. Usa un altro canale.</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ExportJson.IncludePresets" xml:space="preserve">
+    <value>Vuoi includere le FFlag predefinite?</value>
+  </data>
+  <data name="Menu.FastFlags.EditorInfo" xml:space="preserve">
+    <value>Roblox applica solo le FFlag consentite.</value>
+  </data>
+  <data name="Menu.FastFlags.FRMQualityOverride.Description" xml:space="preserve">
+    <value>Scegli la qualità FRM che Roblox deve usare.</value>
+  </data>
+  <data name="Menu.FastFlags.FRMQualityOverride.Title" xml:space="preserve">
+    <value>Forza qualità FRM</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.Description" xml:space="preserve">
+    <value>Controlla il livello di dettaglio delle mesh nel gioco.</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.Header" xml:space="preserve">
+    <value>Dettaglio delle mesh</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.LowQualityWarning" xml:space="preserve">
+    <value>Qualità più basse possono far sparire alcune mesh.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RemoveGrass.Description" xml:space="preserve">
+    <value>Impedisce che l'erba del terreno venga disegnata.</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RemoveGrass.Title" xml:space="preserve">
+    <value>Rimuovi l'erba</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.ConfirmDelete" xml:space="preserve">
+    <value>Eliminare la configurazione {0}?</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Description" xml:space="preserve">
+    <value>Salva queste impostazioni con un nome e passa dall'una all'altra, oppure fanne applicare una automaticamente a ogni avvio di Roblox. Una configurazione salva l'intero file delle impostazioni, comprese le parti che questa pagina non mostra.</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Header" xml:space="preserve">
+    <value>Configurazioni</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.InvalidName" xml:space="preserve">
+    <value>Questo nome non può essere usato per una configurazione.</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Launch.Title" xml:space="preserve">
+    <value>Avvia con questa configurazione</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Load" xml:space="preserve">
+    <value>Carica</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.LoadFailed" xml:space="preserve">
+    <value>Impossibile caricare questa configurazione. Il log contiene i dettagli.</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.NamePlaceholder" xml:space="preserve">
+    <value>Nome della configurazione</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.None" xml:space="preserve">
+    <value>Nessuna</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Overwrite" xml:space="preserve">
+    <value>Esiste già una configurazione chiamata {0}. Sostituirla?</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.SaveFailed" xml:space="preserve">
+    <value>Impossibile salvare questa configurazione. Il log contiene i dettagli.</value>
+  </data>
+  <data name="Menu.GBSEditor.Description" xml:space="preserve">
+    <value>Imposta le opzioni di gioco dal menu di aliceestrap.</value>
+  </data>
+  <data name="Menu.GBSEditor.FontSize.Description" xml:space="preserve">
+    <value>Scegli quanto grande deve apparire il testo.</value>
+  </data>
+  <data name="Menu.GBSEditor.FontSize.Title" xml:space="preserve">
+    <value>Dimensione del testo</value>
+  </data>
+  <data name="Menu.GBSEditor.GraphicsQuality.Description" xml:space="preserve">
+    <value>Imposta la qualità grafica del gioco</value>
+  </data>
+  <data name="Menu.GBSEditor.GraphicsQuality.Title" xml:space="preserve">
+    <value>Qualità grafica</value>
+  </data>
+  <data name="Menu.GBSEditor.MasterVolume.Description" xml:space="preserve">
+    <value>La stessa scala da 0 a 10 del cursore del volume di Roblox. Salvato con le tue configurazioni.</value>
+  </data>
+  <data name="Menu.GBSEditor.MasterVolume.Title" xml:space="preserve">
+    <value>Volume generale</value>
+  </data>
+  <data name="Menu.GBSEditor.MouseSensitivity.Description" xml:space="preserve">
+    <value>Cambia la velocità di movimento della telecamera nel gioco.</value>
+  </data>
+  <data name="Menu.GBSEditor.MouseSensitivity.Title" xml:space="preserve">
+    <value>Sensibilità del mouse</value>
+  </data>
+  <data name="Menu.GBSEditor.ReadOnly.Description" xml:space="preserve">
+    <value>Impedisce a Roblox di sovrascrivere le impostazioni globali.</value>
+  </data>
+  <data name="Menu.GBSEditor.ReadOnly.Title" xml:space="preserve">
+    <value>Imposta come sola lettura</value>
+  </data>
+  <data name="Menu.GBSEditor.ReducedMotion.Description" xml:space="preserve">
+    <value>Rimuove l'animazione del menu Esc.</value>
+  </data>
+  <data name="Menu.GBSEditor.ReducedMotion.Title" xml:space="preserve">
+    <value>Movimento ridotto</value>
+  </data>
+  <data name="Menu.GBSEditor.UITransparency.Description" xml:space="preserve">
+    <value>Trasparenza personalizzata per gli elementi dell'interfaccia.</value>
+  </data>
+  <data name="Menu.GBSEditor.UITransparency.Title" xml:space="preserve">
+    <value>Trasparenza</value>
+  </data>
+  <data name="Menu.GBSEditor.VREnabled.Title" xml:space="preserve">
+    <value>VR attiva</value>
+  </data>
+  <data name="Menu.GPSEditor.FramerateCap.Description" xml:space="preserve">
+    <value>Sblocca il limite di fotogrammi di Roblox. Superare i 240 FPS non è consigliato.</value>
+  </data>
+  <data name="Menu.GPSEditor.FramerateCap.Title" xml:space="preserve">
+    <value>Limite di fotogrammi</value>
+  </data>
+  <data name="Menu.Integrations.DesktopApp.Description" xml:space="preserve">
+    <value>Roblox si chiuderà completamente quando esci da un gioco invece di tornare all'app. Alcune cose potrebbero non funzionare come previsto.</value>
+  </data>
+  <data name="Menu.Integrations.EnableWindowManipulation.Description" xml:space="preserve">
+    <value>Consente ad aliceestrap di accedere alla finestra di Roblox per offrire più personalizzazione e funzioni.</value>
+  </data>
+  <data name="Menu.Integrations.EnableWindowManipulation.Title" xml:space="preserve">
+    <value>Attiva la manipolazione della finestra</value>
+  </data>
+  <data name="Menu.Integrations.FakeVulkanBorderless.Description" xml:space="preserve">
+    <value>Ti permette di usare una versione simulata dello schermo intero senza bordi con Vulkan.</value>
+  </data>
+  <data name="Menu.Integrations.FakeVulkanBorderless.Title" xml:space="preserve">
+    <value>Attiva lo schermo intero senza bordi per Vulkan</value>
+  </data>
+  <data name="Menu.Integrations.RequiresActivityTracking" xml:space="preserve">
+    <value>Questa funzione richiede il monitoraggio delle attività attivo e l'app desktop di Discord installata e aperta.</value>
+  </data>
+  <data name="Menu.Integrations.ShowGameActivity.Description" xml:space="preserve">
+    <value>Il gioco Roblox a cui stai giocando verrà mostrato sul tuo profilo Discord.</value>
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" xml:space="preserve">
+    <value>Seleziona il tipo di stato che vuoi mostrare.</value>
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" xml:space="preserve">
+    <value>Stato su Discord</value>
+  </data>
+  <data name="Menu.Presets.Channels.Add.Title" xml:space="preserve">
+    <value>Salva un canale</value>
+  </data>
+  <data name="Menu.Presets.Channels.Current" xml:space="preserve">
+    <value>In uso</value>
+  </data>
+  <data name="Menu.Presets.Channels.Empty" xml:space="preserve">
+    <value>Nessun canale salvato.</value>
+  </data>
+  <data name="Menu.Presets.Channels.Title" xml:space="preserve">
+    <value>Canali di distribuzione</value>
+  </data>
+  <data name="Menu.Presets.Channels.Used" xml:space="preserve">
+    <value>Roblox si avvierà su {0} dopo il salvataggio.</value>
+  </data>
+  <data name="Menu.Presets.Configs.Applied" xml:space="preserve">
+    <value>{0} applicato alle impostazioni di Roblox.</value>
+  </data>
+  <data name="Menu.Presets.Configs.Apply" xml:space="preserve">
+    <value>Applica</value>
+  </data>
+  <data name="Menu.Presets.Configs.Empty" xml:space="preserve">
+    <value>Nessuna configurazione salvata.</value>
+  </data>
+  <data name="Menu.Presets.Configs.OnLaunch" xml:space="preserve">
+    <value>Applicata all'avvio</value>
+  </data>
+  <data name="Menu.Presets.Configs.Save.Title" xml:space="preserve">
+    <value>Salva le impostazioni attuali</value>
+  </data>
+  <data name="Menu.Presets.Configs.Title" xml:space="preserve">
+    <value>Configurazioni delle impostazioni di Roblox</value>
+  </data>
+  <data name="Menu.Presets.Configs.Unavailable" xml:space="preserve">
+    <value>Impossibile leggere il file delle impostazioni di Roblox, quindi le configurazioni non sono disponibili. Avvia Roblox una volta, poi riapri questa finestra.</value>
+  </data>
+  <data name="Menu.Presets.Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="Menu.Presets.Editing" xml:space="preserve">
+    <value>Modifica di {0}</value>
+  </data>
+  <data name="Menu.Presets.Editing.Config" xml:space="preserve">
+    <value>Configurazione delle impostazioni di Roblox</value>
+  </data>
+  <data name="Menu.Presets.Editing.Flags" xml:space="preserve">
+    <value>Preset di fast flag</value>
+  </data>
+  <data name="Menu.Presets.Flags.Applied" xml:space="preserve">
+    <value>{0} caricato. Premi Salva per mantenerlo.</value>
+  </data>
+  <data name="Menu.Presets.Flags.Apply" xml:space="preserve">
+    <value>Applica</value>
+  </data>
+  <data name="Menu.Presets.Flags.ConfirmDelete" xml:space="preserve">
+    <value>Eliminare il preset {0}?</value>
+  </data>
+  <data name="Menu.Presets.Flags.Empty" xml:space="preserve">
+    <value>Nessun preset salvato.</value>
+  </data>
+  <data name="Menu.Presets.Flags.Failed" xml:space="preserve">
+    <value>Impossibile leggere o scrivere questo preset. Il log contiene i dettagli.</value>
+  </data>
+  <data name="Menu.Presets.Flags.InvalidName" xml:space="preserve">
+    <value>Questo nome non può essere usato per un preset.</value>
+  </data>
+  <data name="Menu.Presets.Flags.NamePlaceholder" xml:space="preserve">
+    <value>Nome del preset</value>
+  </data>
+  <data name="Menu.Presets.Flags.Overwrite" xml:space="preserve">
+    <value>Esiste già un preset chiamato {0}. Sostituirlo?</value>
+  </data>
+  <data name="Menu.Presets.Flags.Save.Title" xml:space="preserve">
+    <value>Salva i flag attuali</value>
+  </data>
+  <data name="Menu.Presets.Flags.Title" xml:space="preserve">
+    <value>Preset di fast flag</value>
+  </data>
+  <data name="Menu.Presets.SaveToPreset" xml:space="preserve">
+    <value>Salva nel preset</value>
+  </data>
+  <data name="Menu.Presets.Title" xml:space="preserve">
+    <value>Preset</value>
+  </data>
+  <data name="Menu.SaveAndLaunch" xml:space="preserve">
+    <value>Salva e avvia</value>
+  </data>
+  <data name="Menu.Shortcuts.ExtractIcons.Description" xml:space="preserve">
+    <value>Estrae le icone Roblox di aliceestrap in una cartella, così puoi usarle per i tuoi collegamenti.</value>
+  </data>
+  <data name="Uninstaller.Text" xml:space="preserve">
+    <value>La disinstallazione rimuoverà aliceestrap dal sistema e riconfigurerà automaticamente il launcher predefinito di Roblox, se è ancora installato.
+
+La disinstallazione potrebbe non riuscire a ripulire tutto, quindi potresti dover eliminare manualmente i file rimasti dove era installato aliceestrap.
+
+aliceestrap era installato in "{0}".</value>
+  </data>
+  <data name="Menu.SearchSettings" xml:space="preserve">
+    <value>Cerca nelle impostazioni</value>
+  </data>
+  <data name="Menu.Appearance.Roblox.Description" xml:space="preserve">
+    <value>Personalizza l'aspetto della finestra di Roblox.</value>
+  </data>
+  <data name="Menu.Bootstrapper.Experimental.Title" xml:space="preserve">
+    <value>Sperimentale</value>
+  </data>
+  <data name="Menu.Bootstrapper.Experimental.Description" xml:space="preserve">
+    <value>Impostazioni ancora in fase di test. Potrebbero non funzionare sempre come previsto.</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchDelay" xml:space="preserve">
+    <value>Ritardo di avvio</value>
+  </data>
+  <data name="Menu.Integrations.Custom.PreLaunch" xml:space="preserve">
+    <value>Esegui prima dell'avvio di Roblox</value>
+  </data>
+  <data name="Bootstrapper.Status.UpdatingApp" xml:space="preserve">
+    <value>Aggiornamento di aliceestrap a {0}...</value>
+  </data>
+  <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
+    <value>aliceestrap non è riuscito ad aggiornarsi a {0}. Roblox si avvierà con la versione attuale e puoi scaricare quella nuova dalla pagina GitHub di aliceestrap.</value>
+  </data>
+  <data name="Menu.Behaviour.CheckForUpdates.Title" xml:space="preserve">
+    <value>Controlla aggiornamenti</value>
+  </data>
+  <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
+    <value>Prima dell'avvio di Roblox, controlla su GitHub se esiste una versione più recente di aliceestrap e la installa automaticamente.</value>
+  </data>
+</root>

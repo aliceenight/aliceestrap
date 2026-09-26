@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bootstrapper.ConfirmLaunch" xml:space="preserve">
+    <value>Roblox 当前正在运行中，打开另一个 Roblox 进程后将会关闭它。
+
+您确定要继续启动吗？</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxDown" xml:space="preserve">
+    <value>Roblox 的服务器目前可能已经熟透了；请参阅 {0} 来了解更多信息。</value>
+  </data>
+  <data name="Dialog.Connectivity.BadConnection" xml:space="preserve">
+    <value>目前无法建立网络连接，这可能表明网络连接不畅或被防火墙阻止；如果连接正常，请确保您的杀毒软件没有阻止 aliceestrap 访问 Internet。</value>
+  </data>
+  <data name="Bootstrapper.FirstRunUninstall" xml:space="preserve">
+    <value>你必须先安装 aliceestrap 后才能卸载。(难不成你想卸载安装包？)</value>
+  </data>
+  <data name="Bootstrapper.NotEnoughSpace" xml:space="preserve">
+    <value>当前所使用的磁盘空间不足以下载和安装 Roblox；请释放一些磁盘空间后再重试。</value>
+  </data>
+  <data name="Bootstrapper.Status.ApplyingModifications" xml:space="preserve">
+    <value>正在应用 Roblox 修改...</value>
+  </data>
+  <data name="Bootstrapper.Status.Configuring" xml:space="preserve">
+    <value>正在配置 {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.Connecting" xml:space="preserve">
+    <value>正在与 Roblox 建立连接...</value>
+  </data>
+  <data name="Bootstrapper.Status.Installing" xml:space="preserve">
+    <value>正在安装 {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.InstallingWebView2" xml:space="preserve">
+    <value>正在安装 “WebView2”；请耐心等待...</value>
+  </data>
+  <data name="Bootstrapper.Status.Starting" xml:space="preserve">
+    <value>正在启动 {product}...</value>
+    <comment>"Starting Roblox" or "Starting Roblox Studio"</comment>
+  </data>
+  <data name="Bootstrapper.Status.Upgrading" xml:space="preserve">
+    <value>正在更新 {product}...</value>
+  </data>
+  <data name="Bootstrapper.Status.WaitingOtherInstances" xml:space="preserve">
+    <value>正在等待其他 Roblox 进程退出...</value>
+  </data>
+  <data name="Bootstrapper.StylePreview.ImageCancel" xml:space="preserve">
+    <value>样式预览 - 单击右上角的 “X” 按钮来关闭</value>
+    <comment>Text for style previews that use an X button. Currently only applies to Byfron</comment>
+  </data>
+  <data name="Bootstrapper.StylePreview.TextCancel" xml:space="preserve">
+    <value>样式预览 - 单击 “取消” 来关闭</value>
+    <comment>Text for style previews that use text button that says "Cancel"</comment>
+  </data>
+  <data name="Bootstrapper.SuccessfullyUninstalled" xml:space="preserve">
+    <value>aliceestrap 已成功卸载</value>
+  </data>
+  <data name="Bootstrapper.Uninstall.RobloxRunning" xml:space="preserve">
+    <value>Roblox 当前正在运行中，但在卸载 aliceestrap 之前必须将其关闭。
+
+您想现在关闭 Roblox 吗？</value>
+  </data>
+  <data name="Bootstrapper.WMFNotFound" xml:space="preserve">
+    <value>Roblox 需要使用 “Windows Media Foundation” 组件才能启动；您似乎缺少它们，可能是因为您使用的是 N 版本的 Windows；请先安装它们后再尝试重新启动 Roblox。</value>
+  </data>
+  <data name="Common.AddSingle" xml:space="preserve">
+    <value>添加单项</value>
+  </data>
+  <data name="Common.Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Common.Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Common.DiscordRichPresence" xml:space="preserve">
+    <value>Discord 活动状态</value>
+  </data>
+  <data name="Common.ImportJson" xml:space="preserve">
+    <value>导入 JSON</value>
+  </data>
+  <data name="Common.OpenLogFile" xml:space="preserve">
+    <value>打开日志文件</value>
+  </data>
+  <data name="Common.Miscellaneous" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Common.Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Common.New" xml:space="preserve">
+    <value>新的</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Common.OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Common.Presets" xml:space="preserve">
+    <value>预设</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>重置</value>
+    <comment>In the context of resetting something to a default value</comment>
+  </data>
+  <data name="Common.Value" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="Common.Warning" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="ContextMenu.CloseRoblox" xml:space="preserve">
+    <value>关闭 Roblox</value>
+  </data>
+  <data name="ContextMenu.CloseRobloxMessage" xml:space="preserve">
+    <value>您确定要关闭 Roblox 吗？这将强制结束其进程。</value>
+  </data>
+  <data name="ContextMenu.CopyDeeplinkInvite" xml:space="preserve">
+    <value>复制邀请链接</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.CopyInstanceId" xml:space="preserve">
+    <value>复制服务器 Job ID</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.InstanceId" xml:space="preserve">
+    <value>服务器 Job ID</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Location" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Public" xml:space="preserve">
+    <value>已连接至 公共 服务器</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Title" xml:space="preserve">
+    <value>服务器信息</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Dialog.AddFastFlag.Title" xml:space="preserve">
+    <value>添加 FFlag</value>
+  </data>
+  <data name="Dialog.Connectivity.MoreInfo" xml:space="preserve">
+    <value>更多信息：</value>
+  </data>
+  <data name="Dialog.Connectivity.Title" xml:space="preserve">
+    <value>连接错误</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToConnect" xml:space="preserve">
+    <value>aliceestrap 无法连接至 {0}</value>
+    <comment>{0} is the name of a service (i.e. Roblox, GitHub)</comment>
+  </data>
+  <data name="Dialog.Exception.CopyLogContents" xml:space="preserve">
+    <value>复制日志内容</value>
+  </data>
+  <data name="Dialog.Exception.Title" xml:space="preserve">
+    <value>aliceestrap 出现异常</value>
+  </data>
+  <data name="Common.Custom" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="Enums.BootstrapperIcon.IconEarly2015" xml:space="preserve">
+    <value>2015 前半年</value>
+  </data>
+  <data name="Enums.BootstrapperIcon.IconLate2015" xml:space="preserve">
+    <value>2015 后半年</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ByfronDialog" xml:space="preserve">
+    <value>仿 Byfron (2023)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ClassicFluentDialog" xml:space="preserve">
+    <value>Fluent (经典)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.FluentAeroDialog" xml:space="preserve">
+    <value>Fluent (透明)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.LegacyDialog2008" xml:space="preserve">
+    <value>经典 (2008 - 2011)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.LegacyDialog2011" xml:space="preserve">
+    <value>经典 (2011 - 2014)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.ProgressDialog" xml:space="preserve">
+    <value>Roblox (~2014)</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.VistaDialog" xml:space="preserve">
+    <value>Vista (2008 - 2011)</value>
+  </data>
+  <data name="Enums.CursorType.From2006" xml:space="preserve">
+    <value>2006 (卡通化)</value>
+  </data>
+  <data name="Enums.CursorType.From2013" xml:space="preserve">
+    <value>2013 (棱角化)</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.D3D11" xml:space="preserve">
+    <value>Direct3D 11</value>
+  </data>
+  <data name="Enums.ServerType.Private" xml:space="preserve">
+    <value>私人服务器</value>
+  </data>
+  <data name="Enums.ServerType.Public" xml:space="preserve">
+    <value>公共服务器</value>
+  </data>
+  <data name="Enums.ServerType.Reserved" xml:space="preserve">
+    <value>预留服务器</value>
+  </data>
+  <data name="Enums.Theme.Dark" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="Enums.Theme.Light" xml:space="preserve">
+    <value>浅色</value>
+  </data>
+  <data name="InstallChecker.Updated" xml:space="preserve">
+    <value>aliceestrap 现已更新至 v{0}</value>
+  </data>
+  <data name="InstallChecker.VersionDifferentThanInstalled" xml:space="preserve">
+    <value>您启动的 aliceestrap 版本与您当前已安装的版本并不一致。
+您是否要更新当前已安装的版本？</value>
+  </data>
+  <data name="Menu.About.Title" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Menu.About.Version" xml:space="preserve">
+    <value>版本 {0}</value>
+    <comment>{0} is replaced with the version, i.e. "Version 2.8.0"</comment>
+  </data>
+  <data name="Menu.AllFiles" xml:space="preserve">
+    <value>所有文件</value>
+  </data>
+  <data name="Menu.AlreadyRunning.Caption" xml:space="preserve">
+    <value>请注意；在您关闭所有 Roblox 程序之前，并非所有更改都会立即生效。</value>
+  </data>
+  <data name="Menu.AlreadyRunning.Title" xml:space="preserve">
+    <value>aliceestrap 已经在运行中</value>
+  </data>
+  <data name="Menu.Appearance.Bootstrapper.Description" xml:space="preserve">
+    <value>您可以自由更改此启动器的 UI 风格。例如复古；又或者跟原版 Roblox 的风格完全一样！</value>
+  </data>
+  <data name="Menu.Appearance.Bootstrapper.Title" xml:space="preserve">
+    <value>启动器</value>
+  </data>
+  <data name="Menu.Appearance.CustomisationTitle.Description" xml:space="preserve">
+    <value>此文本将作为启动器的标题显示。</value>
+  </data>
+  <data name="Menu.Appearance.CustomisationTitle.Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="Menu.Appearance.Description" xml:space="preserve">
+    <value>您可以在此处更改 aliceestrap 的部分 UI。</value>
+  </data>
+  <data name="Menu.Appearance.Global.Theme.Title" xml:space="preserve">
+    <value>全局主题</value>
+  </data>
+  <data name="Menu.Appearance.Icon.Description" xml:space="preserve">
+    <value>为 aliceestrap 选择一个图标。</value>
+  </data>
+  <data name="Menu.Appearance.Icon.Title" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="Menu.Appearance.Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="Menu.Appearance.Style.Description" xml:space="preserve">
+    <value>选择主题外观；深色主题不适用于 “经典/Vista” 选项。</value>
+  </data>
+  <data name="Menu.Appearance.Style.Title" xml:space="preserve">
+    <value>样式</value>
+  </data>
+  <data name="Menu.Appearance.Title" xml:space="preserve">
+    <value>个性化</value>
+  </data>
+  <data name="Menu.Behaviour.ConfirmLaunches.Description" xml:space="preserve">
+    <value>防止因意外启动另外一个 Roblox 进程从而导致您当前正在进行的进程被关闭。</value>
+  </data>
+  <data name="Menu.Behaviour.ConfirmLaunches.Title" xml:space="preserve">
+    <value>在启动另一个 Roblox 进程时提示确认信息</value>
+  </data>
+  <data name="Menu.Behaviour.Description" xml:space="preserve">
+    <value>您可以在此处配置 aliceestrap 在启动时应执行的操作。</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxReinstall.Description" xml:space="preserve">
+    <value>启用此选项后 Roblox 将会在下次启动时进行全新安装。
+（此选项将会在首次安装时强制启用；若完成安装此选项则会自动禁用）</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxReinstall.Title" xml:space="preserve">
+    <value>强制重新安装 Roblox</value>
+  </data>
+  <data name="Menu.Behaviour.Title" xml:space="preserve">
+    <value>启动器</value>
+  </data>
+  <data name="Menu.FastFlagEditor.AddNew" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Menu.FastFlagEditor.AlreadyExists" xml:space="preserve">
+    <value>关于此 Flag 名称的条目已存在。</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ConflictingImport" xml:space="preserve">
+    <value>您尝试导入的某些 Flags 已经设置了属于它自己的值；您想用导入时定义的值覆盖它们当前所处的值吗？
+
+有 {0} 个 Flags 定义相互冲突：
+{1}</value>
+    <comment>{0} is a number, {1} is a comma-separated list</comment>
+  </data>
+  <data name="Menu.FastFlagEditor.DeleteSelected" xml:space="preserve">
+    <value>删除所选内容</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Description" xml:space="preserve">
+    <value>您可以在此处管理属于您自己独一无二的 Fast Flags；双击任意一列来进行编辑。</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ExportJson" xml:space="preserve">
+    <value>导出 JSON</value>
+  </data>
+  <data name="Menu.FastFlagEditor.InvalidJSON" xml:space="preserve">
+    <value>您输入的 JSON 似乎无效；请仔细检查后并重试。
+
+关于更多信息：
+{0}</value>
+    <comment>{0} is an exception message</comment>
+  </data>
+  <data name="Menu.FastFlagEditor.JsonCopiedToClipboard" xml:space="preserve">
+    <value>已复制到剪贴板。</value>
+  </data>
+  <data name="Menu.FastFlagEditor.LargeConfig" xml:space="preserve">
+    <value>您似乎正在导入过多的配置；通常来说，您应该只导入自己完全了解的配置，切勿盲目粘贴他人的配置。如果执意继续，很可能会出现稳定性问题；并发生意想不到的变化。
+
+您确定要继续吗？</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ShowPresetFlags" xml:space="preserve">
+    <value>展示预设 Flags</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Title" xml:space="preserve">
+    <value>FFlag 编辑器</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Continue" xml:space="preserve">
+    <value>我知道我在做什么</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Header" xml:space="preserve">
+    <value>你知道您在做什么吗？</value>
+  </data>
+  <data name="Menu.FastFlagEditor.Warning.Text" xml:space="preserve">
+    <value>Fast Flags 是专业且有用的，它们通常仅供 Roblox 工程师来使用；而不是非专业人士。虽然它们很有用，但手动配置它们可能会导致严重的稳定性和功能问题。如果你不知道这是干什么用的，那就最好别用 Fast Flags。
+
+因此，在你不知道相关知识之前，请不要导入其他人制作的 Fast Flags；例如提高游戏性能或类似功能的 Fast Flags 配置，它们会让你徒增烦恼。如果你正打算这么干的话，就此打住吧。
+
+（注：Fast Flags 是这样的，Roblox 只需要随时更新就可以了；而你要考虑的可就多了。）</value>
+  </data>
+  <data name="Menu.FastFlags.Description" xml:space="preserve">
+    <value>您可以在此处配置 Roblox 引擎的特定参数和功能。</value>
+  </data>
+  <data name="Menu.FastFlags.Editor.Description" xml:space="preserve">
+    <value>您可以在此处管理属于您自己独一无二的 Fast Flags；请谨慎使用它们。</value>
+    <comment>Title is Menu.FastFlagEditor.Title</comment>
+  </data>
+  <data name="Menu.FastFlags.Presets.FixDisplayScaling.Description" xml:space="preserve">
+    <value>Roblox 会根据 Windows 的显示缩放比例来调整渲染质量；启用此选项将禁用此功能。</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.FixDisplayScaling.Title" xml:space="preserve">
+    <value>不根据显示缩放比例改变其渲染质量</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RenderingMode.Title" xml:space="preserve">
+    <value>渲染模式</value>
+  </data>
+  <data name="Menu.FastFlags.Title" xml:space="preserve">
+    <value>FFlags</value>
+  </data>
+  <data name="Menu.FontFiles" xml:space="preserve">
+    <value>字体文件</value>
+  </data>
+  <data name="Menu.IconFiles" xml:space="preserve">
+    <value>图标文件</value>
+  </data>
+  <data name="Menu.InstallLocation.CantInstall" xml:space="preserve">
+    <value>aliceestrap 无法在此处安装；请选择在其他位置安装，或点击 “重置” 按钮来使用其默认安装路径。</value>
+  </data>
+  <data name="Menu.InstallLocation.NotEmpty" xml:space="preserve">
+    <value>您选择安装 aliceestrap 的文件夹已经存在且不为空文件夹；强烈建议将 aliceestrap 安装到其自己的独立文件夹中。
+
+建议更改为以下位置：
+「{0}」
+
+是否更改为建议的位置？
+选择 “否” 将忽略此警告并继续安装。</value>
+    <comment>{0} is a file path</comment>
+  </data>
+  <data name="Menu.InstallLocation.NotSet" xml:space="preserve">
+    <value>您必须选择一个安装位置</value>
+  </data>
+  <data name="Menu.InstallLocation.NoWritePerms" xml:space="preserve">
+    <value>aliceestrap 对您当前选择的安装路径没有写入权限；请选择其他可用的位置。</value>
+  </data>
+  <data name="Menu.Integrations.ActivityTracking" xml:space="preserve">
+    <value>游戏跟踪</value>
+  </data>
+  <data name="Menu.Integrations.AllowActivityJoining.Description" xml:space="preserve">
+    <value>启用此选项将会允许任何人通过您的 Discord 个人资料来加入您当前所在的游戏。</value>
+  </data>
+  <data name="Menu.Integrations.AllowActivityJoining.Title" xml:space="preserve">
+    <value>允许外部方式加入游戏</value>
+  </data>
+  <data name="Menu.Integrations.ShowAccountOnProfile.Description" xml:space="preserve">
+    <value>启用此选项将会在您的 Discord 个人资料上显示您当前正在使用的 Roblox 帐户。</value>
+  </data>
+  <data name="Menu.Integrations.ShowAccountOnProfile.Title" xml:space="preserve">
+    <value>显示 Roblox 帐户</value>
+  </data>
+  <data name="Menu.Integrations.Custom.AppLocation" xml:space="preserve">
+    <value>应用路径</value>
+  </data>
+  <data name="Menu.Integrations.Custom.AutoClose" xml:space="preserve">
+    <value>当 Roblox 关闭时自动关闭其进程</value>
+  </data>
+  <data name="Menu.Integrations.Custom.Description" xml:space="preserve">
+    <value>在此处，您可以让其他程序与 Roblox 一起启动。</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchArgs" xml:space="preserve">
+    <value>启动参数</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchArgs.Placeholder" xml:space="preserve">
+    <value>Roblox 当前正在运行中！</value>
+  </data>
+  <data name="Menu.Integrations.Custom.NewIntegration" xml:space="preserve">
+    <value>新附属程序</value>
+  </data>
+  <data name="Menu.Integrations.Custom.NoneSelected" xml:space="preserve">
+    <value>当前未选择任意一个附属程序；请选择一个或添加新的附属程序</value>
+  </data>
+  <data name="Menu.Integrations.Custom.Title" xml:space="preserve">
+    <value>自定义附属程序</value>
+  </data>
+  <data name="Menu.Integrations.Description" xml:space="preserve">
+    <value>您可以在此处配置 Roblox 的附属功能。</value>
+  </data>
+  <data name="Menu.Integrations.DesktopApp.Title" xml:space="preserve">
+    <value>禁止 Roblox 在离开游戏时退回到主界面</value>
+  </data>
+  <data name="Menu.Integrations.EnableActivityTracking.Description" xml:space="preserve">
+    <value>启用此选项将会允许 aliceestrap 检测您当前玩的 Roblox 游戏；某些功能可能需要这项功能打开。</value>
+  </data>
+  <data name="Menu.Integrations.EnableActivityTracking.Title" xml:space="preserve">
+    <value>启用游戏跟踪</value>
+  </data>
+  <data name="Menu.Integrations.ShowGameActivity.Title" xml:space="preserve">
+    <value>显示游戏活动</value>
+  </data>
+  <data name="Menu.Integrations.QueryServerLocation.Description" xml:space="preserve">
+    <value>当您加入游戏时，您将会收到当前服务器具体信息的通知；通知将不会在 “全屏独占” 时显示。
+（您可以通过 [ipinfo.io]({0}) 来获取您当前所处服务器的位置信息）</value>
+  </data>
+  <data name="Menu.Integrations.QueryServerLocation.Title" xml:space="preserve">
+    <value>允许接收服务器具体信息通知</value>
+  </data>
+  <data name="Menu.Integrations.Title" xml:space="preserve">
+    <value>附属功能</value>
+  </data>
+  <data name="Menu.Mods.Description" xml:space="preserve">
+    <value>您可以在此处管理其模组的文件并将其应用到 Roblox 游戏客户端。</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Choose" xml:space="preserve">
+    <value>选择字体文件...</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Description" xml:space="preserve">
+    <value>字体大小可在 “FFlags” 选项卡中进行调整。</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Invalid" xml:space="preserve">
+    <value>您当前选择的文件似乎不是有效的字体文件。</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Remove" xml:space="preserve">
+    <value>移除已应用的字体</value>
+  </data>
+  <data name="Menu.Mods.Misc.CustomFont.Title" xml:space="preserve">
+    <value>使用自定义字体</value>
+  </data>
+  <data name="Menu.Mods.OpenModsFolder.Description" xml:space="preserve">
+    <value>您可以在此处自定义 Roblox 的模组。</value>
+  </data>
+  <data name="Menu.Mods.OpenModsFolder.Title" xml:space="preserve">
+    <value>打开模组文件夹</value>
+  </data>
+  <data name="Menu.Mods.Presets.MouseCursor.Description" xml:space="preserve">
+    <value>在两种经典的 Roblox 指针样式之间进行选择。</value>
+  </data>
+  <data name="Menu.Mods.Presets.MouseCursor.Title" xml:space="preserve">
+    <value>鼠标指针</value>
+  </data>
+  <data name="Menu.Mods.Presets.OldAvatarEditor.Description" xml:space="preserve">
+    <value>启用此选项将会恢复 2020 年之前 Roblox 应用程序中使用的旧版 虚拟形象 (Avatar) 编辑器背景。</value>
+  </data>
+  <data name="Menu.Mods.Presets.OldAvatarEditor.Title" xml:space="preserve">
+    <value>使用旧的 虚拟形象 (Avatar) 编辑器背景</value>
+  </data>
+  <data name="Menu.Mods.Title" xml:space="preserve">
+    <value>模组</value>
+  </data>
+  <data name="Menu.MoreInfo" xml:space="preserve">
+    <value>点击以获取有关此选项的更多信息。</value>
+  </data>
+  <data name="Menu.Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Menu.SettingsSaved.Message" xml:space="preserve">
+    <value>更改将会在下次启动 Roblox 时生效。</value>
+  </data>
+  <data name="Menu.SettingsSaved.Title" xml:space="preserve">
+    <value>设置已保存！</value>
+  </data>
+  <data name="Menu.Title" xml:space="preserve">
+    <value>aliceestrap 设置</value>
+  </data>
+  <data name="Dialog.LanguageSelector.Header" xml:space="preserve">
+    <value>选择启动器应用的语言</value>
+  </data>
+  <data name="Dialog.LanguageSelector.Subtext" xml:space="preserve">
+    <value>在继续安装之前请先选择语言。</value>
+  </data>
+  <data name="Menu.Appearance.Language.Title" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Menu.Appearance.Language.Description" xml:space="preserve">
+    <value>您需要重启 aliceestrap 才能使更改生效。</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxLanguage.Title" xml:space="preserve">
+    <value>允许使用 Roblox 官方不支持的语言</value>
+  </data>
+  <data name="Menu.Behaviour.ForceRobloxLanguage.Description" xml:space="preserve">
+    <value>启用此选项后必须从 Roblox 网页端 启动游戏才能生效。</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.Categories.Rendering" xml:space="preserve">
+    <value>渲染和质量</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.Categories.UserInterface" xml:space="preserve">
+    <value>UI 和布局</value>
+  </data>
+  <data name="Menu.FastFlags.ManagerEnabled.Title" xml:space="preserve">
+    <value>允许 aliceestrap 管理 Fast Flags</value>
+  </data>
+  <data name="Menu.FastFlags.ManagerEnabled.Description" xml:space="preserve">
+    <value>禁用此选项将会阻止在此配置的任何内容应用于 Roblox。</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.MSAA.Title" xml:space="preserve">
+    <value>抗锯齿等级 (MSAA)</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
+    <value>aliceestrap 无法下载 Roblox</value>
+  </data>
+  <data name="Common.ImportFromFile" xml:space="preserve">
+    <value>从文件导入</value>
+  </data>
+  <data name="FileTypes.JSONFiles" xml:space="preserve">
+    <value>JSON 文件</value>
+    <comment>Shown in the open file dialog, where the file type selection dropdown is, e.g. "JSON files (*.json)"</comment>
+  </data>
+  <data name="Logger.NoWriteMode" xml:space="preserve">
+    <value>由于 aliceestrap 无法写入 “{0}” 文件夹；因此本次启动不会写入任何日志文件。</value>
+  </data>
+  <data name="Common.Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="Common.Automatic" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="Common.SystemDefault" xml:space="preserve">
+    <value>系统默认</value>
+  </data>
+  <data name="Installer.Title" xml:space="preserve">
+    <value>aliceestrap 安装程序</value>
+  </data>
+  <data name="Installer.Welcome.Title" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="Installer.Install.Title" xml:space="preserve">
+    <value>安装 aliceestrap</value>
+    <comment>Refers to "Install" as a verb</comment>
+  </data>
+  <data name="Installer.Completion.Title" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Common.Navigation.Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Common.Navigation.Next" xml:space="preserve">
+    <value>下一步</value>
+  </data>
+  <data name="Installer.Welcome.MainText" xml:space="preserve">
+    <value>感谢您下载 aliceestrap。
+
+! 获取 aliceestrap 的 唯一 官方网站 是 {0} 和 {1}；因此请确保启动器是从 官方渠道 获取的 !
+（注：一般只有使用真正意义上的 注入器 作弊才会导致封号 (aliceestrap 只是在 外部 修改 并未在游戏内修改任何内容)）
+
+安装过程简单明了；安装完成后，您将可以对 aliceestrap 的任何设置进行配置。</value>
+    <comment>{0} and {1} are URLs</comment>
+  </data>
+  <data name="Installer.Welcome.NextToContinue" xml:space="preserve">
+    <value>请点击 “下一步” 以继续。</value>
+  </data>
+  <data name="Installer.Install.Location.Title" xml:space="preserve">
+    <value>选择安装位置</value>
+  </data>
+  <data name="Installer.Install.Location.Text" xml:space="preserve">
+    <value>Roblox 本体也将安装至此路径。
+如果您有分类整理电脑的习惯，请更改此项；否则，建议您保持原样。</value>
+  </data>
+  <data name="Installer.Install.Location.DataFound" xml:space="preserve">
+    <value>发现数据残留；您的模组和设置将被恢复。</value>
+  </data>
+  <data name="Common.Shortcuts" xml:space="preserve">
+    <value>快捷方式</value>
+  </data>
+  <data name="Common.Shortcuts.Desktop" xml:space="preserve">
+    <value>桌面图标</value>
+  </data>
+  <data name="Common.Shortcuts.StartMenu" xml:space="preserve">
+    <value>“开始”菜单图标</value>
+  </data>
+  <data name="Installer.Completion.Text" xml:space="preserve">
+    <value>aliceestrap 目前已成功安装到你的电脑上。
+
+但是 Roblox 尚未安装；这将会在您首次使用 aliceestrap 启动 Roblox 时发生。
+不过，在此之前；您可能会想先调整 aliceestrap 的设置。
+
+此外，请避免 使用默认 Roblox 启动器 “Roblox Player” 快捷方式 来启动 Roblox；因为 aliceestrap 不会与 Roblox 一起启动。
+如果您尝试从 网页端 启动 Roblox 时并未显示 aliceestrap，只需用 aliceestrap 启动一次 Roblox 即可解决。
+
+您想要做什么？</value>
+  </data>
+  <data name="Installer.Completion.Settings.Title" xml:space="preserve">
+    <value>更改 aliceestrap 的设置</value>
+  </data>
+  <data name="Installer.Completion.Settings.Description" xml:space="preserve">
+    <value>利用启动器提供的所有功能进行调整。</value>
+  </data>
+  <data name="Installer.Completion.Launch.Title" xml:space="preserve">
+    <value>安装并启动 Roblox</value>
+  </data>
+  <data name="Installer.Completion.Launch.Description" xml:space="preserve">
+    <value>一切就绪后，您将会跳转到 Roblox 桌面客户端。</value>
+  </data>
+  <data name="Uninstaller.Title" xml:space="preserve">
+    <value>卸载 aliceestrap</value>
+  </data>
+  <data name="Uninstaller.KeepData.Label" xml:space="preserve">
+    <value>保留我的 aliceestrap 设置 和 Roblox 模组 (Mods)</value>
+  </data>
+  <data name="Uninstaller.KeepData.Description" xml:space="preserve">
+    <value>它们将会保存在 aliceestrap 安装的位置；重新安装时则会自动恢复。</value>
+  </data>
+  <data name="Uninstaller.Uninstall" xml:space="preserve">
+    <value>卸载</value>
+  </data>
+  <data name="LaunchMenu.LaunchRoblox" xml:space="preserve">
+    <value>启动 Roblox</value>
+  </data>
+  <data name="LaunchMenu.ConfigureSettings" xml:space="preserve">
+    <value>更改设置</value>
+  </data>
+  <data name="Bootstrapper.WebView2NotFound" xml:space="preserve">
+    <value>您目前尚未安装 “WebView2 Runtime”。没有它，某些 Roblox 功能将无法正常运行；例如 Roblox 桌面客户端。
+您想现在下载它吗？</value>
+  </data>
+  <data name="Dialog.CannotCreateShortcuts" xml:space="preserve">
+    <value>aliceestrap 目前无法在 桌面 和 “开始”菜单 创建快捷方式；请尝试稍后通过设置手动创建快捷方式。</value>
+  </data>
+  <data name="Installer.Install.Shortcuts.Description" xml:space="preserve">
+    <value>这些是调出 “多选启动菜单” 的通用快捷方式；稍后可以在设置中创建特定功能的快捷方式。</value>
+  </data>
+  <data name="Menu.Shortcuts.Description" xml:space="preserve">
+    <value>您可以在此处配置 aliceestrap 的快捷启动方式。</value>
+  </data>
+  <data name="Menu.Shortcuts.General.Title" xml:space="preserve">
+    <value>通用类</value>
+  </data>
+  <data name="Menu.Shortcuts.General.Description" xml:space="preserve">
+    <value>这些是调出 “多选启动菜单” 的快捷方式。</value>
+  </data>
+  <data name="Menu.Shortcuts.Function.Title" xml:space="preserve">
+    <value>功能类</value>
+  </data>
+  <data name="Menu.Shortcuts.Function.Description" xml:space="preserve">
+    <value>您可以在此处创建快速访问特定功能的快捷方式；它们将会放置在桌面上。</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Private" xml:space="preserve">
+    <value>已连接至 私人 服务器</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Notification.Title.Reserved" xml:space="preserve">
+    <value>已连接至 预留 服务器</value>
+  </data>
+  <data name="Dialog.AlreadyRunning.Installer" xml:space="preserve">
+    <value>请等待安装完成。</value>
+  </data>
+  <data name="Dialog.AlreadyRunning.Uninstaller" xml:space="preserve">
+    <value>请等待卸载完成。</value>
+  </data>
+  <data name="About.Licenses.Title" xml:space="preserve">
+    <value>许可证</value>
+    <comment>Referring to code licenses; see https://opensource.org/licenses for example</comment>
+  </data>
+  <data name="Menu.UnsavedChanges" xml:space="preserve">
+    <value>您有未保存的更改；您确定要在不保存的情况下关闭吗？</value>
+  </data>
+  <data name="InstallChecker.VersionLessThanInstalled" xml:space="preserve">
+    <value>您启动的 aliceestrap 版本早于您当前安装的版本。
+可能会出现问题，您的设置也可能被更改；建议重新安装。
+您确定要继续吗？</value>
+  </data>
+  <data name="Dialog.PlayerError.FailedLaunch" xml:space="preserve">
+    <value>Roblox 启动失败。</value>
+  </data>
+  <data name="Dialog.PlayerError.Crash" xml:space="preserve">
+    <value>Roblox 已崩溃。</value>
+  </data>
+  <data name="Common.Loading" xml:space="preserve">
+    <value>正在加载，请稍后...</value>
+  </data>
+  <data name="JsonManager.SettingsLoadFailed" xml:space="preserve">
+    <value>由于无法加载您的设置；因此它们已被重置为默认值。</value>
+  </data>
+  <data name="JsonManager.FastFlagsLoadFailed" xml:space="preserve">
+    <value>由于您配置的 Fast Flags 无法被加载；因此它们已被重置为默认值。</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Title" xml:space="preserve">
+    <value>游戏历史</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Rejoin" xml:space="preserve">
+    <value>重新加入</value>
+  </data>
+  <data name="ActivityWatcher.RichPresenceLoadFailed" xml:space="preserve">
+    <value>由于加载游戏信息时发生错误；您当前的游戏状态将不会在您的 Discord 活动状态 上显示。</value>
+  </data>
+  <data name="ContextMenu.GameHistory.Description" xml:space="preserve">
+    <value>仅记录您当前 Roblox 会话的游戏历史记录；关于游戏的具体信息将会在您离开游戏或传送至其他游戏时出现在此处。并非所有服务器都可以重新加入。</value>
+  </data>
+  <data name="ActivityWatcher.LocationQueryFailed" xml:space="preserve">
+    <value>可能由于您加入游戏的频次太频繁了；因此无法获取到您当前所处服务器的具体地点。</value>
+  </data>
+  <data name="Dialog.Connectivity.TryAgainLater" xml:space="preserve">
+    <value>请稍后再试。</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxUpgradeSkip" xml:space="preserve">
+    <value>此次启动将不会检查 Roblox 更新，对模组的更改也将不会被应用。</value>
+  </data>
+  <data name="Dialog.Connectivity.RobloxUpgradeNeeded" xml:space="preserve">
+    <value>由于 Roblox 需要安装或更新，aliceestrap 目前无法继续执行。</value>
+  </data>
+  <data name="Installer.Install.CannotOverwrite" xml:space="preserve">
+    <value>aliceestrap 此前已安装到此位置，且安装文件仍然存在；但安装程序无法覆盖旧的可执行文件。
+
+请从安装位置 手动删除 “aliceestrap.exe” 或尝试 重新启动系统，最后再重试安装 aliceestrap。</value>
+  </data>
+  <data name="Common.NotAvailable" xml:space="preserve">
+    <value>暂不可用</value>
+  </data>
+  <data name="Menu.Mods.Misc.CompatibilitySettings.Title" xml:space="preserve">
+    <value>管理兼容性设置</value>
+  </data>
+  <data name="Menu.Mods.Misc.CompatibilitySettings.Description" xml:space="preserve">
+    <value>您可以在此处配置应用程序参数；例如 “DPI 缩放行为”，以及 “[全屏优化]({0})”。</value>
+  </data>
+  <data name="Common.RobloxNotInstalled" xml:space="preserve">
+    <value>Roblox 尚未安装；在尝试使用此选项之前，请至少使用 aliceestrap 启动一次 Roblox。</value>
+  </data>
+  <data name="Installer.ShouldCancel" xml:space="preserve">
+    <value>您确定要取消安装吗？</value>
+  </data>
+  <data name="Bootstrapper.JsonManagerSaveFailed" xml:space="preserve">
+    <value>无法保存 {0}: {1}</value>
+  </data>
+  <data name="Dialog.IconLoadFailed" xml:space="preserve">
+    <value>当前选中的启动器图标无法被加载。
+
+{0}</value>
+    <comment>{0} is an exception message</comment>
+  </data>
+  <data name="Menu.Shortcuts.ExtractIcons.Title" xml:space="preserve">
+    <value>提取 Roblox 图标至 aliceestrap 安装目录</value>
+  </data>
+  <data name="Dialog.RegistryWriteError" xml:space="preserve">
+    <value>aliceestrap 目前无法写入 Windows 注册表；可能是杀毒软件的干扰导致了问题。
+
+请检查以确保没有任何东西会限制 aliceestrap 的运行。</value>
+  </data>
+  <data name="Menu.FastFlags.Reset.Title" xml:space="preserve">
+    <value>重置所有设置为默认值</value>
+  </data>
+  <data name="Dialog.Exception.Report" xml:space="preserve">
+    <value>报告异常</value>
+  </data>
+  <data name="Menu.TestMode" xml:space="preserve">
+    <value>测试模式</value>
+    <comment>See the prompt for more context</comment>
+  </data>
+  <data name="Menu.TestMode.Prompt" xml:space="preserve">
+    <value>“测试模式” 是一种可以更方便地反复测试 aliceestrap 特定设置对 Roblox 造成影响的功能。
+（例如微调 设置/FFlags 后可以更方便地调试具体参数对 Roblox 造成的影响）
+
+启用后，它将会在每次关闭设置后自动启动 Roblox；而关闭 Roblox 则会重新打开设置。
+如此循环，直到您禁用为止。
+
+您想启用 “测试模式” 吗？</value>
+  </data>
+  <data name="Common.Navigation.Install" xml:space="preserve">
+    <value>安装</value>
+    <comment>The word "Install" is being used as a verb in this instance, like the other navigation button texts of "Next" and "Back"</comment>
+  </data>
+  <data name="Paths.Icons" xml:space="preserve">
+    <value>已提取的图标 (Icons)</value>
+    <comment>Name of the folder that gets created according to the "create shortcut icons" option. Ensure that it is a valid folder name.</comment>
+  </data>
+  <data name="LaunchMenu.LaunchRobloxStudio" xml:space="preserve">
+    <value>启动 Roblox Studio</value>
+  </data>
+  <data name="Dialog.Exception.Version" xml:space="preserve">
+    <value>版本 {0}</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.CustomDialog" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="FileTypes.ZipArchive" xml:space="preserve">
+    <value>压缩文件</value>
+    <comment>Shown in the save file dialog, where the file type selection dropdown is, e.g. "Zip archive (*.zip)"</comment>
+  </data>
+  <data name="Common.Export" xml:space="preserve">
+    <value>导出</value>
+    <comment>Currently used under the "aliceestrap" settings tab for the button to export diagnostic data</comment>
+  </data>
+  <data name="Dialog.Connectivity.Preventing" xml:space="preserve">
+    <value>某些东西可能正在阻止 aliceestrap 连接至互联网。</value>
+  </data>
+  <data name="Dialog.Connectivity.TimedOut" xml:space="preserve">
+    <value>连接超时；可能表明当前网络连接不畅或被防火墙阻止。</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="App.OSDeprecation.Win7_81" xml:space="preserve">
+    <value>Roblox 已停止支持 Windows 7 及 8.1 系统；若需继续畅玩，请与时俱进升级至 Windows 10 或更高版本。</value>
+  </data>
+  <data name="Enums.CustomThemeTemplate.Blank" xml:space="preserve">
+    <value>空白</value>
+  </data>
+  <data name="Enums.CustomThemeTemplate.Simple" xml:space="preserve">
+    <value>简约</value>
+  </data>
+  <data name="CustomTheme.Errors.ElementTypeCreationFailed" xml:space="preserve">
+    <value>{0} 创建 {1} 失败：{2}</value>
+    <comment>{0} is the element name (e.g. Button), {1} is the attribute name (e.g. Text), {2} is the error reason</comment>
+  </data>
+  <data name="CustomTheme.Editor.Title" xml:space="preserve">
+    <value>正在编辑「{0}」</value>
+  </data>
+  <data name="CustomTheme.Editor.Save.Success" xml:space="preserve">
+    <value>主题保存成功！</value>
+  </data>
+  <data name="CustomTheme.Editor.Save.Error" xml:space="preserve">
+    <value>保存主题时发生错误。</value>
+  </data>
+  <data name="CustomTheme.Editor.ConfirmSave" xml:space="preserve">
+    <value>是否保存对 {0} 的更改？</value>
+  </data>
+  <data name="CustomTheme.Editor.Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="CustomTheme.Editor.Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="CustomTheme.Editor.OpenThemeDirectory" xml:space="preserve">
+    <value>打开主题目录</value>
+  </data>
+  <data name="CustomTheme.Add.Title" xml:space="preserve">
+    <value>添加自定义主题</value>
+  </data>
+  <data name="Common.Template" xml:space="preserve">
+    <value>模板</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameEmpty" xml:space="preserve">
+    <value>名称不能为空</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameIllegalCharacters" xml:space="preserve">
+    <value>该名称包含非法字符</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameReserved" xml:space="preserve">
+    <value>该名称不可用</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.Unknown" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.NameTaken" xml:space="preserve">
+    <value>该名称已被占用</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.FileNotZip" xml:space="preserve">
+    <value>文件必须是 ZIP 格式</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.ZipMissingThemeFile" xml:space="preserve">
+    <value>ZIP 文件中未找到主题文件</value>
+  </data>
+  <data name="CustomTheme.Add.Errors.ZipInvalidData" xml:space="preserve">
+    <value>ZIP 文件无效或损坏</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.NoneSelected" xml:space="preserve">
+    <value>未选择自定义主题。</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.DeleteFailed" xml:space="preserve">
+    <value>无法删除自定义主题 {0}: {1}</value>
+  </data>
+  <data name="Menu.Appearance.CustomThemes.RenameFailed" xml:space="preserve">
+    <value>无法重命名自定义主题 {0}: {1}</value>
+  </data>
+  <data name="CustomTheme.Templates.Blank.UIElements" xml:space="preserve">
+    <value>在此放置 UI 元素</value>
+  </data>
+  <data name="CustomTheme.DefaultName" xml:space="preserve">
+    <value>自定义主题 {0}</value>
+    <comment>{0} is a string (e.g. '1', '1-1234')</comment>
+  </data>
+  <data name="CustomTheme.Editor.Save.Success.Description" xml:space="preserve">
+    <value>您的主题已保存！</value>
+  </data>
+  <data name="Bootstrapper.ModificationsFailed.Title" xml:space="preserve">
+    <value>应用修改失败</value>
+  </data>
+  <data name="Bootstrapper.ModificationsFailed.Message" xml:space="preserve">
+    <value>并非所有修改都会在本次启动中生效。</value>
+  </data>
+  <data name="Bootstrapper.ExtractionFailed.Title" xml:space="preserve">
+    <value>解压文件失败</value>
+  </data>
+  <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
+    <value>部分内容可能缺失；请前往设置强制重新安装 Roblox 以解决此问题。</value>
+  </data>
+  <data name="Common.Rename" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="Common.CreateNew" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="Menu.Behaviour.BackgroundUpdates.Title" xml:space="preserve">
+    <value>后台更新</value>
+  </data>
+  <data name="Menu.Behaviour.BackgroundUpdates.Description" xml:space="preserve">
+    <value>无需等待即可在后台更新 Roblox；不推荐在网速较慢的情况下使用。此功能需要至少 3GB 的可用存储空间。</value>
+  </data>
+  <data name="Common.Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="About.Title" xml:space="preserve">
+    <value>关于 aliceestrap</value>
+  </data>
+  <data name="Boostrapper.Dialog.UnauthorizedChannel" xml:space="preserve">
+    <value>你当前所在的频道（{0}）已不再公开。你现在将使用默认频道（{1}）。</value>
+  </data>
+  <data name="Bootstrapper.Bootstrapper.Dialog.PromptChannelChange" xml:space="preserve">
+    <value>Roblox 正在尝试将你的频道设为 {0}，但你当前的首选频道是 {1}。
+
+
+要将首选频道切换为 {0} 吗？</value>
+  </data>
+  <data name="Bootstrapper.Dialog.ChannelOutOfDate" xml:space="preserve">
+    <value>你当前所在的频道（{0}）已过时，似乎不再接收更新。
+要切换到默认频道（{1}）吗？</value>
+  </data>
+  <data name="Bootstrapper.Status.Downloading" xml:space="preserve">
+    <value>正在下载</value>
+  </data>
+  <data name="Bootstrapper.Status.DownloadingPackages" xml:space="preserve">
+    <value>正在下载 - {0} / {1}</value>
+  </data>
+  <data name="Bootstrapper.Status.WaitingForData" xml:space="preserve">
+    <value>正在等待数据</value>
+  </data>
+  <data name="Common.Channel" xml:space="preserve">
+    <value>频道</value>
+  </data>
+  <data name="Common.Deployment" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="Common.Geometry" xml:space="preserve">
+    <value>几何</value>
+  </data>
+  <data name="Common.GlobalSettings" xml:space="preserve">
+    <value>全局设置</value>
+  </data>
+  <data name="Common.HighestQuality" xml:space="preserve">
+    <value>最高质量</value>
+  </data>
+  <data name="Common.LowestQuality" xml:space="preserve">
+    <value>最低质量</value>
+  </data>
+  <data name="Common.Other" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="Common.Timestamp" xml:space="preserve">
+    <value>时间戳</value>
+  </data>
+  <data name="Common.Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Common.Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="Common.VersionGuid" xml:space="preserve">
+    <value>VersionGuid</value>
+  </data>
+  <data name="Common.WindowManipulation" xml:space="preserve">
+    <value>窗口操控</value>
+  </data>
+  <data name="ContextMenu.ServerDetails.Notification.Text" xml:space="preserve">
+    <value>位置：{0}
+运行时间：{1}</value>
+  </data>
+  <data name="ContextMenu.ServerInformation.Uptime" xml:space="preserve">
+    <value>运行时间</value>
+  </data>
+  <data name="Dialog.Bloxshade.Setting" xml:space="preserve">
+    <value>aliceestrap 已不再支持 Bloxshade。
+如需了解更多信息，请加入 Bloxshade 的 Discord 服务器。</value>
+  </data>
+  <data name="Dialog.Bloxshade.ThankYou" xml:space="preserve">
+    <value>抱歉</value>
+  </data>
+  <data name="Dialog.Connectivity.UnableToDownloadReason" xml:space="preserve">
+    <value>目前无法下载 Roblox。请检查网络连接，或尝试将部署频道切换回 production。</value>
+  </data>
+  <data name="Dialog.Exception.Info.1" xml:space="preserve">
+    <value>运行 aliceestrap 时发生异常</value>
+  </data>
+  <data name="Dialog.Exception.Info.2.Alt" xml:space="preserve">
+    <value>日志文件中有完整的详细信息。请用下方按钮打开它；如果无法写入磁盘，请复制其内容。</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Channel" xml:space="preserve">
+    <value>频道</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Config" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="Dialog.LaunchOptions.DontChange" xml:space="preserve">
+    <value>不更改</value>
+  </data>
+  <data name="Dialog.LaunchOptions.FlagPreset" xml:space="preserve">
+    <value>Fast Flags</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Launch" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="Dialog.LaunchOptions.Title" xml:space="preserve">
+    <value>启动选项</value>
+  </data>
+  <data name="Dialog.LaunchOptions.VR" xml:space="preserve">
+    <value>以 VR 启动</value>
+  </data>
+  <data name="Dialog.PlayerError.HelpInformation" xml:space="preserve">
+    <value>请再次尝试启动。如果问题持续，请检查 Roblox 能否通过自带的启动器启动。如果不能，问题出在 Roblox 而不是 aliceestrap。</value>
+  </data>
+  <data name="Dialog.VRLaunch.Description" xml:space="preserve">
+    <value>这会在游戏开始前设置 Roblox 的全局 VR 选项。</value>
+  </data>
+  <data name="Dialog.VRLaunch.Desktop" xml:space="preserve">
+    <value>非 VR</value>
+  </data>
+  <data name="Dialog.VRLaunch.Question" xml:space="preserve">
+    <value>要以 VR 还是非 VR 模式运行游戏？</value>
+  </data>
+  <data name="Dialog.VRLaunch.VR" xml:space="preserve">
+    <value>VR</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.TerminalDialog" xml:space="preserve">
+    <value>Windows Terminal</value>
+  </data>
+  <data name="Enums.BootstrapperStyle.TwentyFiveDialog" xml:space="preserve">
+    <value>Roblox (~2025)</value>
+  </data>
+  <data name="Enums.CleanerOptions.Never" xml:space="preserve">
+    <value>从不</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneDay" xml:space="preserve">
+    <value>1 天后</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneMonth" xml:space="preserve">
+    <value>1 个月后</value>
+  </data>
+  <data name="Enums.CleanerOptions.OneWeek" xml:space="preserve">
+    <value>1 周后</value>
+  </data>
+  <data name="Enums.CleanerOptions.TwoMonths" xml:space="preserve">
+    <value>2 个月后</value>
+  </data>
+  <data name="Enums.CleanerOptions.TwoWeeks" xml:space="preserve">
+    <value>2 周后</value>
+  </data>
+  <data name="Enums.DiscordRPCStatusDisplay.Details" xml:space="preserve">
+    <value>详情（正在玩游戏）</value>
+  </data>
+  <data name="Enums.DiscordRPCStatusDisplay.Name" xml:space="preserve">
+    <value>名称（正在玩 Roblox）</value>
+  </data>
+  <data name="Enums.FlagPresets.RenderingMode.Vulkan" xml:space="preserve">
+    <value>Vulkan</value>
+  </data>
+  <data name="Menu.About.Description" xml:space="preserve">
+    <value>一款自定义的 Roblox 启动器。</value>
+  </data>
+  <data name="Menu.Appearance.RobloxIcon.Description" xml:space="preserve">
+    <value>选择 Roblox 在任务栏上显示的图标。</value>
+  </data>
+  <data name="Menu.Appearance.RobloxIcon.Title" xml:space="preserve">
+    <value>Roblox 图标</value>
+  </data>
+  <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
+    <value>选择 Roblox 窗口的标题。</value>
+  </data>
+  <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
+    <value>Roblox 标题</value>
+  </data>
+  <data name="Menu.Appearance.WindowManipulationAlert" xml:space="preserve">
+    <value>此功能需要启用窗口操控</value>
+  </data>
+  <data name="Menu.Behaviour.LaunchOptions.Description" xml:space="preserve">
+    <value>你在这里开启的选项会在游戏开始前以弹窗形式询问，方便你为本次启动做选择。</value>
+  </data>
+  <data name="Menu.Behaviour.LaunchOptions.VR" xml:space="preserve">
+    <value>VR</value>
+  </data>
+  <data name="Menu.Bootstrapper.AllowCookieAccess.Description" xml:space="preserve">
+    <value>使用你的身份验证 Cookie 访问 Roblox API。它只用于查询你加入的服务器的详细信息，除 Roblox 外绝不会发送到任何地方。</value>
+  </data>
+  <data name="Menu.Bootstrapper.AllowCookieAccess.Title" xml:space="preserve">
+    <value>允许 aliceestrap 访问你的 Roblox 账户</value>
+  </data>
+  <data name="Menu.Bootstrapper.CleanUp.Description" xml:space="preserve">
+    <value>aliceestrap 会删除旧数据以节省空间</value>
+  </data>
+  <data name="Menu.Bootstrapper.CleanUp.Title" xml:space="preserve">
+    <value>清理</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Age.Description" xml:space="preserve">
+    <value>早于设定时间的文件将被删除。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Age.Title" xml:space="preserve">
+    <value>何时删除文件</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Cache.Description" xml:space="preserve">
+    <value>旧的下载文件将被删除。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Cache.Title" xml:space="preserve">
+    <value>缓存</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.IncludeAliceestrap.Description" xml:space="preserve">
+    <value>aliceestrap 的日志将被删除。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.IncludeAliceestrap.Title" xml:space="preserve">
+    <value>aliceestrap 日志</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Logs.Description" xml:space="preserve">
+    <value>旧的日志文件将被删除。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.Logs.Title" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.StudioCache.Description" xml:space="preserve">
+    <value>旧的 Studio 下载文件将被删除。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Cleaner.StudioCache.Title" xml:space="preserve">
+    <value>Studio 缓存</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Automatic" xml:space="preserve">
+    <value>自动更改</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Description" xml:space="preserve">
+    <value>Roblox 或 aliceestrap 可能会尝试更改你的首选频道。</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Ignore" xml:space="preserve">
+    <value>从不更改</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Prompt" xml:space="preserve">
+    <value>始终询问</value>
+  </data>
+  <data name="Menu.Channel.ChangeAction.Title" xml:space="preserve">
+    <value>频道自动更改时的操作</value>
+  </data>
+  <data name="Menu.Channel.Description" xml:space="preserve">
+    <value>更改 Roblox 和 aliceestrap 的部署与安装设置。</value>
+  </data>
+  <data name="Menu.Channel.Presets.Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Menu.Channel.Presets.ConfirmDelete" xml:space="preserve">
+    <value>要从已保存的频道中移除 {0} 吗？</value>
+  </data>
+  <data name="Menu.Channel.Presets.Duplicate" xml:space="preserve">
+    <value>{0} 已保存。</value>
+  </data>
+  <data name="Menu.Channel.Presets.InvalidName" xml:space="preserve">
+    <value>频道名称只能包含字母、数字、点、连字符和下划线。</value>
+  </data>
+  <data name="Menu.Channel.Presets.NamePlaceholder" xml:space="preserve">
+    <value>频道名称</value>
+  </data>
+  <data name="Menu.Channel.Presets.Use" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.Description" xml:space="preserve">
+    <value>设置 Roblox 和 aliceestrap 使用的域名。请只输入可信的域名。</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.InvalidDomain" xml:space="preserve">
+    <value>你输入的域名似乎无效。
+除非你清楚自己在做什么，否则请不要更改此设置。</value>
+  </data>
+  <data name="Menu.Channel.RobloxDomain.Title" xml:space="preserve">
+    <value>Roblox 域名</value>
+  </data>
+  <data name="Menu.Channel.StaticDirectory.Description" xml:space="preserve">
+    <value>将安装目录从 version-xxx 切换为基于 BinaryType 的目录。</value>
+  </data>
+  <data name="Menu.Channel.StaticDirectory.Title" xml:space="preserve">
+    <value>固定目录</value>
+  </data>
+  <data name="Menu.Channel.Switcher.Fetching" xml:space="preserve">
+    <value>正在获取最新的部署信息，请稍候...</value>
+  </data>
+  <data name="Menu.Channel.Switcher.Unauthorized" xml:space="preserve">
+    <value>指定的频道不存在或为私有频道</value>
+  </data>
+  <data name="Menu.ChannelChanger.Description" xml:space="preserve">
+    <value>选择部署频道。除非你清楚自己在做什么，否则请不要更改。</value>
+  </data>
+  <data name="Menu.Deployment.Channel.OutOfDate" xml:space="preserve">
+    <value>此频道已过时，可能不再更新。请使用其他频道。</value>
+  </data>
+  <data name="Menu.FastFlagEditor.ExportJson.IncludePresets" xml:space="preserve">
+    <value>要包含预设的 FFlag 吗？</value>
+  </data>
+  <data name="Menu.FastFlags.EditorInfo" xml:space="preserve">
+    <value>Roblox 只会应用白名单中的 FFlag。</value>
+  </data>
+  <data name="Menu.FastFlags.FRMQualityOverride.Description" xml:space="preserve">
+    <value>选择 Roblox 应使用的 FRM 质量。</value>
+  </data>
+  <data name="Menu.FastFlags.FRMQualityOverride.Title" xml:space="preserve">
+    <value>覆盖 FRM 质量</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.Description" xml:space="preserve">
+    <value>控制游戏中网格的细节程度。</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.Header" xml:space="preserve">
+    <value>网格细节</value>
+  </data>
+  <data name="Menu.FastFlags.MeshDetail.LowQualityWarning" xml:space="preserve">
+    <value>较低的质量可能导致网格消失。</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RemoveGrass.Description" xml:space="preserve">
+    <value>停止绘制地形上的草。</value>
+  </data>
+  <data name="Menu.FastFlags.Presets.RemoveGrass.Title" xml:space="preserve">
+    <value>移除草</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.ConfirmDelete" xml:space="preserve">
+    <value>要删除配置 {0} 吗？</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Description" xml:space="preserve">
+    <value>将这些设置以名称保存并在它们之间切换，或让其中一个在每次启动 Roblox 时自动应用。配置会保存整个设置文件，包括此页面未显示的部分。</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Header" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.InvalidName" xml:space="preserve">
+    <value>该名称不能用作配置名称。</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Launch.Title" xml:space="preserve">
+    <value>使用此配置启动</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Load" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.LoadFailed" xml:space="preserve">
+    <value>无法加载该配置。详情请查看日志。</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.NamePlaceholder" xml:space="preserve">
+    <value>配置名称</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Overwrite" xml:space="preserve">
+    <value>已存在名为 {0} 的配置。要替换吗？</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Menu.GBSEditor.Configs.SaveFailed" xml:space="preserve">
+    <value>无法保存该配置。详情请查看日志。</value>
+  </data>
+  <data name="Menu.GBSEditor.Description" xml:space="preserve">
+    <value>通过 aliceestrap 菜单设置游戏内选项。</value>
+  </data>
+  <data name="Menu.GBSEditor.FontSize.Description" xml:space="preserve">
+    <value>选择字体显示的大小。</value>
+  </data>
+  <data name="Menu.GBSEditor.FontSize.Title" xml:space="preserve">
+    <value>字体大小</value>
+  </data>
+  <data name="Menu.GBSEditor.GraphicsQuality.Description" xml:space="preserve">
+    <value>设置游戏的画质</value>
+  </data>
+  <data name="Menu.GBSEditor.GraphicsQuality.Title" xml:space="preserve">
+    <value>画质</value>
+  </data>
+  <data name="Menu.GBSEditor.MasterVolume.Description" xml:space="preserve">
+    <value>与 Roblox 自带音量滑块相同的 0 到 10 刻度。会随配置一起保存。</value>
+  </data>
+  <data name="Menu.GBSEditor.MasterVolume.Title" xml:space="preserve">
+    <value>主音量</value>
+  </data>
+  <data name="Menu.GBSEditor.MouseSensitivity.Description" xml:space="preserve">
+    <value>更改游戏中镜头移动的速度。</value>
+  </data>
+  <data name="Menu.GBSEditor.MouseSensitivity.Title" xml:space="preserve">
+    <value>鼠标灵敏度</value>
+  </data>
+  <data name="Menu.GBSEditor.ReadOnly.Description" xml:space="preserve">
+    <value>防止 Roblox 覆盖全局设置。</value>
+  </data>
+  <data name="Menu.GBSEditor.ReadOnly.Title" xml:space="preserve">
+    <value>设为只读</value>
+  </data>
+  <data name="Menu.GBSEditor.ReducedMotion.Description" xml:space="preserve">
+    <value>移除 Esc 菜单的动画。</value>
+  </data>
+  <data name="Menu.GBSEditor.ReducedMotion.Title" xml:space="preserve">
+    <value>减少动态效果</value>
+  </data>
+  <data name="Menu.GBSEditor.UITransparency.Description" xml:space="preserve">
+    <value>自定义界面元素的透明度。</value>
+  </data>
+  <data name="Menu.GBSEditor.UITransparency.Title" xml:space="preserve">
+    <value>透明度</value>
+  </data>
+  <data name="Menu.GBSEditor.VREnabled.Title" xml:space="preserve">
+    <value>启用 VR</value>
+  </data>
+  <data name="Menu.GPSEditor.FramerateCap.Description" xml:space="preserve">
+    <value>解除 Roblox 的帧率限制。不建议超过 240 FPS。</value>
+  </data>
+  <data name="Menu.GPSEditor.FramerateCap.Title" xml:space="preserve">
+    <value>帧率限制</value>
+  </data>
+  <data name="Menu.Integrations.DesktopApp.Description" xml:space="preserve">
+    <value>离开游戏时 Roblox 会完全关闭，而不是返回应用。部分功能可能无法正常工作。</value>
+  </data>
+  <data name="Menu.Integrations.EnableWindowManipulation.Description" xml:space="preserve">
+    <value>允许 aliceestrap 访问 Roblox 的窗口，以提供更多自定义选项和功能。</value>
+  </data>
+  <data name="Menu.Integrations.EnableWindowManipulation.Title" xml:space="preserve">
+    <value>启用窗口操控</value>
+  </data>
+  <data name="Menu.Integrations.FakeVulkanBorderless.Description" xml:space="preserve">
+    <value>在使用 Vulkan 时使用模拟的无边框全屏。</value>
+  </data>
+  <data name="Menu.Integrations.FakeVulkanBorderless.Title" xml:space="preserve">
+    <value>为 Vulkan 启用无边框全屏</value>
+  </data>
+  <data name="Menu.Integrations.RequiresActivityTracking" xml:space="preserve">
+    <value>此功能需要启用活动追踪，并安装且运行 Discord 桌面应用。</value>
+  </data>
+  <data name="Menu.Integrations.ShowGameActivity.Description" xml:space="preserve">
+    <value>你正在玩的 Roblox 游戏将显示在你的 Discord 个人资料上。</value>
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" xml:space="preserve">
+    <value>选择你想要的状态显示类型。</value>
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" xml:space="preserve">
+    <value>Discord 状态显示</value>
+  </data>
+  <data name="Menu.Presets.Channels.Add.Title" xml:space="preserve">
+    <value>保存频道</value>
+  </data>
+  <data name="Menu.Presets.Channels.Current" xml:space="preserve">
+    <value>使用中</value>
+  </data>
+  <data name="Menu.Presets.Channels.Empty" xml:space="preserve">
+    <value>还没有保存任何频道。</value>
+  </data>
+  <data name="Menu.Presets.Channels.Title" xml:space="preserve">
+    <value>部署频道</value>
+  </data>
+  <data name="Menu.Presets.Channels.Used" xml:space="preserve">
+    <value>保存后 Roblox 将在 {0} 上启动。</value>
+  </data>
+  <data name="Menu.Presets.Configs.Applied" xml:space="preserve">
+    <value>已将 {0} 应用到 Roblox 的设置。</value>
+  </data>
+  <data name="Menu.Presets.Configs.Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Menu.Presets.Configs.Empty" xml:space="preserve">
+    <value>还没有保存任何配置。</value>
+  </data>
+  <data name="Menu.Presets.Configs.OnLaunch" xml:space="preserve">
+    <value>启动时应用</value>
+  </data>
+  <data name="Menu.Presets.Configs.Save.Title" xml:space="preserve">
+    <value>保存当前设置</value>
+  </data>
+  <data name="Menu.Presets.Configs.Title" xml:space="preserve">
+    <value>Roblox 设置配置</value>
+  </data>
+  <data name="Menu.Presets.Configs.Unavailable" xml:space="preserve">
+    <value>无法读取 Roblox 的设置文件，因此配置不可用。请先启动一次 Roblox，然后重新打开此窗口。</value>
+  </data>
+  <data name="Menu.Presets.Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Menu.Presets.Editing" xml:space="preserve">
+    <value>正在编辑 {0}</value>
+  </data>
+  <data name="Menu.Presets.Editing.Config" xml:space="preserve">
+    <value>Roblox 设置配置</value>
+  </data>
+  <data name="Menu.Presets.Editing.Flags" xml:space="preserve">
+    <value>Fast Flag 预设</value>
+  </data>
+  <data name="Menu.Presets.Flags.Applied" xml:space="preserve">
+    <value>已加载 {0}。按“保存”以保留。</value>
+  </data>
+  <data name="Menu.Presets.Flags.Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="Menu.Presets.Flags.ConfirmDelete" xml:space="preserve">
+    <value>要删除预设 {0} 吗？</value>
+  </data>
+  <data name="Menu.Presets.Flags.Empty" xml:space="preserve">
+    <value>还没有保存任何预设。</value>
+  </data>
+  <data name="Menu.Presets.Flags.Failed" xml:space="preserve">
+    <value>无法读取或写入该预设。详情请查看日志。</value>
+  </data>
+  <data name="Menu.Presets.Flags.InvalidName" xml:space="preserve">
+    <value>该名称不能用作预设名称。</value>
+  </data>
+  <data name="Menu.Presets.Flags.NamePlaceholder" xml:space="preserve">
+    <value>预设名称</value>
+  </data>
+  <data name="Menu.Presets.Flags.Overwrite" xml:space="preserve">
+    <value>已存在名为 {0} 的预设。要替换吗？</value>
+  </data>
+  <data name="Menu.Presets.Flags.Save.Title" xml:space="preserve">
+    <value>保存当前 Flag</value>
+  </data>
+  <data name="Menu.Presets.Flags.Title" xml:space="preserve">
+    <value>Fast Flag 预设</value>
+  </data>
+  <data name="Menu.Presets.SaveToPreset" xml:space="preserve">
+    <value>保存到预设</value>
+  </data>
+  <data name="Menu.Presets.Title" xml:space="preserve">
+    <value>预设</value>
+  </data>
+  <data name="Menu.SaveAndLaunch" xml:space="preserve">
+    <value>保存并启动</value>
+  </data>
+  <data name="Menu.Shortcuts.ExtractIcons.Description" xml:space="preserve">
+    <value>将 aliceestrap 自带的 Roblox 图标导出到文件夹，方便你用于快捷方式。</value>
+  </data>
+  <data name="Uninstaller.Text" xml:space="preserve">
+    <value>卸载将从系统中移除 aliceestrap，如果默认的 Roblox 启动器仍已安装，还会自动恢复它。
+
+卸载过程可能无法完全清理干净，你可能需要手动删除 aliceestrap 安装位置中的残留文件。
+
+aliceestrap 安装在“{0}”。</value>
+  </data>
+  <data name="Menu.SearchSettings" xml:space="preserve">
+    <value>搜索设置</value>
+  </data>
+  <data name="Menu.Appearance.Roblox.Description" xml:space="preserve">
+    <value>自定义 Roblox 窗口的外观。</value>
+  </data>
+  <data name="Menu.Bootstrapper.Experimental.Title" xml:space="preserve">
+    <value>实验性</value>
+  </data>
+  <data name="Menu.Bootstrapper.Experimental.Description" xml:space="preserve">
+    <value>仍在测试中的设置，可能无法始终按预期工作。</value>
+  </data>
+  <data name="Menu.Integrations.Custom.LaunchDelay" xml:space="preserve">
+    <value>启动延迟</value>
+  </data>
+  <data name="Menu.Integrations.Custom.PreLaunch" xml:space="preserve">
+    <value>在 Roblox 启动前运行</value>
+  </data>
+  <data name="Bootstrapper.Status.UpdatingApp" xml:space="preserve">
+    <value>正在将 aliceestrap 更新到 {0}...</value>
+  </data>
+  <data name="Bootstrapper.AutoUpdateFailed" xml:space="preserve">
+    <value>aliceestrap 无法将自身更新到 {0}。Roblox 将使用你当前的版本启动，你可以从 aliceestrap 的 GitHub 页面下载新版本。</value>
+  </data>
+  <data name="Menu.Behaviour.CheckForUpdates.Title" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
+    <value>在 Roblox 启动前，从 GitHub 检查是否有更新版本的 aliceestrap 并自动安装。</value>
+  </data>
+</root>

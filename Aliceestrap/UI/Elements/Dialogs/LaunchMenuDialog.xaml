@@ -1,0 +1,59 @@
+<base:WpfUiWindow x:Class="Aliceestrap.UI.Elements.Dialogs.LaunchMenuDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:base="clr-namespace:Aliceestrap.UI.Elements.Base"
+        xmlns:resources="clr-namespace:Aliceestrap.Resources"
+        mc:Ignorable="d"
+        Title="aliceestrap"
+        MinWidth="0"
+        MinHeight="0"
+        Width="400"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        Background="{DynamicResource ApplicationBackgroundBrush}"
+        ExtendsContentIntoTitleBar="True"
+        WindowBackdropType="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="{DynamicResource ApplicationBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.RowSpan="2" Height="190" VerticalAlignment="Top" Opacity="0.22" Background="{DynamicResource ShellGlowBrush}">
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="#FF000000" />
+                    <GradientStop Offset="1" Color="#00000000" />
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+        </Border>
+
+        <ui:TitleBar Grid.Row="0" Padding="0" Height="40" ShowMinimize="False" ShowMaximize="False" CanMaximize="False" Title="" KeyboardNavigation.TabNavigation="None" />
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,22" HorizontalAlignment="Center">
+            <Border Width="76" Height="76" CornerRadius="20" Padding="3" HorizontalAlignment="Center" Background="{DynamicResource ShellGlowBrush}">
+                <Border CornerRadius="17">
+                    <Border.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Aliceestrap.png" RenderOptions.BitmapScalingMode="HighQuality" />
+                    </Border.Background>
+                </Border>
+            </Border>
+            <TextBlock Margin="0,12,0,0" HorizontalAlignment="Center" Text="aliceestrap" FontSize="24" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+            <TextBlock Margin="0,2,0,0" HorizontalAlignment="Center" Text="{Binding Version, Mode=OneTime}" FontSize="12" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="24,0,24,20">
+            <ui:Button TabIndex="0" HorizontalAlignment="Stretch" Height="46" FontSize="15" Icon="Play24" Appearance="Primary" Content="{x:Static resources:Strings.LaunchMenu_LaunchRoblox}" Command="{Binding LaunchRobloxCommand, Mode=OneTime}" />
+
+            <ui:Button Margin="0,8,0,0" TabIndex="1" HorizontalAlignment="Stretch" Height="40" Icon="Settings20" Content="{x:Static resources:Strings.LaunchMenu_ConfigureSettings}" Command="{Binding LaunchSettingsCommand, Mode=OneTime}" />
+            <ui:Button Margin="0,8,0,0" TabIndex="2" HorizontalAlignment="Stretch" Height="40" Icon="Wrench20" Content="{x:Static resources:Strings.LaunchMenu_LaunchRobloxStudio}" Command="{Binding LaunchRobloxStudioCommand, Mode=OneTime}" />
+
+            <ui:Button Margin="0,14,0,0" TabIndex="3" HorizontalAlignment="Center" Padding="10,4" FontSize="12" Appearance="Transparent" Icon="Info16" Content="{x:Static resources:Strings.About_Title}" Command="{Binding LaunchAboutCommand, Mode=OneTime}" />
+        </StackPanel>
+    </Grid>
+</base:WpfUiWindow>

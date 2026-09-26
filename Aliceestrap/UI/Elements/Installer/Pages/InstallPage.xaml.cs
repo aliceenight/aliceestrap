@@ -1,0 +1,36 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+
+using Aliceestrap.UI.ViewModels.Installer;
+
+namespace Aliceestrap.UI.Elements.Installer.Pages
+{
+    public partial class InstallPage
+    {
+        private readonly InstallViewModel _viewModel = new();
+
+        public InstallPage()
+        {
+            DataContext = _viewModel;
+
+            _viewModel.SetCanContinueEvent += (_, state) =>
+            {
+                if (Window.GetWindow(this) is MainWindow window)
+                    window.SetButtonEnabled("next", state);
+            };
+
+            InitializeComponent();
+        }
+
+        private void UiPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Window.GetWindow(this) is MainWindow window)
+            {
+                window.SetNextButtonText(Strings.Common_Navigation_Install);
+                window.NextPageCallback += NextPageCallback;
+            }
+        }
+
+        public bool NextPageCallback() => _viewModel.DoInstall();
+    }
+}

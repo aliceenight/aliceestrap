@@ -1,0 +1,15 @@
+name: Feature Request
+title: "[REQ] "
+description: Suggest a feature that should be added
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### **Preliminary instructions**
+        - If your feature suggestion is to do with Roblox itself, please consider that what's possible is heavily constrained by what FastFlags Roblox allows.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What idea do you have?
+    validations:
+      required: true

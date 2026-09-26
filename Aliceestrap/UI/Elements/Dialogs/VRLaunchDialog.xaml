@@ -1,0 +1,49 @@
+﻿<base:WpfUiWindow x:Class="Aliceestrap.UI.Elements.Dialogs.VRLaunchDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:Aliceestrap.UI.Elements.Dialogs"
+        xmlns:base="clr-namespace:Aliceestrap.UI.Elements.Base"
+        xmlns:models="clr-namespace:Aliceestrap.UI.ViewModels"
+        xmlns:resources="clr-namespace:Aliceestrap.Resources"
+        mc:Ignorable="d"
+        Title="aliceestrap"
+        MinWidth="420"
+        MinHeight="0"
+        Width="420"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        Background="{ui:ThemeResource ApplicationBackgroundBrush}"
+        ExtendsContentIntoTitleBar="True"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="{DynamicResource ApplicationBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar Grid.Row="0" Grid.ColumnSpan="2" Padding="8" ShowMinimize="False" ShowMaximize="False" Title="aliceestrap" Icon="pack://application:,,,/Aliceestrap.ico" CanMaximize="False" KeyboardNavigation.TabNavigation="None" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Margin="16,16,16,0" Text="{x:Static resources:Strings.Dialog_VRLaunch_Question}" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock Grid.Row="1" Margin="16,6,16,12" Text="{x:Static resources:Strings.Dialog_VRLaunch_Description}" FontSize="13" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+
+            <Border Grid.Row="2" Margin="0,15,0,0" Padding="10" Background="{ui:ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+                <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" HorizontalAlignment="Center">
+                    <Button x:Name="VRButton" MinWidth="110" Margin="0,0,8,0" Content="{x:Static resources:Strings.Dialog_VRLaunch_VR}" Click="VR_Click" />
+                    <Button x:Name="DesktopButton" MinWidth="110" Margin="0,0,8,0" Content="{x:Static resources:Strings.Dialog_VRLaunch_Desktop}" Click="Desktop_Click" />
+                    <Button x:Name="CancelButton" MinWidth="90" Content="{x:Static resources:Strings.Common_Cancel}" Click="Cancel_Click" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</base:WpfUiWindow>

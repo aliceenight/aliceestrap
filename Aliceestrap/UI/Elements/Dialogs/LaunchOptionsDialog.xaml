@@ -1,0 +1,121 @@
+<base:WpfUiWindow x:Class="Aliceestrap.UI.Elements.Dialogs.LaunchOptionsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:base="clr-namespace:Aliceestrap.UI.Elements.Base"
+        xmlns:resources="clr-namespace:Aliceestrap.Resources"
+        mc:Ignorable="d"
+        Title="aliceestrap"
+        MinWidth="440"
+        MinHeight="0"
+        Width="440"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        Background="{DynamicResource ApplicationBackgroundBrush}"
+        ExtendsContentIntoTitleBar="True"
+        WindowBackdropType="None"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="OptionRow" TargetType="Border">
+            <Setter Property="Padding" Value="14,10" />
+            <Setter Property="Margin" Value="0,0,0,6" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Background" Value="{DynamicResource ShellNavHoverBrush}" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{DynamicResource ApplicationBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar Grid.Row="0" Padding="0" Height="40" ShowMinimize="False" ShowMaximize="False" CanMaximize="False" Title="" KeyboardNavigation.TabNavigation="None" />
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Margin="22,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsHitTestVisible="False">
+            <StackPanel Orientation="Horizontal">
+                <Border Width="18" Height="18" CornerRadius="5">
+                    <Border.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Aliceestrap.png" RenderOptions.BitmapScalingMode="HighQuality" />
+                    </Border.Background>
+                </Border>
+                <TextBlock Margin="8,0,0,0" VerticalAlignment="Center" FontSize="12" Text="aliceestrap" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="22,6,22,14">
+            <TextBlock Text="{x:Static resources:Strings.Dialog_LaunchOptions_Title}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Rectangle Width="28" Height="3" Margin="1,8,0,0" HorizontalAlignment="Left" RadiusX="1.5" RadiusY="1.5" Fill="{DynamicResource ShellGlowBrush}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="22,0,22,10">
+            <Border x:Name="ChannelRow" Style="{StaticResource OptionRow}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="BranchFork20" FontSize="16" Margin="0,0,10,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock VerticalAlignment="Center" FontSize="14" FontWeight="Medium" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static resources:Strings.Dialog_LaunchOptions_Channel}" />
+                    </StackPanel>
+                    <ComboBox x:Name="ChannelBox" Grid.Column="1" Width="200" Padding="10,5,10,5" />
+                </Grid>
+            </Border>
+
+            <Border x:Name="ConfigRow" Style="{StaticResource OptionRow}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="Options20" FontSize="16" Margin="0,0,10,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock VerticalAlignment="Center" FontSize="14" FontWeight="Medium" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static resources:Strings.Dialog_LaunchOptions_Config}" />
+                    </StackPanel>
+                    <ComboBox x:Name="ConfigBox" Grid.Column="1" Width="200" Padding="10,5,10,5" />
+                </Grid>
+            </Border>
+
+            <Border x:Name="FlagsRow" Style="{StaticResource OptionRow}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="Beaker20" FontSize="16" Margin="0,0,10,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock VerticalAlignment="Center" FontSize="14" FontWeight="Medium" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static resources:Strings.Dialog_LaunchOptions_FlagPreset}" />
+                    </StackPanel>
+                    <ComboBox x:Name="FlagsBox" Grid.Column="1" Width="200" Padding="10,5,10,5" />
+                </Grid>
+            </Border>
+
+            <Border x:Name="VRRow" Style="{StaticResource OptionRow}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="HeadsetVr20" FontSize="16" Margin="0,0,10,0" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock VerticalAlignment="Center" FontSize="14" FontWeight="Medium" Foreground="{DynamicResource TextFillColorPrimaryBrush}" Text="{x:Static resources:Strings.Dialog_LaunchOptions_VR}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="VRToggle" Grid.Column="1" />
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <Border Grid.Row="3" Padding="22,12" Background="{DynamicResource ShellHeaderBrush}" BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" HorizontalAlignment="Right">
+                <ui:Button MinWidth="90" Margin="0,0,8,0" Appearance="Transparent" IsCancel="True" Content="{x:Static resources:Strings.Common_Cancel}" Click="Cancel_Click" />
+                <ui:Button x:Name="LaunchButton" MinWidth="120" Icon="Play20" Appearance="Primary" IsDefault="True" Content="{x:Static resources:Strings.Dialog_LaunchOptions_Launch}" Click="Launch_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</base:WpfUiWindow>

@@ -1,0 +1,166 @@
+<ui:UiPage x:Class="Aliceestrap.UI.Elements.Settings.Pages.PresetsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:controls="clr-namespace:Aliceestrap.UI.Elements.Controls"
+      xmlns:models="clr-namespace:Aliceestrap.UI.ViewModels.Settings"
+      xmlns:resources="clr-namespace:Aliceestrap.Resources"
+      d:DataContext="{d:DesignInstance Type=models:PresetsViewModel}"
+      mc:Ignorable="d"
+      d:DesignHeight="1200" d:DesignWidth="800"
+      Title="PresetsPage"
+      Scrollable="True">
+
+    <ui:UiPage.Resources>
+        <DataTemplate x:Key="PresetRow" DataType="{x:Type models:PresetEntry}">
+            <Border Margin="0,2,0,0" Padding="14,10" CornerRadius="10" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource ShellNavHoverBrush}" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Visibility="{Binding NormalVisibility}">
+                        <TextBlock FontSize="14" FontWeight="Medium" Text="{Binding Name}" Foreground="{DynamicResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" />
+                        <Border Margin="10,0,0,0" Padding="8,2" CornerRadius="8" VerticalAlignment="Center" Background="{DynamicResource ShellNavSelectedBrush}" Visibility="{Binding BadgeVisibility}">
+                            <TextBlock FontSize="11" FontWeight="SemiBold" Text="{Binding Badge}" Foreground="{DynamicResource ShellNavSelectedTextBrush}" />
+                        </Border>
+                    </StackPanel>
+
+                    <ui:TextBox Grid.Column="0" Width="240" MinWidth="240" HorizontalAlignment="Left" Padding="10,5,10,5" Text="{Binding EditName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding RenamingVisibility}" />
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Visibility="{Binding NormalVisibility}">
+                        <ui:Button MinWidth="80" Content="{Binding PrimaryLabel}" Command="{Binding Primary}" />
+                        <ui:Button Margin="6,0,0,0" Padding="8" Icon="Edit20" Appearance="Transparent" ToolTip="{x:Static resources:Strings.Menu_Presets_Edit}" Command="{Binding Edit}" />
+                        <ui:Button Margin="2,0,0,0" Padding="8" Icon="Delete20" Appearance="Transparent" ToolTip="{x:Static resources:Strings.Menu_GBSEditor_Configs_Delete}" Command="{Binding Delete}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Visibility="{Binding RenamingVisibility}">
+                        <ui:Button MinWidth="80" Appearance="Primary" Content="{x:Static resources:Strings.Menu_GBSEditor_Configs_Save}" Command="{Binding SaveRename}" />
+                        <ui:Button Margin="6,0,0,0" MinWidth="80" Appearance="Transparent" Content="{x:Static resources:Strings.Common_Cancel}" Command="{Binding CancelRename}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <Style x:Key="SectionTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="Margin" Value="0,20,0,6" />
+            <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+        </Style>
+
+
+        <Style x:Key="EmptyText" TargetType="TextBlock">
+            <Setter Property="Margin" Value="14,6,0,6" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="Foreground" Value="{DynamicResource TextFillColorTertiaryBrush}" />
+        </Style>
+
+        <Style x:Key="StatusText" TargetType="TextBlock">
+            <Setter Property="Margin" Value="14,8,0,0" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{DynamicResource ShellGlowStartBrush}" />
+            <Style.Triggers>
+                <Trigger Property="Text" Value="">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </ui:UiPage.Resources>
+
+    <StackPanel Margin="0,0,14,14">
+        <TextBlock Style="{StaticResource SectionTitle}" Text="{x:Static resources:Strings.Menu_Presets_Configs_Title}" />
+
+        <ui:InfoBar Margin="0,0,0,8" Padding="8" Severity="Warning" IsClosable="False" IsOpen="True" Title="{x:Static resources:Strings.Menu_Presets_Configs_Unavailable}" Visibility="{Binding ConfigsUnavailableVisibility, Mode=OneTime}" />
+
+        <StackPanel IsEnabled="{Binding ConfigsAvailable, Mode=OneTime}">
+            <ItemsControl ItemsSource="{Binding Configs}" ItemTemplate="{StaticResource PresetRow}" />
+            <TextBlock Text="{x:Static resources:Strings.Menu_Presets_Configs_Empty}">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock" BasedOn="{StaticResource EmptyText}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding HasConfigs}" Value="True">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <TextBlock Style="{StaticResource StatusText}" Text="{Binding ConfigStatus}" />
+
+            <controls:OptionControl
+                Header="{x:Static resources:Strings.Menu_Presets_Configs_Save_Title}">
+                <StackPanel Orientation="Horizontal">
+                    <ui:TextBox Width="180" Padding="10,5,10,5" PlaceholderText="{x:Static resources:Strings.Menu_GBSEditor_Configs_NamePlaceholder}" Text="{Binding NewConfigName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <ui:Button Margin="8,0,0,0" MinWidth="80" Icon="Save20" Content="{x:Static resources:Strings.Menu_GBSEditor_Configs_Save}" Command="{Binding SaveConfigCommand}" />
+                </StackPanel>
+            </controls:OptionControl>
+
+            <controls:OptionControl
+                Header="{x:Static resources:Strings.Menu_GBSEditor_Configs_Launch_Title}">
+                <ComboBox Width="200" Padding="10,5,10,5" ItemsSource="{Binding LaunchConfigs}" SelectedItem="{Binding LaunchConfig, Mode=TwoWay}" />
+            </controls:OptionControl>
+        </StackPanel>
+
+        <TextBlock Style="{StaticResource SectionTitle}" Text="{x:Static resources:Strings.Menu_Presets_Flags_Title}" />
+
+        <ItemsControl ItemsSource="{Binding Flags}" ItemTemplate="{StaticResource PresetRow}" />
+        <TextBlock Text="{x:Static resources:Strings.Menu_Presets_Flags_Empty}">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource EmptyText}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasFlags}" Value="True">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock Style="{StaticResource StatusText}" Text="{Binding FlagStatus}" />
+
+        <controls:OptionControl
+            Header="{x:Static resources:Strings.Menu_Presets_Flags_Save_Title}">
+            <StackPanel Orientation="Horizontal">
+                <ui:TextBox Width="180" Padding="10,5,10,5" PlaceholderText="{x:Static resources:Strings.Menu_Presets_Flags_NamePlaceholder}" Text="{Binding NewFlagPresetName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <ui:Button Margin="8,0,0,0" MinWidth="80" Icon="Save20" Content="{x:Static resources:Strings.Menu_GBSEditor_Configs_Save}" Command="{Binding SaveFlagPresetCommand}" />
+            </StackPanel>
+        </controls:OptionControl>
+
+        <TextBlock Style="{StaticResource SectionTitle}" Text="{x:Static resources:Strings.Menu_Presets_Channels_Title}" />
+
+        <ItemsControl ItemsSource="{Binding Channels}" ItemTemplate="{StaticResource PresetRow}" />
+        <TextBlock Text="{x:Static resources:Strings.Menu_Presets_Channels_Empty}">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource EmptyText}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasChannels}" Value="True">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock Style="{StaticResource StatusText}" Text="{Binding ChannelStatus}" />
+
+        <controls:OptionControl
+            Header="{x:Static resources:Strings.Menu_Presets_Channels_Add_Title}">
+            <StackPanel Orientation="Horizontal">
+                <ui:TextBox Width="180" Padding="10,5,10,5" PlaceholderText="{x:Static resources:Strings.Menu_Channel_Presets_NamePlaceholder}" Text="{Binding NewChannelName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <ui:Button Margin="8,0,0,0" MinWidth="80" Icon="Add20" Content="{x:Static resources:Strings.Menu_Channel_Presets_Add}" Command="{Binding AddChannelCommand}" />
+            </StackPanel>
+        </controls:OptionControl>
+    </StackPanel>
+</ui:UiPage>

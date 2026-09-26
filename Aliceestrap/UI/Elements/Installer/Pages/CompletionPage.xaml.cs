@@ -1,0 +1,33 @@
+﻿using System.Windows;
+using Aliceestrap.UI.ViewModels.Installer;
+
+namespace Aliceestrap.UI.Elements.Installer.Pages
+{
+    public partial class CompletionPage
+    {
+        private readonly CompletionViewModel _viewModel = new();
+        public CompletionPage()
+        {
+            _viewModel.CloseWindowRequest += (_, closeAction) =>
+            {
+                if (Window.GetWindow(this) is MainWindow window)
+                {
+                    window.CloseAction = closeAction;
+                    window.Close();
+                }
+            };
+
+            DataContext = _viewModel;
+            InitializeComponent();
+        }
+
+        private void UiPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Window.GetWindow(this) is MainWindow window)
+            {
+                window.SetNextButtonText(Strings.Common_Navigation_Next);
+                window.SetButtonEnabled("back", false);
+            }
+        }
+    }
+}

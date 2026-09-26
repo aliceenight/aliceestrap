@@ -1,0 +1,35 @@
+﻿using Microsoft.Win32;
+using System.Windows;
+using Aliceestrap.Resources;
+
+namespace Aliceestrap.UI.Elements.Dialogs
+{
+    public partial class AddFastFlagDialog
+    {
+        public MessageBoxResult Result = MessageBoxResult.Cancel;
+
+        public AddFastFlagDialog()
+        {
+            InitializeComponent();
+        }
+
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = $"{Strings.FileTypes_JSONFiles}|*.json"
+            };
+
+            if (dialog.ShowDialog() != true)
+                return;
+
+            JsonTextBox.Text = File.ReadAllText(dialog.FileName);
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            Result = MessageBoxResult.OK;
+            Close();
+        }
+    }
+}
