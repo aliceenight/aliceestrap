@@ -899,8 +899,6 @@ namespace Aliceestrap
 
             if (App.Settings.Prop.EnableActivityTracking || App.Settings.Prop.EnableWindowManipulation || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
             {
-                using var ipl = new InterProcessLock("Watcher", TimeSpan.FromSeconds(5));
-
                 var watcherData = new WatcherData
                 {
                     ProcessId = _appPid,
@@ -916,8 +914,7 @@ namespace Aliceestrap
                 if (App.LaunchSettings.TestModeFlag.Active)
                     args += " -testmode";
 
-                if (ipl.IsAcquired || true)
-                    Process.Start(Paths.Process, args);
+                Process.Start(Paths.Process, args);
             }
 
             Thread.Sleep(1000);

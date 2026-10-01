@@ -5,7 +5,7 @@ namespace Aliceestrap
 {
     public class Watcher : IDisposable
     {
-        private readonly InterProcessLock _lock = new("Watcher");
+        private readonly InterProcessLock? _lock;
 
         private readonly WatcherData? _watcherData;
         
@@ -20,13 +20,6 @@ namespace Aliceestrap
         public Watcher()
         {
             const string LOG_IDENT = "Watcher";
-
-
-            if (!_lock.IsAcquired)
-            {
-                App.Logger.WriteLine(LOG_IDENT, "Watcher instance already exists");
-                return;
-            }
 
             string? watcherDataArg = App.LaunchSettings.WatcherFlag.Data;
 
@@ -55,13 +48,29 @@ namespace Aliceestrap
             if (_watcherData is null)
                 throw new Exception("Watcher data is invalid");
 
+            _lock = new($"Watcher-{_watcherData.ProcessId}");
+
+            if (!_lock.IsAcquired)
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"A watcher for PID {_watcherData.ProcessId} already exists");
+                return;
+            }
+
+            bool isPrimary = new InterProcessLock("WatcherPrimary").IsAcquired;
+
+            App.Logger.WriteLine(LOG_IDENT, $"Watching PID {_watcherData.ProcessId} ({(isPrimary ? "primary" : "additional instance")})");
+
             if (App.Settings.Prop.EnableWindowManipulation && _watcherData.Handle != 0)
                 WindowManipulation = new(_watcherData.Handle, _watcherData.ProcessId);
 
-            if (App.Settings.Prop.EnableActivityTracking)
-            {
+            if (App.Settings.Prop.EnableActivityTracking || WindowManipulation?.UsesAccountName == true)
                 ActivityWatcher = new(_watcherData.LogFile);
 
+            if (ActivityWatcher is not null)
+                WindowManipulation?.TrackAccount(ActivityWatcher);
+
+            if (App.Settings.Prop.EnableActivityTracking && ActivityWatcher is not null)
+            {
                 if (App.Settings.Prop.UseDisableAppPatch)
                 {
                     ActivityWatcher.OnAppClose += delegate
@@ -72,14 +81,15 @@ namespace Aliceestrap
                     };
                 }
 
-                if (App.Settings.Prop.UseDiscordRichPresence && !App.State.Prop.WatcherRunning)
+                if (App.Settings.Prop.UseDiscordRichPresence && isPrimary)
                 {
                     App.Logger.WriteLine(LOG_IDENT, "Running rpc");
                     RichPresence = new(ActivityWatcher);
                 }
             }
 
-            _notifyIcon = new(this);
+            if (isPrimary)
+                _notifyIcon = new(this);
         }
 
         public void KillRobloxProcess() => CloseProcess(_watcherData!.ProcessId, true);
@@ -114,7 +124,7 @@ namespace Aliceestrap
 
         public async Task Run()
         {
-            if (!_lock.IsAcquired || _watcherData is null)
+            if (_lock is null || !_lock.IsAcquired || _watcherData is null)
                 return;
 
             ActivityWatcher?.Start();

@@ -1161,7 +1161,7 @@ Thời gian hoạt động: {1}</value>
     <value>Biểu tượng Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Chọn tiêu đề cho cửa sổ Roblox.</value>
+    <value>Chọn tiêu đề cho cửa sổ Roblox. Dùng {username} hoặc {displayname} để hiển thị tên tài khoản sau khi bạn vào trò chơi.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Tiêu đề Roblox</value>

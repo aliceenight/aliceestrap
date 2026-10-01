@@ -1160,7 +1160,7 @@ Pentru mai multe informații, intră pe serverul de Discord Bloxshade.</value>
     <value>Pictograma Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Alege ce titlu să aibă fereastra Roblox.</value>
+    <value>Alege ce titlu să aibă fereastra Roblox. Folosește {username} sau {displayname} ca să apară numele contului după ce intri într-un joc.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Titlul Roblox</value>

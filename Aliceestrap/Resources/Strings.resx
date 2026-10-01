@@ -1296,7 +1296,7 @@ Would you like to switch your preferred channel to {0}?</value>
     <value>Roblox title</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Choose what title Roblox window should have.</value>
+    <value>Choose what title the Roblox window should have. Use {username} or {displayname} to show the account's name once you join a game.</value>
   </data>
   <data name="Menu.Appearance.RobloxIcon.Title" xml:space="preserve">
     <value>Roblox icon</value>

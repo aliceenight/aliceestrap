@@ -1154,7 +1154,7 @@ For mere information kan du tilmelde dig Bloxshades Discord-server.</value>
     <value>Roblox-ikon</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Vælg hvilken titel Roblox-vinduet skal have.</value>
+    <value>Vælg hvilken titel Roblox-vinduet skal have. Brug {username} eller {displayname} for at vise kontoens navn, når du går ind i et spil.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox-titel</value>

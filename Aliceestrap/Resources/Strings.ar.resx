@@ -1158,7 +1158,7 @@
     <value>أيقونة Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>اختر عنوان نافذة Roblox.</value>
+    <value>اختر العنوان الذي تحمله نافذة Roblox. استخدم {username} أو {displayname} لعرض اسم الحساب بعد الانضمام إلى لعبة.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>عنوان Roblox</value>

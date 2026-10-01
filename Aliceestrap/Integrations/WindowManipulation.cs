@@ -1,9 +1,11 @@
-﻿using Windows.Win32;
+using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 using System.Windows.Forms;
 using System.Drawing;
 using Windows.Win32.UI.Accessibility;
+
+using Aliceestrap.Models.RobloxApi;
 
 namespace Aliceestrap.Integrations
 {
@@ -13,6 +15,14 @@ namespace Aliceestrap.Integrations
 
         private HWND _hWnd;
         private uint _robloxPID;
+
+        private readonly string _titleTemplate = App.Settings.Prop.RobloxTitle;
+        private string _title = "";
+        private long _userId;
+
+        public bool UsesAccountName =>
+            _titleTemplate.Contains("{username}", StringComparison.OrdinalIgnoreCase)
+            || _titleTemplate.Contains("{displayname}", StringComparison.OrdinalIgnoreCase);
 
         public WindowManipulation(long windowHandle, long robloxProcessId)
         {
@@ -29,6 +39,51 @@ namespace Aliceestrap.Integrations
                 FakeBorderless();
 
             ApplyWindowModifications();
+        }
+
+        public void TrackAccount(ActivityWatcher activityWatcher)
+        {
+            if (!UsesAccountName)
+                return;
+
+            activityWatcher.OnGameJoin += async (_, _) =>
+            {
+                const string LOG_IDENT = "WindowManipulation::TrackAccount";
+
+                long userId = activityWatcher.Data.UserId;
+
+                if (userId == 0 || userId == _userId)
+                    return;
+
+                _userId = userId;
+
+                try
+                {
+                    var user = await Http.GetJson<GetUserResponse>(new Uri($"https://users.roblox.com/v1/users/{userId}"));
+
+                    _title = BuildTitle(_titleTemplate, user.Name, user.DisplayName);
+                    PInvoke.SetWindowText(_hWnd, _title);
+
+                    App.Logger.WriteLine(LOG_IDENT, "Updated Roblox title with the account name");
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, "Failed to get the account name");
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+            };
+        }
+
+        private static string BuildTitle(string template, string? username, string? displayName)
+        {
+            string title = template
+                .Replace("{username}", username ?? "", StringComparison.OrdinalIgnoreCase)
+                .Replace("{displayname}", displayName ?? "", StringComparison.OrdinalIgnoreCase);
+
+            if (username is null)
+                title = Regex.Replace(title, @"\s{2,}", " ").Trim(' ', '-', '|', ':', ',', '·', '•', '(', ')', '[', ']', '@');
+
+            return String.IsNullOrWhiteSpace(title) ? "Roblox" : title;
         }
 
         private void FakeBorderless()
@@ -80,10 +135,12 @@ namespace Aliceestrap.Integrations
                 }
 
             App.Logger.WriteLine(LOG_IDENT, "Setting Roblox title");
-            string robloxTitle = App.Settings.Prop.RobloxTitle;
-            if (robloxTitle != "Roblox")
+            if (_titleTemplate != "Roblox")
             {
-                PInvoke.SetWindowText(_hWnd, robloxTitle);
+                if (String.IsNullOrEmpty(_title))
+                    _title = BuildTitle(_titleTemplate, null, null);
+
+                PInvoke.SetWindowText(_hWnd, _title);
 
                 App.Current.Dispatcher.Invoke(() => PInvoke.SetWinEventHook(EVENT_OBJECT_NAMECHANGE, EVENT_OBJECT_NAMECHANGE, null, _setTitleHook, _robloxPID, 0, WINEVENT_OUTOFCONTEXT));
             }
@@ -92,18 +149,18 @@ namespace Aliceestrap.Integrations
         private void SetWindowTitleHook(HWINEVENTHOOK hWinEventHook, uint iEvent, HWND hWnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
             const string LOG_IDENT = "WindowManipulation::SetWindowTitleHook";
-            string robloxTitle = App.Settings.Prop.RobloxTitle;
-            string newRobloxTitle = robloxTitle;
+
+            string title = _title;
 
             Span<char> titleBuffer = new char[256];
             PInvoke.GetWindowText(_hWnd, titleBuffer);
 
-            newRobloxTitle = titleBuffer.TrimEnd('\0').ToString();
+            string currentTitle = titleBuffer.TrimEnd('\0').ToString();
 
-            if (newRobloxTitle != robloxTitle)
+            if (currentTitle != title)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"Setting Roblox title back to {robloxTitle}");
-                PInvoke.SetWindowText(_hWnd, robloxTitle);
+                App.Logger.WriteLine(LOG_IDENT, $"Setting Roblox title back to {title}");
+                PInvoke.SetWindowText(_hWnd, title);
             }
         }
     }

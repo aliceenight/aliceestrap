@@ -1154,7 +1154,7 @@ Untuk informasi lebih lanjut, bergabunglah ke server Discord Bloxshade.</value>
     <value>Ikon Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Pilih judul untuk jendela Roblox.</value>
+    <value>Pilih judul untuk jendela Roblox. Gunakan {username} atau {displayname} untuk menampilkan nama akun setelah kamu masuk ke game.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Judul Roblox</value>

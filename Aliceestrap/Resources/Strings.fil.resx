@@ -1148,7 +1148,7 @@ Para sa higit pang impormasyon, sumali sa Discord server ng Bloxshade.</value>
     <value>Icon ng Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Piliin kung anong pamagat ang magkakaroon ang window ng Roblox.</value>
+    <value>Piliin kung anong pamagat ang magkakaroon ang window ng Roblox. Gamitin ang {username} o {displayname} para ipakita ang pangalan ng account pagsali mo sa laro.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Pamagat ng Roblox</value>

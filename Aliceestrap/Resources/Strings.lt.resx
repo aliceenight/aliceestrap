@@ -1160,7 +1160,7 @@ Daugiau informacijos rasite Bloxshade Discord serveryje.</value>
     <value>Roblox piktograma</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Pasirinkite, kokį pavadinimą turės Roblox langas.</value>
+    <value>Pasirinkite, kokį pavadinimą turės Roblox langas. Naudokite {username} arba {displayname}, kad prisijungus prie žaidimo būtų rodomas paskyros vardas.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox pavadinimas</value>

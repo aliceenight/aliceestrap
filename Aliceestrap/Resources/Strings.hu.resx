@@ -1158,7 +1158,7 @@ További információért csatlakozz a Bloxshade Discord-szerveréhez.</value>
     <value>Roblox ikon</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Válaszd ki, milyen címe legyen a Roblox ablakának.</value>
+    <value>Válaszd ki, milyen címe legyen a Roblox ablakának. A {username} vagy {displayname} a fiók nevét jeleníti meg, miután beléptél egy játékba.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox cím</value>

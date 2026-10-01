@@ -1157,7 +1157,7 @@ Více informací najdete na Discord serveru Bloxshade.</value>
     <value>Ikona Robloxu</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Vyberte, jaký titulek má mít okno Robloxu.</value>
+    <value>Vyberte, jaký titulek má mít okno Robloxu. Pomocí {username} nebo {displayname} zobrazíte jméno účtu po připojení do hry.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Titulek Robloxu</value>

@@ -1154,7 +1154,7 @@ Lai uzzinātu vairāk, pievienojieties Bloxshade Discord serverim.</value>
     <value>Roblox ikona</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Izvēlieties, kāds nosaukums būs Roblox logam.</value>
+    <value>Izvēlieties, kāds nosaukums būs Roblox logam. Izmantojiet {username} vai {displayname}, lai pēc pievienošanās spēlei tiktu rādīts konta vārds.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox nosaukums</value>

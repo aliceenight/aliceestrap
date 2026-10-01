@@ -1153,7 +1153,7 @@
     <value>آیکون Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>انتخاب کنید پنجرهٔ Roblox چه عنوانی داشته باشد.</value>
+    <value>عنوان پنجرهٔ Roblox را انتخاب کنید. از {username} یا {displayname} استفاده کنید تا پس از ورود به بازی نام حساب نمایش داده شود.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>عنوان Roblox</value>

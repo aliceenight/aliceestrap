@@ -1160,7 +1160,7 @@ Weitere Informationen findest du auf dem Discord-Server von Bloxshade.</value>
     <value>Roblox-Symbol</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Wähle, welchen Titel das Roblox-Fenster haben soll.</value>
+    <value>Wähle, welchen Titel das Roblox-Fenster haben soll. Mit {username} oder {displayname} wird der Name des Kontos angezeigt, sobald du einem Spiel beitrittst.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox-Titel</value>

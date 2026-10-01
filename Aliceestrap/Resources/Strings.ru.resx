@@ -1158,7 +1158,7 @@ Roblox еще не установлен, это произойдет, когда
     <value>Значок Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Выберите заголовок окна Roblox.</value>
+    <value>Выберите заголовок окна Roblox. Используйте {username} или {displayname}, чтобы после входа в игру показывалось имя аккаунта.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Заголовок Roblox</value>

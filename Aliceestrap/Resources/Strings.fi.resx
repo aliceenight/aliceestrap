@@ -1160,7 +1160,7 @@ Lisätietoja saat Bloxshaden Discord-palvelimelta.</value>
     <value>Robloxin kuvake</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Valitse, mikä otsikko Robloxin ikkunalla on.</value>
+    <value>Valitse, mikä otsikko Robloxin ikkunalla on. Käytä {username} tai {displayname}, niin tilin nimi näkyy, kun liityt peliin.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Robloxin otsikko</value>

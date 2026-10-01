@@ -1159,7 +1159,7 @@ Roblox все още не е инсталиран, това ще се случи
     <value>Икона на Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Изберете какво заглавие да има прозорецът на Roblox.</value>
+    <value>Изберете какво заглавие да има прозорецът на Roblox. Използвайте {username} или {displayname}, за да се показва името на профила, след като влезете в игра.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Заглавие на Roblox</value>

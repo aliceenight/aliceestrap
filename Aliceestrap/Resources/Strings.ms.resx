@@ -1153,7 +1153,7 @@ Untuk maklumat lanjut, sertai pelayan Discord Bloxshade.</value>
     <value>Ikon Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Pilih tajuk untuk tetingkap Roblox.</value>
+    <value>Pilih tajuk untuk tetingkap Roblox. Gunakan {username} atau {displayname} untuk menunjukkan nama akaun selepas anda menyertai permainan.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Tajuk Roblox</value>

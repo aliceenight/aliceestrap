@@ -1173,7 +1173,7 @@ WebサイトからRobloxを起動した際にaliceestrapの画面が表示され
     <value>Roblox のアイコン</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Roblox のウィンドウのタイトルを選びます。</value>
+    <value>Roblox のウィンドウのタイトルを選びます。{username} や {displayname} を使うと、ゲームに参加した後にアカウント名が表示されます。</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox のタイトル</value>

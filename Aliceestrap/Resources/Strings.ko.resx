@@ -1153,7 +1153,7 @@ Roblox는 아직 설치되지 않았습니다. aliceestrap을 처음 실행할 �
     <value>Roblox 아이콘</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Roblox 창의 제목을 선택하세요.</value>
+    <value>Roblox 창의 제목을 선택하세요. {username} 또는 {displayname}을(를) 쓰면 게임에 참여한 뒤 계정 이름이 표시됩니다.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox 제목</value>

@@ -1153,7 +1153,7 @@ Kijk voor meer informatie op de Discord-server van Bloxshade.</value>
     <value>Roblox-pictogram</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Kies welke titel het Roblox-venster krijgt.</value>
+    <value>Kies welke titel het Roblox-venster krijgt. Gebruik {username} of {displayname} om de naam van het account te tonen zodra je een spel in gaat.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Roblox-titel</value>

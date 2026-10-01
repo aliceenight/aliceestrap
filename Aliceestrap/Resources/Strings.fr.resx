@@ -1159,7 +1159,7 @@ Pour plus d'informations, rejoignez le serveur Discord de Bloxshade.</value>
     <value>Icône de Roblox</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Choisissez le titre de la fenêtre de Roblox.</value>
+    <value>Choisissez le titre de la fenêtre de Roblox. Utilisez {username} ou {displayname} pour afficher le nom du compte une fois dans un jeu.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Titre de Roblox</value>

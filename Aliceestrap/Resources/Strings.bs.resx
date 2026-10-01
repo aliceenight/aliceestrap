@@ -1153,7 +1153,7 @@ Za više informacija pridruži se Bloxshade Discord serveru.</value>
     <value>Ikona Robloxa</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Description" xml:space="preserve">
-    <value>Odaberi koji će naslov imati prozor Robloxa.</value>
+    <value>Odaberi koji će naslov imati prozor Robloxa. Koristi {username} ili {displayname} da se prikaže ime računa kada uđeš u igru.</value>
   </data>
   <data name="Menu.Appearance.RobloxTitle.Title" xml:space="preserve">
     <value>Naslov Robloxa</value>
