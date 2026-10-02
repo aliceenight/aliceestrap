@@ -1550,6 +1550,24 @@ Az aliceestrap helye: "{0}".</value>
     <value>Frissítések keresése</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>A Roblox indulása előtt megnézi a GitHubon, van-e újabb aliceestrap-verzió, és automatikusan telepíti.</value>
+    <value>A Roblox indítása előtt megnézi a GitHubon, van-e újabb aliceestrap verzió, és megkérdezi, telepítse-e.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Frissítés érhető el</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>Az aliceestrap {0} telepítésre kész. Neked a(z) {1} van meg.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Újdonságok</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Ehhez a frissítéshez nincsenek részletek.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Frissítés</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Most nem</value>
   </data>
 </root>

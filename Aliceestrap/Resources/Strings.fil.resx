@@ -1543,6 +1543,24 @@ Naka-install ang aliceestrap sa "{0}".</value>
     <value>Tingnan kung may update</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Bago magsimula ang Roblox, titingnan sa GitHub kung may mas bagong bersyon ng aliceestrap at awtomatiko itong ii-install.</value>
+    <value>Bago magsimula ang Roblox, tinitingnan sa GitHub kung may mas bagong bersyon ng aliceestrap at itinatanong kung ii-install ito.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>May available na update</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>Handa nang i-install ang aliceestrap {0}. Ang nasa iyo ay {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Ano'ng bago</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Walang ibinigay na detalye para sa update na ito.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>I-update</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Hindi muna</value>
   </data>
 </root>

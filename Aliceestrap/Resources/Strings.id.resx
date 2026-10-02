@@ -1546,6 +1546,24 @@ aliceestrap dipasang di "{0}".</value>
     <value>Periksa pembaruan</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Sebelum Roblox dimulai, periksa GitHub untuk versi aliceestrap yang lebih baru dan pasang secara otomatis.</value>
+    <value>Sebelum Roblox dimulai, periksa GitHub untuk versi aliceestrap yang lebih baru dan tanyakan apakah ingin memasangnya.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Pembaruan tersedia</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} siap dipasang. Versi kamu {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Yang baru</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Tidak ada detail untuk pembaruan ini.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Perbarui</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Nanti saja</value>
   </data>
 </root>

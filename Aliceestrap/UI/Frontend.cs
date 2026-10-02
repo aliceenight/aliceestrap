@@ -54,6 +54,19 @@ namespace Aliceestrap.UI
             });
         }
 
+        public static bool ShowUpdateDialog(IReadOnlyList<GithubRelease> releases)
+        {
+            if (App.LaunchSettings.QuietFlag.Active)
+                return true;
+
+            return Application.Current.Dispatcher.Invoke(() =>
+            {
+                var dialog = new UpdateDialog(releases);
+                dialog.ShowDialog();
+                return dialog.Accepted;
+            });
+        }
+
         private static IBootstrapperDialog GetCustomBootstrapper()
         {
             const string LOG_IDENT = "Frontend::GetCustomBootstrapper";

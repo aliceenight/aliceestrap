@@ -1553,6 +1553,24 @@ aliceestrap đã được cài tại "{0}".</value>
     <value>Kiểm tra cập nhật</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Trước khi Roblox khởi động, kiểm tra GitHub xem có phiên bản aliceestrap mới hơn không và tự động cài đặt.</value>
+    <value>Trước khi Roblox khởi động, kiểm tra GitHub xem có phiên bản aliceestrap mới hơn không và hỏi bạn có muốn cài đặt không.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Có bản cập nhật</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} đã sẵn sàng để cài đặt. Bạn đang dùng {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Có gì mới</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Không có thông tin chi tiết cho bản cập nhật này.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Để sau</value>
   </data>
 </root>

@@ -1545,6 +1545,24 @@ aliceestrap 설치 위치: "{0}"</value>
     <value>업데이트 확인</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Roblox가 시작되기 전에 GitHub에서 aliceestrap의 새 버전을 확인하고 자동으로 설치합니다.</value>
+    <value>Roblox가 시작되기 전에 GitHub에서 aliceestrap의 새 버전을 확인하고 설치할지 묻습니다.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>업데이트 가능</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0}을(를) 설치할 수 있습니다. 현재 버전은 {1}입니다.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>새로운 기능</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>이 업데이트에 대한 세부 정보가 없습니다.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>나중에</value>
   </data>
 </root>

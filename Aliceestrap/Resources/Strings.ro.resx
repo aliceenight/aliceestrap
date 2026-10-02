@@ -1552,6 +1552,24 @@ aliceestrap a fost instalat în "{0}".</value>
     <value>Caută actualizări</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Înainte de pornirea Roblox, verifică pe GitHub dacă există o versiune mai nouă de aliceestrap și o instalează automat.</value>
+    <value>Înainte să pornească Roblox, verifică pe GitHub dacă există o versiune mai nouă de aliceestrap și întreabă dacă vrei s-o instalezi.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Actualizare disponibilă</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} este gata de instalare. Ai {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Ce e nou</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Nu au fost oferite detalii pentru această actualizare.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Actualizează</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Nu acum</value>
   </data>
 </root>

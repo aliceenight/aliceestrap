@@ -1546,6 +1546,24 @@ aliceestrap ติดตั้งอยู่ที่ "{0}"</value>
     <value>ตรวจหาอัปเดต</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>ก่อนเริ่ม Roblox จะตรวจสอบ GitHub ว่ามี aliceestrap เวอร์ชันใหม่กว่าหรือไม่ และติดตั้งให้โดยอัตโนมัติ</value>
+    <value>ก่อนเริ่ม Roblox จะตรวจสอบ GitHub ว่ามี aliceestrap เวอร์ชันใหม่กว่าหรือไม่ และถามว่าจะติดตั้งหรือไม่</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>มีอัปเดตใหม่</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} พร้อมติดตั้งแล้ว คุณมีเวอร์ชัน {1}</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>มีอะไรใหม่</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>ไม่มีรายละเอียดสำหรับอัปเดตนี้</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>อัปเดต</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>ไว้ทีหลัง</value>
   </data>
 </root>

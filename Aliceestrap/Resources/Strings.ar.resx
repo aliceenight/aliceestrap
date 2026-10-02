@@ -1550,6 +1550,24 @@
     <value>التحقق من وجود تحديثات</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>قبل بدء Roblox، يتحقق من GitHub من وجود إصدار أحدث من aliceestrap ويثبته تلقائيًا.</value>
+    <value>قبل تشغيل Roblox، يتحقق من GitHub من وجود إصدار أحدث من aliceestrap ويسألك هل تريد تثبيته.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>يتوفر تحديث</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} جاهز للتثبيت. لديك {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>ما الجديد</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>لم تُذكر تفاصيل لهذا التحديث.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>ليس الآن</value>
   </data>
 </root>

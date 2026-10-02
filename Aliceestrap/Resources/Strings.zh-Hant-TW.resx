@@ -1551,6 +1551,24 @@ aliceestrap 安裝在「{0}」。</value>
     <value>檢查更新</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>在 Roblox 啟動前，從 GitHub 檢查是否有較新版本的 aliceestrap 並自動安裝。</value>
+    <value>在 Roblox 啟動前，於 GitHub 檢查是否有較新版本的 aliceestrap，並詢問是否安裝。</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>有可用的更新</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} 已可安裝。你目前的版本是 {1}。</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>新功能</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>此更新沒有提供詳細資訊。</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>稍後再說</value>
   </data>
 </root>

@@ -1549,6 +1549,24 @@ aliceestrap byl nainstalován v "{0}".</value>
     <value>Kontrolovat aktualizace</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Před spuštěním Robloxu zkontroluje na GitHubu novější verzi aliceestrap a automaticky ji nainstaluje.</value>
+    <value>Před spuštěním Robloxu zkontroluje na GitHubu novější verzi aliceestrapu a zeptá se, zda ji nainstalovat.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Je k dispozici aktualizace</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} je připraven k instalaci. Máte {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Co je nového</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>K této aktualizaci nejsou uvedeny žádné podrobnosti.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Aktualizovat</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Teď ne</value>
   </data>
 </root>

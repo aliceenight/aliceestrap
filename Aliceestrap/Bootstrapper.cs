@@ -22,6 +22,10 @@ namespace Aliceestrap
         #region Properties
         private const int ProgressBarMaximum = 10000;
 
+        private const int UpdateDownloadAttempts = 2;
+
+        private static readonly TimeSpan UpdateStallTimeout = TimeSpan.FromSeconds(30);
+
         private const double TaskbarProgressMaximumWpf = 1;
         private const int TaskbarProgressMaximumWinForms = WinFormsDialogBase.TaskbarProgressMaximum;
 
@@ -129,28 +133,42 @@ namespace Aliceestrap
 
             App.Logger.WriteLine(LOG_IDENT, "Checking for updates");
 
-            var release = await App.GetLatestRelease();
+            var releases = await App.GetReleases();
 
-            if (release is null)
+            if (releases is null)
                 return false;
 
-            Version latestVersion;
+            Version currentVersion = Utilities.GetVersionFromString(App.Version);
 
-            try
+            var newerReleases = new List<(GithubRelease Release, Version Version)>();
+
+            foreach (var item in releases)
             {
-                latestVersion = Utilities.GetVersionFromString(release.TagName);
+                if (item.Draft || item.Prerelease || item.Assets is null)
+                    continue;
+
+                try
+                {
+                    Version version = Utilities.GetVersionFromString(item.TagName);
+
+                    if (version > currentVersion)
+                        newerReleases.Add((item, version));
+                }
+                catch (Exception)
+                {
+                    App.Logger.WriteLine(LOG_IDENT, $"Release tag '{item.TagName}' is not a version, skipping it");
+                }
             }
-            catch (Exception)
+
+            if (newerReleases.Count == 0)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"Release tag '{release.TagName}' is not a version, skipping");
+                App.Logger.WriteLine(LOG_IDENT, "Up to date");
                 return false;
             }
 
-            if (latestVersion <= Utilities.GetVersionFromString(App.Version))
-            {
-                App.Logger.WriteLine(LOG_IDENT, $"Up to date (latest release is {release.TagName})");
-                return false;
-            }
+            newerReleases = newerReleases.OrderByDescending(x => x.Version).ToList();
+
+            var (release, latestVersion) = newerReleases[0];
 
             var asset = release.Assets!.FirstOrDefault(x => x.Name.Equals($"{App.ProjectName}.exe", StringComparison.OrdinalIgnoreCase))
                 ?? release.Assets!.FirstOrDefault(x => x.Name.EndsWith(".exe", StringComparison.OrdinalIgnoreCase));
@@ -161,43 +179,61 @@ namespace Aliceestrap
                 return false;
             }
 
+            if (!Frontend.ShowUpdateDialog(newerReleases.Select(x => x.Release).ToList()))
+            {
+                App.Logger.WriteLine(LOG_IDENT, $"Update to {release.TagName} was put off for now");
+                return false;
+            }
+
             App.Logger.WriteLine(LOG_IDENT, $"Updating from {App.Version} to {release.TagName}");
 
-            if (Dialog is not null)
-                Dialog.CancelEnabled = false;
-
             SetStatus(String.Format(Strings.Bootstrapper_Status_UpdatingApp, release.TagName));
+
+            var token = _cancelTokenSource.Token;
+
+            string downloadLocation = Path.Combine(Paths.TempUpdates, $"{App.ProjectName}-{latestVersion}.exe");
+            string partialLocation = downloadLocation + ".part";
 
             try
             {
                 Directory.CreateDirectory(Paths.TempUpdates);
 
-                string downloadLocation = Path.Combine(Paths.TempUpdates, $"{App.ProjectName}-{latestVersion}.exe");
-                string partialLocation = downloadLocation + ".part";
-
                 if (!File.Exists(downloadLocation))
                 {
-                    using (var response = await App.HttpClient.GetAsync(asset.BrowserDownloadUrl, HttpCompletionOption.ResponseHeadersRead))
+                    for (int attempt = 1; ; attempt++)
                     {
-                        response.EnsureSuccessStatusCode();
+                        try
+                        {
+                            await DownloadUpdate(asset, partialLocation, token);
+                            VerifyUpdate(partialLocation, asset);
+                            break;
+                        }
+                        catch (Exception ex) when (attempt < UpdateDownloadAttempts && !token.IsCancellationRequested)
+                        {
+                            App.Logger.WriteLine(LOG_IDENT, $"Download attempt {attempt} failed, trying again");
+                            App.Logger.WriteException(LOG_IDENT, ex);
 
-                        await using var fileStream = new FileStream(partialLocation, FileMode.Create, FileAccess.Write);
-                        await response.Content.CopyToAsync(fileStream);
+                            await Task.Delay(TimeSpan.FromSeconds(2), token);
+                        }
                     }
-
-                    VerifyUpdate(partialLocation, asset);
 
                     File.Move(partialLocation, downloadLocation, true);
                 }
 
                 string? downloadedVersion = FileVersionInfo.GetVersionInfo(downloadLocation).ProductVersion;
 
-                if (downloadedVersion is null || Utilities.GetVersionFromString(downloadedVersion) <= Utilities.GetVersionFromString(App.Version))
+                if (downloadedVersion is null || Utilities.GetVersionFromString(downloadedVersion) <= currentVersion)
                 {
                     App.Logger.WriteLine(LOG_IDENT, $"Downloaded exe reports version {downloadedVersion}, which is not newer. Not installing it");
                     File.Delete(downloadLocation);
                     return false;
                 }
+
+                if (Dialog is not null)
+                    Dialog.CancelEnabled = false;
+
+                if (token.IsCancellationRequested)
+                    return true;
 
                 ProcessStartInfo startInfo = new()
                 {
@@ -224,6 +260,11 @@ namespace Aliceestrap
 
                 return true;
             }
+            catch (Exception) when (token.IsCancellationRequested)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Update was cancelled");
+                return true;
+            }
             catch (Exception ex)
             {
                 App.Logger.WriteLine(LOG_IDENT, "Update failed");
@@ -231,8 +272,90 @@ namespace Aliceestrap
 
                 Frontend.ShowMessageBox(String.Format(Strings.Bootstrapper_AutoUpdateFailed, release.TagName), MessageBoxImage.Information);
             }
+            finally
+            {
+                try
+                {
+                    if (File.Exists(partialLocation))
+                        File.Delete(partialLocation);
+                }
+                catch (Exception ex)
+                {
+                    App.Logger.WriteException(LOG_IDENT, ex);
+                }
+
+                if (Dialog is not null && !token.IsCancellationRequested)
+                {
+                    Dialog.ProgressStyle = ProgressBarStyle.Marquee;
+                    Dialog.TaskbarProgressState = TaskbarItemProgressState.Indeterminate;
+                }
+            }
 
             return false;
+        }
+
+        private async Task DownloadUpdate(GithubReleaseAsset asset, string path, CancellationToken token)
+        {
+            using var response = await App.HttpClient.GetAsync(asset.BrowserDownloadUrl, HttpCompletionOption.ResponseHeadersRead, token);
+
+            response.EnsureSuccessStatusCode();
+
+            long total = response.Content.Headers.ContentLength ?? asset.Size;
+            long downloaded = 0;
+            int lastProgress = -1;
+
+            double taskbarMaximum = Dialog is WinFormsDialogBase ? TaskbarProgressMaximumWinForms : TaskbarProgressMaximumWpf;
+
+            if (Dialog is not null && total > 0)
+            {
+                Dialog.ProgressMaximum = ProgressBarMaximum;
+                Dialog.ProgressValue = 0;
+                Dialog.ProgressStyle = ProgressBarStyle.Continuous;
+                Dialog.TaskbarProgressState = TaskbarItemProgressState.Normal;
+            }
+
+            await using var source = await response.Content.ReadAsStreamAsync(token);
+            await using var fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+
+            using var stallTokenSource = CancellationTokenSource.CreateLinkedTokenSource(token);
+
+            byte[] buffer = new byte[81920];
+
+            while (true)
+            {
+                stallTokenSource.CancelAfter(UpdateStallTimeout);
+
+                int read;
+
+                try
+                {
+                    read = await source.ReadAsync(buffer, stallTokenSource.Token);
+                }
+                catch (OperationCanceledException) when (!token.IsCancellationRequested)
+                {
+                    throw new TimeoutException($"No data was received for {UpdateStallTimeout.TotalSeconds} seconds");
+                }
+
+                if (read == 0)
+                    break;
+
+                await fileStream.WriteAsync(buffer.AsMemory(0, read), token);
+
+                downloaded += read;
+
+                if (Dialog is null || total <= 0)
+                    continue;
+
+                int progress = (int)Math.Clamp(downloaded * ProgressBarMaximum / total, 0, ProgressBarMaximum);
+
+                if (progress == lastProgress)
+                    continue;
+
+                lastProgress = progress;
+
+                Dialog.ProgressValue = progress;
+                Dialog.TaskbarProgressValue = taskbarMaximum * progress / ProgressBarMaximum;
+            }
         }
 
         private static void VerifyUpdate(string path, GithubReleaseAsset asset)

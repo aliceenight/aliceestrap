@@ -1546,6 +1546,24 @@ aliceestrap var installeret i "{0}".</value>
     <value>Søg efter opdateringer</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Før Roblox starter, tjekkes GitHub for en nyere version af aliceestrap, som installeres automatisk.</value>
+    <value>Før Roblox starter, tjekkes GitHub for en nyere version af aliceestrap, og du bliver spurgt, om den skal installeres.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Opdatering tilgængelig</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} er klar til installation. Du har {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Nyheder</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Der er ingen detaljer om denne opdatering.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Opdater</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Ikke nu</value>
   </data>
 </root>

@@ -1550,6 +1550,24 @@ aliceestrap был установлен в «{0}».</value>
     <value>Проверять обновления</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Перед запуском Roblox проверяет на GitHub, есть ли новая версия aliceestrap, и устанавливает её автоматически.</value>
+    <value>Перед запуском Roblox проверяет на GitHub, есть ли более новая версия aliceestrap, и спрашивает, установить ли её.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Доступно обновление</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} готов к установке. У вас {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Что нового</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Подробности об этом обновлении не указаны.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Не сейчас</value>
   </data>
 </root>

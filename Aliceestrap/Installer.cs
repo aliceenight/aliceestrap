@@ -8,8 +8,6 @@ namespace Aliceestrap
 {
     internal class Installer
     {
-        private const bool OpenReleaseNotes = true;
-
         private static string DesktopShortcut => Path.Combine(Paths.Desktop, $"{App.ProjectName}.lnk");
 
         private static string StartMenuShortcut => Path.Combine(Paths.WindowsStartMenu, $"{App.ProjectName}.lnk");
@@ -434,10 +432,7 @@ namespace Aliceestrap
             if (currentVer is null)
                 return;
 
-            if (isAutoUpgrade)
-            {
-            }
-            else
+            if (!isAutoUpgrade)
             {
                 Frontend.ShowMessageBox(
                     string.Format(Strings.InstallChecker_Updated, currentVer),

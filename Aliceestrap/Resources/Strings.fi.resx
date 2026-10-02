@@ -1552,6 +1552,24 @@ aliceestrap oli asennettu kohteeseen "{0}".</value>
     <value>Tarkista päivitykset</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Tarkistaa ennen Robloxin käynnistystä GitHubista, onko aliceestrapista uudempaa versiota, ja asentaa sen automaattisesti.</value>
+    <value>Ennen Robloxin käynnistymistä tarkistaa GitHubista, onko aliceestrapista uudempaa versiota, ja kysyy, asennetaanko se.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Päivitys saatavilla</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} on valmis asennettavaksi. Sinulla on {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Mitä uutta</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Tälle päivitykselle ei ole annettu tietoja.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Päivitä</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Ei nyt</value>
   </data>
 </root>

@@ -1545,6 +1545,24 @@ aliceestrap was geïnstalleerd in "{0}".</value>
     <value>Controleren op updates</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Controleert op GitHub of er een nieuwere versie van aliceestrap is voordat Roblox start, en installeert die automatisch.</value>
+    <value>Controleert voordat Roblox start op GitHub of er een nieuwere versie van aliceestrap is en vraagt of die geïnstalleerd moet worden.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Update beschikbaar</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} is klaar om te installeren. Je hebt {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Wat is er nieuw</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Er zijn geen details gegeven voor deze update.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Bijwerken</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Niet nu</value>
   </data>
 </root>

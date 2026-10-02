@@ -1550,6 +1550,24 @@ aliceestrap je bio instaliran u "{0}".</value>
     <value>Provjeri ažuriranja</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Prije pokretanja Robloxa provjerava na GitHubu postoji li novija verzija aliceestrap i automatski je instalira.</value>
+    <value>Prije pokretanja Robloxa provjerava na GitHubu postoji li novija verzija aliceestrapa i pita želiš li je instalirati.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Dostupno je ažuriranje</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} spreman je za instalaciju. Ti imaš {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Što je novo</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Za ovo ažuriranje nisu navedeni detalji.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Ažuriraj</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Ne sada</value>
   </data>
 </root>

@@ -1545,6 +1545,24 @@ aliceestrap telah dipasang di "{0}".</value>
     <value>Semak kemas kini</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Sebelum Roblox bermula, semak GitHub untuk versi aliceestrap yang lebih baharu dan pasangkannya secara automatik.</value>
+    <value>Sebelum Roblox bermula, semak GitHub untuk versi aliceestrap yang lebih baharu dan tanya sama ada mahu memasangnya.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Kemas kini tersedia</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} sedia untuk dipasang. Anda mempunyai {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Apa yang baharu</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Tiada butiran diberikan untuk kemas kini ini.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Kemas kini</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Bukan sekarang</value>
   </data>
 </root>

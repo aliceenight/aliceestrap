@@ -128,25 +128,19 @@ namespace Aliceestrap
             Terminate(ErrorCode.ERROR_INSTALL_FAILURE);
         }
 
-        public static async Task<GithubRelease?> GetLatestRelease()
+        public static async Task<List<GithubRelease>?> GetReleases()
         {
-            const string LOG_IDENT = "App::GetLatestRelease";
+            const string LOG_IDENT = "App::GetReleases";
 
             try
             {
-                var release = await Http.GetJson<GithubRelease>(new Uri($"https://api.github.com/repos/{ProjectRepository}/releases/latest"));
+                var releases = await Http.GetJson<List<GithubRelease>>(new Uri($"https://api.github.com/repos/{ProjectRepository}/releases?per_page=50"));
 
-                if (release?.Assets is null || String.IsNullOrEmpty(release.TagName))
-                {
-                    Logger.WriteLine(LOG_IDENT, "Latest release has no tag or assets");
-                    return null;
-                }
-
-                return release;
+                return releases?.Where(x => !String.IsNullOrEmpty(x.TagName)).ToList();
             }
             catch (Exception ex)
             {
-                Logger.WriteLine(LOG_IDENT, "Failed to get latest release");
+                Logger.WriteLine(LOG_IDENT, "Failed to get releases");
                 Logger.WriteException(LOG_IDENT, ex);
             }
 

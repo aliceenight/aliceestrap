@@ -2686,6 +2686,42 @@
             }
         }
         
+        public static string Dialog_Update_Title {
+            get {
+                return ResourceManager.GetString("Dialog.Update.Title", resourceCulture);
+            }
+        }
+
+        public static string Dialog_Update_Subtitle {
+            get {
+                return ResourceManager.GetString("Dialog.Update.Subtitle", resourceCulture);
+            }
+        }
+
+        public static string Dialog_Update_WhatsNew {
+            get {
+                return ResourceManager.GetString("Dialog.Update.WhatsNew", resourceCulture);
+            }
+        }
+
+        public static string Dialog_Update_NoNotes {
+            get {
+                return ResourceManager.GetString("Dialog.Update.NoNotes", resourceCulture);
+            }
+        }
+
+        public static string Dialog_Update_Update {
+            get {
+                return ResourceManager.GetString("Dialog.Update.Update", resourceCulture);
+            }
+        }
+
+        public static string Dialog_Update_Later {
+            get {
+                return ResourceManager.GetString("Dialog.Update.Later", resourceCulture);
+            }
+        }
+
         public static string Dialog_LaunchOptions_Launch {
             get {
                 return ResourceManager.GetString("Dialog.LaunchOptions.Launch", resourceCulture);

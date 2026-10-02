@@ -1551,6 +1551,24 @@ aliceestrap był zainstalowany w "{0}".</value>
     <value>Sprawdzaj aktualizacje</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Przed uruchomieniem Robloxa sprawdza na GitHubie, czy jest nowsza wersja aliceestrap, i instaluje ją automatycznie.</value>
+    <value>Przed uruchomieniem Robloxa sprawdza na GitHubie, czy jest nowsza wersja aliceestrap, i pyta, czy ją zainstalować.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Dostępna aktualizacja</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} jest gotowy do instalacji. Masz {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Co nowego</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Do tej aktualizacji nie podano szczegółów.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Aktualizuj</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Nie teraz</value>
   </data>
 </root>

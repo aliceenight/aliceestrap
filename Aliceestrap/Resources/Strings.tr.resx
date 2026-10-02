@@ -1549,6 +1549,24 @@ aliceestrap şuraya kurulmuştu: "{0}".</value>
     <value>Güncellemeleri denetle</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Roblox başlamadan önce GitHub'da aliceestrap'in daha yeni bir sürümü olup olmadığını denetler ve otomatik olarak kurar.</value>
+    <value>Roblox başlamadan önce GitHub'da aliceestrap'in daha yeni bir sürümü olup olmadığını kontrol eder ve yüklemek isteyip istemediğini sorar.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Güncelleme mevcut</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} yüklenmeye hazır. Sende {1} var.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Yenilikler</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Bu güncelleme için ayrıntı verilmedi.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Şimdi değil</value>
   </data>
 </root>

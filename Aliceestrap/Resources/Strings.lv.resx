@@ -1546,6 +1546,24 @@ aliceestrap bija instalēts šeit: "{0}".</value>
     <value>Pārbaudīt atjauninājumus</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Pirms Roblox palaišanas pārbauda GitHub, vai ir jaunāka aliceestrap versija, un automātiski to instalē.</value>
+    <value>Pirms Roblox palaišanas pārbauda GitHub, vai ir jaunāka aliceestrap versija, un jautā, vai to instalēt.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Pieejams atjauninājums</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} ir gatavs instalēšanai. Jums ir {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Jaunumi</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Par šo atjauninājumu nav sniegta informācija.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Atjaunināt</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Ne tagad</value>
   </data>
 </root>

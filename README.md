@@ -33,7 +33,7 @@ doesn't have.
 - Global Basic Settings editor
   - Ability to increase frame rate cap, toggle quality levels and more
 - Mods: old cursors and avatar editor background, or your own files
-- Updates itself from this repository's releases
+- Tells you when there's a new version, shows what changed, and updates when you say so
 - Cache cleaner, channel switcher and more
 
 ## Requirements

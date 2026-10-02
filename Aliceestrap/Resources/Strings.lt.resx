@@ -1552,6 +1552,24 @@ aliceestrap buvo įdiegtas „{0}“.</value>
     <value>Tikrinti naujinimus</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Prieš paleidžiant Roblox, GitHub patikrina, ar yra naujesnė aliceestrap versija, ir ją automatiškai įdiegia.</value>
+    <value>Prieš paleidžiant Roblox, GitHub patikrina, ar yra naujesnė aliceestrap versija, ir klausia, ar ją įdiegti.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Yra naujinys</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} paruoštas įdiegti. Jūs turite {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Kas naujo</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Apie šį naujinį informacijos nepateikta.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Atnaujinti</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Ne dabar</value>
   </data>
 </root>

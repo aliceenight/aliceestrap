@@ -1545,6 +1545,24 @@ aliceestrap در "{0}" نصب شده بود.</value>
     <value>بررسی به‌روزرسانی‌ها</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>پیش از اجرای Roblox، در GitHub نسخهٔ جدیدتر aliceestrap را بررسی و خودکار نصب می‌کند.</value>
+    <value>پیش از اجرای Roblox، در GitHub نسخهٔ جدیدتر aliceestrap را بررسی می‌کند و می‌پرسد که آیا نصب شود یا نه.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>به‌روزرسانی در دسترس است</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} آمادهٔ نصب است. نسخهٔ شما {1} است.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>چه چیزهایی تازه است</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>جزئیاتی برای این به‌روزرسانی ارائه نشده است.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>به‌روزرسانی</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>الان نه</value>
   </data>
 </root>

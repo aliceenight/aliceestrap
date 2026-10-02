@@ -1549,6 +1549,24 @@ aliceestrap було встановлено в «{0}».</value>
     <value>Перевіряти оновлення</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Перед запуском Roblox перевіряє на GitHub, чи є новіша версія aliceestrap, і встановлює її автоматично.</value>
+    <value>Перед запуском Roblox перевіряє на GitHub, чи є новіша версія aliceestrap, і питає, чи встановити її.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Доступне оновлення</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} готовий до встановлення. У вас {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Що нового</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Подробиць про це оновлення не надано.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Не зараз</value>
   </data>
 </root>

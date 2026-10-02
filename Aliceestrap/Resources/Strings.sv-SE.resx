@@ -1552,6 +1552,24 @@ aliceestrap var installerat i "{0}".</value>
     <value>Sök efter uppdateringar</value>
   </data>
   <data name="Menu.Behaviour.CheckForUpdates.Description" xml:space="preserve">
-    <value>Innan Roblox startar kontrolleras GitHub efter en nyare version av aliceestrap, som installeras automatiskt.</value>
+    <value>Innan Roblox startar kontrolleras GitHub efter en nyare version av aliceestrap, och du får frågan om den ska installeras.</value>
+  </data>
+  <data name="Dialog.Update.Title" xml:space="preserve">
+    <value>Uppdatering tillgänglig</value>
+  </data>
+  <data name="Dialog.Update.Subtitle" xml:space="preserve">
+    <value>aliceestrap {0} är redo att installeras. Du har {1}.</value>
+  </data>
+  <data name="Dialog.Update.WhatsNew" xml:space="preserve">
+    <value>Nyheter</value>
+  </data>
+  <data name="Dialog.Update.NoNotes" xml:space="preserve">
+    <value>Inga detaljer har angetts för den här uppdateringen.</value>
+  </data>
+  <data name="Dialog.Update.Update" xml:space="preserve">
+    <value>Uppdatera</value>
+  </data>
+  <data name="Dialog.Update.Later" xml:space="preserve">
+    <value>Inte nu</value>
   </data>
 </root>
